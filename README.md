@@ -1,2 +1,3 @@
 # GA_Capstone
-GA Capstone project
+General Capstone project April 2021
+
