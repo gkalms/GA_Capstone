@@ -1,0 +1,13 @@
+.Topbanner{
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: sticky;
+top: 0;
+z-index: 100%;
+background-color: while;
+}
+
+.banner{
+background: image("IMG20210403162559_00.jpg");
+}
