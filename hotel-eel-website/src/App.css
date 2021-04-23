@@ -1,4 +1,4 @@
-.Topbanner{
+.Topbanner {
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -8,6 +8,19 @@ z-index: 100%;
 background-color: while;
 }
 
-.banner{
-background: image("IMG20210403162559_00.jpg");
+.banner {
+height: 50vh;
+position: relative;
+}
+
+.banner-info {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding-top: 10vh;
+    width: 250px;
+}
+
+.banner-info >h2 {
+    margin-top: 10px;
 }
