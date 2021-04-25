@@ -21,15 +21,15 @@ position: relative;
 
 .slider {
     position: relative;
-    height: 55vh;
+    height: 0vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
 }
 
 .images{
-    width: 500px;
-    height: 250px;
+    width: 400px;
+    height: 200px;
     border-radius: 10px;
 }
 
@@ -62,5 +62,10 @@ position: relative;
 .slide.active {
     opacity: 1;
     transition-duration: 2s;
-    transform: scale(2);
+    /* transform: scale(2); */
+}
+
+.table {
+    display: flex;
+    margin-left: 500px;
 }

@@ -46,8 +46,8 @@ export const AccomodationTable = () => {
   const classes = useStyles();
 
   return (
-    <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="customized table">
+    <TableContainer className="table" component={Paper}>
+      <Table style={{width: 500}} className={classes.table}>
         <TableHead>
           <TableRow>
             <StyledTableCell>Room</StyledTableCell>

@@ -1,16 +1,22 @@
-import React from 'react';
-import './App.css';
-import {Homepage} from './Components/Homepage';
-import {Header} from './Components/Header';
+import React from "react";
+import "./App.css";
+import { Header } from "./Components/Header";
+import { Overview } from "./Components/Overview";
+import { ImageData } from "./Components/Images";
+import { ImageSlider } from "./Components/ImageSlider";
+import { AccomodationTable } from "./Components/AccomodationtType.js";
+import {Enquiry} from "./Components/Enquiry";
 
 const App = () => {
   return (
     <div className="app">
-      <h1> Hotel Eel Website</h1>
       <Header />
-      <Homepage />
+      <Overview />
+      <ImageSlider slides={ImageData} />
+      <AccomodationTable />
+      <Enquiry />
     </div>
   );
-}
+};
 
 export { App };
