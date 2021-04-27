@@ -1,0 +1,71 @@
+.Topbanner {
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: sticky;
+top: 0;
+z-index: 100%;
+background-color: while;
+}
+
+.banner {
+height: 50vh;
+position: relative;
+}
+
+.banner-info {
+    background-color: grey;
+    color: white;
+    text-align: center;
+}
+
+.slider {
+    position: relative;
+    height: 0vh;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.images{
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 150px;
+    font-size: 3rem;
+    color: black;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+ .left-arrow {
+    position:absolute;
+    top: 50%;
+    left: 150px;
+    font-size: 3rem;
+    color: black;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+} 
+
+.slide {
+    opacity: 1;
+    transition-duration: 2s ease;
+}
+.slide.active {
+    opacity: 1;
+    transition-duration: 2s;
+    /* transform: scale(2); */
+}
+
+.table {
+    display: flex;
+    margin-left: 500px;
+}
