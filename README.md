@@ -13,11 +13,17 @@ https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbnails.trvl-media.com%2FO
 Look and feel I want to achieve:
 One page website: https://clhg.com/hotels/901/Fairview-Hotel-Nairobi
 
-User story
+User storie:
 As Guest I want information on Room and board
-As Hotel manager I want to update listings of rooms/board information
+As Guest, I want to make a booking enquiry
+As Hotel manager I want to add,update or delete rooms/board information
+As Hotel manager I want to view, update or delete booking enquiry information
 
-
+Database:
+3 tables:
+Employee - Name, password
+Accomodation - Room, boarding, Rates, Occupancy(?) 
+Enquiry - Guest name(primary contact), Guest phone/email, Room type, Boarding type, Number of guests(?),Number of rooms, Dates
 
 Wireframe: Attach image
 

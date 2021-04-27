@@ -5,7 +5,7 @@ export const Enquiry = () => {
     <div>
       <form>
         <h3>Booking enquiry</h3>
-        <div>
+        <div className="Enquiry">
           <div>
             <input type="text" name="name" placeholder="Fist Name" />
           </div>
@@ -20,16 +20,17 @@ export const Enquiry = () => {
           <input type="text" name="name" placeholder="Email Adress" />
         </div>
         <div>
-          <select type="text" name="name" placeholder="Room Type"></select>
+          <input type="text" name="name" placeholder="Room Type"/>
         </div>
         <div>
-          <select type="text" name="name" placeholder="Boarding type"></select>
+          <input type="text" name="name" placeholder="Boarding type"/>
           <div>
-            <select type="text" name="name" placeholder="Arrival"></select>
+            <input type="text" name="name" placeholder="Arrival"/>
           </div>
           <div>
-            <select type="text" name="name" placeholder="Departure"></select>
+            <input type="text" name="name" placeholder="Departure"/>
           </div>
+          <button type="submit">Enquire</button>
         </div>
       </form>
     </div>

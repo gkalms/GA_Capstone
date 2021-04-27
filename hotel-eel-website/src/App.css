@@ -21,10 +21,10 @@ position: relative;
 
 .slider {
     position: relative;
-    height: 0vh;
+    height: 30vh;
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
+    justify-content: center;
+    align-items: center;
 }
 
 .images{
@@ -67,5 +67,7 @@ position: relative;
 
 .table {
     display: flex;
-    margin-left: 500px;
+    justify-content: center;
+    align-items: center;
 }
+

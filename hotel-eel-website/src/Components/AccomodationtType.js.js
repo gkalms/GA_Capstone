@@ -31,7 +31,7 @@ function createData(Room, Boarding, Rates) {
 }
 
 const rows = [
-  createData('Standard room', 'Accomodation only', 'KSH 3000'),
+  createData('Standard room', 'B&B', 'KSH 3000'),
   createData('Standard room', 'Half Board', 'KSH 6000'),
   createData('Standard room', 'Full Board', 'KSH 9000'),
 ];
