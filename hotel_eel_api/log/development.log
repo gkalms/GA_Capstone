@@ -453,3 +453,291 @@ Processing by BoardsController#index as */*
 Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 734)
 
 
+Started GET "/enquiries" for ::1 at 2021-04-29 21:03:52 +1000
+Processing by EnquiriesController#index as */*
+  Parameters: {"board_type"=>"Test-Board", "board_rate_per_person"=>"Ksh 11000", "enquiry"=>{"board_type"=>"Test-Board"}}
+  [1m[36mEnquiry Load (1.1ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 23.4ms | Allocations: 722)
+
+
+Started POST "/enquiries" for ::1 at 2021-04-29 21:07:01 +1000
+Error occurred while parsing request parameters.
+Contents:
+
+ {
+     guest_name: "Test1",
+      guest_phone: "12345",
+      guest_email: "test@test.com",
+      room_type: "room1",
+      board_type: "board1",
+      number_of_guests: 2,
+      start_date: 02/04/2021,
+      end_date: 04/04/2021
+ }
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+     guest_name: "Test1",
+      guest_phone: "12345",
+      guest_email: "test@test.com",
+      room_type: "room1",
+      board_type: "board1",
+      number_of_guests: 2,
+      start_date: 02/04/2021,
+      end_date: 04/04/2021
+ }'):
+  
+actionpack (6.1.3.1) lib/action_dispatch/http/parameters.rb:96:in `rescue in parse_formatted_parameters'
+actionpack (6.1.3.1) lib/action_dispatch/http/parameters.rb:92:in `parse_formatted_parameters'
+actionpack (6.1.3.1) lib/action_dispatch/http/request.rb:399:in `block in POST'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.1.3.1) lib/action_dispatch/http/request.rb:398:in `POST'
+actionpack (6.1.3.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.1.3.1) lib/action_controller/metal/params_wrapper.rb:284:in `_wrapper_enabled?'
+actionpack (6.1.3.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (6.1.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.3.1) lib/abstract_controller/base.rb:165:in `process'
+actionpack (6.1.3.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.3.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+ {
+     guest_name: "Test1",
+      guest_phone: "12345",
+      guest_email: "test@test.com",
+      room_type: "room1",
+      board_type: "board1",
+      number_of_guests: 2,
+      start_date: 02/04/2021,
+      end_date: 04/04/2021
+ }
+Started POST "/enquiries" for ::1 at 2021-04-29 21:09:39 +1000
+Error occurred while parsing request parameters.
+Contents:
+
+ {
+     "guest_name": "Test1",
+      "guest_phone": "12345",
+      "guest_email": "test@test.com",
+      "room_type": "room1",
+      "board_type": "board1",
+      "number_of_guests": 2,
+      "start_date": 02/04/2021,
+      "end_date": 04/04/2021
+ }
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+     "guest_name": "Test1",
+      "guest_phone": "12345",
+      "guest_email": "test@test.com",
+      "room_type": "room1",
+      "board_type": "board1",
+      "number_of_guests": 2,
+      "start_date": 02/04/2021,
+      "end_date": 04/04/2021
+ }'):
+  
+actionpack (6.1.3.1) lib/action_dispatch/http/parameters.rb:96:in `rescue in parse_formatted_parameters'
+actionpack (6.1.3.1) lib/action_dispatch/http/parameters.rb:92:in `parse_formatted_parameters'
+actionpack (6.1.3.1) lib/action_dispatch/http/request.rb:399:in `block in POST'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch'
+rack (2.2.3) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.1.3.1) lib/action_dispatch/http/request.rb:398:in `POST'
+actionpack (6.1.3.1) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.1.3.1) lib/action_controller/metal/params_wrapper.rb:284:in `_wrapper_enabled?'
+actionpack (6.1.3.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (6.1.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.3.1) lib/abstract_controller/base.rb:165:in `process'
+actionpack (6.1.3.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.3.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+ {
+     "guest_name": "Test1",
+      "guest_phone": "12345",
+      "guest_email": "test@test.com",
+      "room_type": "room1",
+      "board_type": "board1",
+      "number_of_guests": 2,
+      "start_date": 02/04/2021,
+      "end_date": 04/04/2021
+ }
+Started POST "/enquiries" for ::1 at 2021-04-29 21:10:50 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"Test1", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"02/04/2021", "end_date"=>"04/04/2021", "enquiry"=>{"guest_name"=>"Test1", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"02/04/2021", "end_date"=>"04/04/2021"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (11.7ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "Test1"], ["guest_phone", "12345"], ["guest_email", "test@test.com"], ["room_type", "room1"], ["board_type", "board1"], ["number_of_guests", 2], ["start_date", "2021-04-02"], ["end_date", "2021-04-04"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 83ms (Views: 0.7ms | ActiveRecord: 31.1ms | Allocations: 8084)
+
+
+Started GET "/enquiries" for ::1 at 2021-04-29 21:10:57 +1000
+Processing by EnquiriesController#index as */*
+  Parameters: {"guest_name"=>"Test1", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"02/04/2021", "end_date"=>"04/04/2021", "enquiry"=>{"guest_name"=>"Test1", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"02/04/2021", "end_date"=>"04/04/2021"}}
+  [1m[36mEnquiry Load (0.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 851)
+
+
+Started PATCH "/enquiries/1" for ::1 at 2021-04-29 21:12:04 +1000
+Processing by EnquiriesController#update as */*
+  Parameters: {"guest_name"=>"test1", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"01/04/2021", "end_date"=>"04/04/2021", "id"=>"1", "enquiry"=>{"guest_name"=>"test1", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"01/04/2021", "end_date"=>"04/04/2021"}}
+  [1m[36mEnquiry Load (0.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:31:in `update'
+  [1m[36mEnquiry Update (0.6ms)[0m  [1m[33mUPDATE "enquiries" SET "guest_name" = $1, "start_date" = $2 WHERE "enquiries"."id" = $3[0m  [["guest_name", "test1"], ["start_date", "2021-04-01"], ["id", 1]]
+  ↳ app/controllers/enquiries_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:31:in `update'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 3.3ms | Allocations: 2356)
+
+
+Started GET "/enquiries/1" for ::1 at 2021-04-29 21:12:10 +1000
+Processing by EnquiriesController#show as */*
+  Parameters: {"guest_name"=>"test1", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"01/04/2021", "end_date"=>"04/04/2021", "id"=>"1", "enquiry"=>{"guest_name"=>"test1", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"01/04/2021", "end_date"=>"04/04/2021"}}
+  [1m[36mEnquiry Load (0.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:26:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 667)
+
+
+Started POST "/enquiries/1" for ::1 at 2021-04-29 21:12:29 +1000
+  
+ActionController::RoutingError (No route matches [POST] "/enquiries/1"):
+  
+Started POST "/enquiries" for ::1 at 2021-04-29 21:12:36 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"test2", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"01/04/2021", "end_date"=>"04/04/2021", "enquiry"=>{"guest_name"=>"test2", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"01/04/2021", "end_date"=>"04/04/2021"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (0.5ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "test2"], ["guest_phone", "12345"], ["guest_email", "test@test.com"], ["room_type", "room1"], ["board_type", "board1"], ["number_of_guests", 2], ["start_date", "2021-04-01"], ["end_date", "2021-04-04"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 1780)
+
+
+Started GET "/enquiries" for ::1 at 2021-04-29 21:12:41 +1000
+Processing by EnquiriesController#index as */*
+  Parameters: {"guest_name"=>"test2", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"01/04/2021", "end_date"=>"04/04/2021", "enquiry"=>{"guest_name"=>"test2", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"01/04/2021", "end_date"=>"04/04/2021"}}
+  [1m[36mEnquiry Load (1.1ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.1ms | Allocations: 920)
+
+
+Started DELETE "/enquiries/2" for ::1 at 2021-04-29 21:12:52 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"guest_name"=>"test2", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"01/04/2021", "end_date"=>"04/04/2021", "id"=>"2", "enquiry"=>{"guest_name"=>"test2", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"01/04/2021", "end_date"=>"04/04/2021"}}
+  [1m[36mEnquiry Load (0.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (0.5ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 1905)
+
+
+Started GET "/enquiries/2" for ::1 at 2021-04-29 21:12:58 +1000
+Processing by EnquiriesController#show as */*
+  Parameters: {"guest_name"=>"test2", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"01/04/2021", "end_date"=>"04/04/2021", "id"=>"2", "enquiry"=>{"guest_name"=>"test2", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"01/04/2021", "end_date"=>"04/04/2021"}}
+  [1m[36mEnquiry Load (0.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:26:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 534)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=2):
+  
+app/controllers/enquiries_controller.rb:26:in `show'
+Started GET "/enquiries" for ::1 at 2021-04-29 21:13:03 +1000
+Processing by EnquiriesController#index as */*
+  Parameters: {"guest_name"=>"test2", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"01/04/2021", "end_date"=>"04/04/2021", "enquiry"=>{"guest_name"=>"test2", "guest_phone"=>"12345", "guest_email"=>"test@test.com", "room_type"=>"room1", "board_type"=>"board1", "number_of_guests"=>2, "start_date"=>"01/04/2021", "end_date"=>"04/04/2021"}}
+  [1m[36mEnquiry Load (0.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms | Allocations: 780)
+
+
