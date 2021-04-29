@@ -67,7 +67,7 @@ position: relative;
 
 .table {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 

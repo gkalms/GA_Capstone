@@ -26,23 +26,23 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData(Room, Boarding, Rates) {
-  return { Room, Boarding, Rates };
+function createData(Room, Occupancy, Rates) {
+  return { Room, Occupancy, Rates };
 }
 
 const rows = [
-  createData('Standard room', 'B&B', 'KSH 3000'),
-  createData('Standard room', 'Half Board', 'KSH 6000'),
-  createData('Standard room', 'Full Board', 'KSH 9000'),
+  createData('Standard room', '2', 'KSH 3000'),
+  createData('Suite', '4', 'KSH 6000'),
+  createData('Cottage', '6', 'KSH 9000'),
 ];
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 700,
+    minWidth: 300,
   },
 });
 
-export const AccomodationTable = () => {
+export const RoomTable = () => {
   const classes = useStyles();
 
   return (
@@ -51,7 +51,7 @@ export const AccomodationTable = () => {
         <TableHead>
           <TableRow>
             <StyledTableCell>Room</StyledTableCell>
-            <StyledTableCell >Boarding</StyledTableCell>
+            <StyledTableCell >Occupancy</StyledTableCell>
             <StyledTableCell >Rates</StyledTableCell>
           </TableRow>
         </TableHead>
@@ -61,7 +61,7 @@ export const AccomodationTable = () => {
               <StyledTableCell component="th" scope="row">
                 {row.Room}
               </StyledTableCell>
-              <StyledTableCell >{row.Boarding}</StyledTableCell>
+              <StyledTableCell >{row.Occupancy}</StyledTableCell>
               <StyledTableCell >{row.Rates}</StyledTableCell>
             </StyledTableRow>
           ))}

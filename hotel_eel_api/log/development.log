@@ -34,3 +34,310 @@ Migrating to Admins (20210427101333)
   [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(4824495724259952825)[0m
   [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mRoom Load (1.9ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mBoard Load (3.6ms)[0m  [1m[34mSELECT "boards".* FROM "boards" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mEnquiry Load (2.2ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mAdmin Load (2.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "admins"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBoard Create (3.4ms)[0m  [1m[32mINSERT INTO "boards" ("board_type", "board_rate_per_person") VALUES ($1, $2) RETURNING "id"[0m  [["board_type", "Bed & Breakfast"], ["board_rate_per_person", "ksh3000"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "boards"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRoom Create (2.4ms)[0m  [1m[32mINSERT INTO "rooms" ("room_type", "room_occupancy", "room_rate") VALUES ($1, $2, $3) RETURNING "id"[0m  [["room_type", "Standard room"], ["room_occupancy", "3"], ["room_rate", "ksh5000"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms"[0m
+Started GET "/" for ::1 at 2021-04-27 22:45:09 +1000
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/georginakalms/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/georginakalms/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.2ms | Allocations: 482)
+Completed 200 OK in 47ms (Views: 21.8ms | ActiveRecord: 0.0ms | Allocations: 4253)
+
+
+Started GET "/welcome" for ::1 at 2021-04-27 22:50:11 +1000
+  
+SyntaxError (/Users/georginakalms/General-assembly/GA_Capstone/hotel_eel_api/config/routes.rb:3: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+  get "/welcome", to "welcome#index"
+                     ^):
+  
+config/routes.rb:3: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+config/routes.rb:3: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+Started GET "/welcome" for ::1 at 2021-04-27 22:53:06 +1000
+  
+Zeitwerk::NameError (expected file /Users/georginakalms/General-assembly/GA_Capstone/hotel_eel_api/app/controllers/welcome_controller.rb to define constant WelcomeController, but didn't):
+  
+zeitwerk (2.4.2) lib/zeitwerk/loader/callbacks.rb:18:in `on_file_autoloaded'
+zeitwerk (2.4.2) lib/zeitwerk/kernel.rb:27:in `block in require'
+zeitwerk (2.4.2) lib/zeitwerk/kernel.rb:26:in `tap'
+zeitwerk (2.4.2) lib/zeitwerk/kernel.rb:26:in `require'
+activesupport (6.1.3.1) lib/active_support/inflector/methods.rb:274:in `const_get'
+activesupport (6.1.3.1) lib/active_support/inflector/methods.rb:274:in `constantize'
+activesupport (6.1.3.1) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.1.3.1) lib/action_dispatch/http/request.rb:93:in `controller_class_for'
+actionpack (6.1.3.1) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (6.1.3.1) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (6.1.3.1) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (6.1.3.1) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (6.1.3.1) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (6.1.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.3.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.1) lib/rails/engine.rb:539:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2021-04-27 22:53:07 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/welcome" for ::1 at 2021-04-27 22:54:41 +1000
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 163)
+
+
+Started GET "/rooms" for ::1 at 2021-04-27 23:21:04 +1000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoomsController#index as HTML
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 2308)
+
+
+Started GET "/" for ::1 at 2021-04-27 23:21:31 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/georginakalms/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/georginakalms/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 34.2ms | Allocations: 309)
+Completed 200 OK in 66ms (Views: 41.8ms | ActiveRecord: 0.0ms | Allocations: 2469)
+
+
+Started GET "/welcome" for ::1 at 2021-04-27 23:21:54 +1000
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 112)
+
+
+Started GET "/rooms" for ::1 at 2021-04-27 23:22:04 +1000
+Processing by RoomsController#index as HTML
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 96)
+
+
+Started GET "/" for ::1 at 2021-04-29 18:59:27 +1000
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/georginakalms/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/georginakalms/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 27.5ms | Allocations: 309)
+Completed 200 OK in 47ms (Views: 33.2ms | ActiveRecord: 0.0ms | Allocations: 2473)
+
+
+Started GET "/welcome" for ::1 at 2021-04-29 18:59:35 +1000
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 162)
+
+
+Started GET "/rooms" for ::1 at 2021-04-29 18:59:44 +1000
+Processing by RoomsController#index as HTML
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 111)
+
+
+Started GET "/rooms" for ::1 at 2021-04-29 19:24:30 +1000
+Processing by RoomsController#index as */*
+Completed 500 Internal Server Error in 3ms (Allocations: 1784)
+
+
+  
+NameError (uninitialized constant RoomsController::Rooms):
+  
+app/controllers/rooms_controller.rb:3:in `index'
+Started GET "/room" for ::1 at 2021-04-29 19:24:59 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/room"):
+  
+Started GET "/Rooms" for ::1 at 2021-04-29 19:29:00 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/Rooms"):
+  
+Started GET "/" for ::1 at 2021-04-29 19:29:13 +1000
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/georginakalms/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/georginakalms/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 23.4ms | Allocations: 192)
+Completed 200 OK in 32ms (Views: 26.4ms | Allocations: 829)
+
+
+Started GET "/rooms" for ::1 at 2021-04-29 19:33:41 +1000
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoomsController#index as */*
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2316)
+
+
+Started POST "/rooms" for ::1 at 2021-04-29 19:35:02 +1000
+Processing by RoomsController#create as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 126)
+
+
+Started POST "/rooms" for ::1 at 2021-04-29 19:39:29 +1000
+Processing by RoomsController#create as */*
+  Parameters: {"room_type"=>"Standard Double", "room_occupancy"=>3, "room_rate"=>"Ksh 4500", "room"=>{"room_type"=>"Standard Double", "room_occupancy"=>3, "room_rate"=>"Ksh 4500"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 8.0ms | Allocations: 104)
+
+
+Started POST "/rooms" for ::1 at 2021-04-29 19:41:49 +1000
+Processing by RoomsController#create as */*
+  Parameters: {"room_type"=>"Standard Double", "room_occupancy"=>3, "room_rate"=>"Ksh 4500", "room"=>{"room_type"=>"Standard Double", "room_occupancy"=>3, "room_rate"=>"Ksh 4500"}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 136)
+
+
+Started POST "/rooms" for ::1 at 2021-04-29 19:50:27 +1000
+Processing by RoomsController#create as */*
+  Parameters: {"room_type"=>"Standard Double", "room_occupancy"=>3, "room_rate"=>"Ksh 4500", "room"=>{"room_type"=>"Standard Double", "room_occupancy"=>3, "room_rate"=>"Ksh 4500"}}
+  [1m[36mTRANSACTION (29.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rooms_controller.rb:7:in `create'
+  [1m[36mRoom Create (112.8ms)[0m  [1m[32mINSERT INTO "rooms" ("room_type", "room_occupancy", "room_rate") VALUES ($1, $2, $3) RETURNING "id"[0m  [["room_type", "Standard Double"], ["room_occupancy", "3"], ["room_rate", "Ksh 4500"]]
+  ↳ app/controllers/rooms_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (35.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rooms_controller.rb:7:in `create'
+Completed 200 OK in 401ms (Views: 0.3ms | ActiveRecord: 414.4ms | Allocations: 4224)
+
+
+Started GET "/rooms" for ::1 at 2021-04-29 19:52:57 +1000
+Processing by RoomsController#index as */*
+  Parameters: {"room_type"=>"Standard Double", "room_occupancy"=>3, "room_rate"=>"Ksh 4500", "room"=>{"room_type"=>"Standard Double", "room_occupancy"=>3, "room_rate"=>"Ksh 4500"}}
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 50.9ms | Allocations: 124)
+
+
+Started GET "/rooms" for ::1 at 2021-04-29 19:53:36 +1000
+Processing by RoomsController#index as */*
+  Parameters: {"room_type"=>"Standard Double", "room_occupancy"=>3, "room_rate"=>"Ksh 4500", "room"=>{"room_type"=>"Standard Double", "room_occupancy"=>3, "room_rate"=>"Ksh 4500"}}
+  [1m[36mRoom Load (12.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:3:in `index'
+Completed 200 OK in 90ms (Views: 29.9ms | ActiveRecord: 105.6ms | Allocations: 2595)
+
+
+Started GET "/rooms/1" for ::1 at 2021-04-29 19:53:43 +1000
+Processing by RoomsController#show as */*
+  Parameters: {"room_type"=>"Standard Double", "room_occupancy"=>3, "room_rate"=>"Ksh 4500", "id"=>"1", "room"=>{"room_type"=>"Standard Double", "room_occupancy"=>3, "room_rate"=>"Ksh 4500"}}
+  [1m[36mRoom Load (28.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:18:in `show'
+Completed 200 OK in 56ms (Views: 0.8ms | ActiveRecord: 29.1ms | Allocations: 1013)
+
+
+Started PATCH "/rooms/1" for ::1 at 2021-04-29 19:54:10 +1000
+Processing by RoomsController#update as */*
+  Parameters: {"room_type"=>"Standard Double", "room_occupancy"=>1, "room_rate"=>"Ksh 5000", "id"=>"1", "room"=>{"room_type"=>"Standard Double", "room_occupancy"=>1, "room_rate"=>"Ksh 5000"}}
+  [1m[36mRoom Load (3.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rooms_controller.rb:23:in `update'
+  [1m[36mRoom Update (41.5ms)[0m  [1m[33mUPDATE "rooms" SET "room_type" = $1, "room_occupancy" = $2, "room_rate" = $3 WHERE "rooms"."id" = $4[0m  [["room_type", "Standard Double"], ["room_occupancy", "1"], ["room_rate", "Ksh 5000"], ["id", 1]]
+  ↳ app/controllers/rooms_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rooms_controller.rb:23:in `update'
+Completed 200 OK in 72ms (Views: 1.2ms | ActiveRecord: 48.9ms | Allocations: 2199)
+
+
+Started GET "/rooms/1" for ::1 at 2021-04-29 19:54:15 +1000
+Processing by RoomsController#show as */*
+  Parameters: {"room_type"=>"Standard Double", "room_occupancy"=>1, "room_rate"=>"Ksh 5000", "id"=>"1", "room"=>{"room_type"=>"Standard Double", "room_occupancy"=>1, "room_rate"=>"Ksh 5000"}}
+  [1m[36mRoom Load (2.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:18:in `show'
+Completed 200 OK in 19ms (Views: 0.6ms | ActiveRecord: 2.7ms | Allocations: 581)
+
+
+Started POST "/rooms" for ::1 at 2021-04-29 19:54:51 +1000
+Processing by RoomsController#create as */*
+  Parameters: {"room_type"=>"test", "room_occupancy"=>1, "room_rate"=>"test", "room"=>{"room_type"=>"test", "room_occupancy"=>1, "room_rate"=>"test"}}
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rooms_controller.rb:7:in `create'
+  [1m[36mRoom Create (43.9ms)[0m  [1m[32mINSERT INTO "rooms" ("room_type", "room_occupancy", "room_rate") VALUES ($1, $2, $3) RETURNING "id"[0m  [["room_type", "test"], ["room_occupancy", "1"], ["room_rate", "test"]]
+  ↳ app/controllers/rooms_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rooms_controller.rb:7:in `create'
+Completed 200 OK in 84ms (Views: 0.6ms | ActiveRecord: 47.8ms | Allocations: 1687)
+
+
+Started GET "/rooms" for ::1 at 2021-04-29 19:54:57 +1000
+Processing by RoomsController#index as */*
+  Parameters: {"room_type"=>"test", "room_occupancy"=>1, "room_rate"=>"test", "room"=>{"room_type"=>"test", "room_occupancy"=>1, "room_rate"=>"test"}}
+  [1m[36mRoom Load (0.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:3:in `index'
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.8ms | Allocations: 832)
+
+
+Started GET "/rooms/3" for ::1 at 2021-04-29 19:55:12 +1000
+Processing by RoomsController#show as */*
+  Parameters: {"room_type"=>"test", "room_occupancy"=>1, "room_rate"=>"test", "id"=>"3", "room"=>{"room_type"=>"test", "room_occupancy"=>1, "room_rate"=>"test"}}
+  [1m[36mRoom Load (3.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:18:in `show'
+Completed 200 OK in 24ms (Views: 1.6ms | ActiveRecord: 3.2ms | Allocations: 580)
+
+
+Started DELETE "/rooms/3" for ::1 at 2021-04-29 19:55:22 +1000
+Processing by RoomsController#destroy as */*
+  Parameters: {"room_type"=>"test", "room_occupancy"=>1, "room_rate"=>"test", "id"=>"3", "room"=>{"room_type"=>"test", "room_occupancy"=>1, "room_rate"=>"test"}}
+  [1m[36mRoom Load (0.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/rooms_controller.rb:29:in `destroy'
+  [1m[36mRoom Destroy (35.4ms)[0m  [1m[31mDELETE FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/rooms_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/rooms_controller.rb:29:in `destroy'
+Completed 200 OK in 67ms (Views: 0.7ms | ActiveRecord: 46.3ms | Allocations: 1901)
+
+
+Started GET "/rooms/3" for ::1 at 2021-04-29 19:55:27 +1000
+Processing by RoomsController#show as */*
+  Parameters: {"room_type"=>"test", "room_occupancy"=>1, "room_rate"=>"test", "id"=>"3", "room"=>{"room_type"=>"test", "room_occupancy"=>1, "room_rate"=>"test"}}
+  [1m[36mRoom Load (0.9ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/rooms_controller.rb:18:in `show'
+Completed 404 Not Found in 40ms (ActiveRecord: 0.9ms | Allocations: 527)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Room with 'id'=3):
+  
+app/controllers/rooms_controller.rb:18:in `show'
+Started GET "/rooms" for ::1 at 2021-04-29 19:55:33 +1000
+Processing by RoomsController#index as */*
+  Parameters: {"room_type"=>"test", "room_occupancy"=>1, "room_rate"=>"test", "room"=>{"room_type"=>"test", "room_occupancy"=>1, "room_rate"=>"test"}}
+  [1m[36mRoom Load (0.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:3:in `index'
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.8ms | Allocations: 759)
+
+
+Started GET "/rooms" for ::1 at 2021-04-29 20:00:29 +1000
+Processing by RoomsController#index as HTML
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:3:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.5ms | Allocations: 751)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-04-29 20:00:29 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  

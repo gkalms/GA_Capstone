@@ -4,7 +4,8 @@ import { Header } from "./Components/Header";
 import { Overview } from "./Components/Overview";
 import { ImageData } from "./Components/Images";
 import { ImageSlider } from "./Components/ImageSlider";
-import { AccomodationTable } from "./Components/AccomodationtType.js";
+import { RoomTable} from "./Components/RoomType";
+import { BoardTable} from "./Components/BoardType";
 import {Enquiry} from "./Components/Enquiry";
 
 const App = () => {
@@ -13,7 +14,8 @@ const App = () => {
       <Header />
       <Overview />
       <ImageSlider slides={ImageData} />
-      <AccomodationTable />
+      <RoomTable />
+      <BoardTable />
       <Enquiry />
     </div>
   );
