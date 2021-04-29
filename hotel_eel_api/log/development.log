@@ -341,3 +341,115 @@ Started GET "/favicon.ico" for ::1 at 2021-04-29 20:00:29 +1000
   
 ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
   
+Started GET "/boards" for ::1 at 2021-04-29 20:26:01 +1000
+Processing by BoardsController#index as */*
+  Parameters: {"room_type"=>"test", "room_occupancy"=>1, "room_rate"=>"test", "board"=>{}}
+  [1m[36mBoard Load (27.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/boards_controller.rb:3:in `index'
+Completed 200 OK in 54ms (Views: 18.9ms | ActiveRecord: 124.4ms | Allocations: 2289)
+
+
+Started POST "/boards" for ::1 at 2021-04-29 20:26:54 +1000
+Processing by BoardsController#create as */*
+  Parameters: {"board_type"=>"Half Board", "board_rate_per_person"=>"ksh7000", "board"=>{"board_type"=>"Half Board", "board_rate_per_person"=>"ksh7000"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/boards_controller.rb:7:in `create'
+  [1m[36mBoard Create (5.0ms)[0m  [1m[32mINSERT INTO "boards" ("board_type", "board_rate_per_person") VALUES ($1, $2) RETURNING "id"[0m  [["board_type", "Half Board"], ["board_rate_per_person", "ksh7000"]]
+  ↳ app/controllers/boards_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/boards_controller.rb:7:in `create'
+Completed 200 OK in 31ms (Views: 0.3ms | ActiveRecord: 7.4ms | Allocations: 1765)
+
+
+Started GET "/boards" for ::1 at 2021-04-29 20:26:59 +1000
+Processing by BoardsController#index as */*
+  Parameters: {"board_type"=>"Half Board", "board_rate_per_person"=>"ksh7000", "board"=>{"board_type"=>"Half Board", "board_rate_per_person"=>"ksh7000"}}
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/boards_controller.rb:3:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 735)
+
+
+Started PATCH "/boards/2" for ::1 at 2021-04-29 20:27:27 +1000
+Processing by BoardsController#update as */*
+  Parameters: {"board_type"=>"Half-Board", "board_rate_per_person"=>"Ksh 7000", "id"=>"2", "board"=>{"board_type"=>"Half-Board", "board_rate_per_person"=>"Ksh 7000"}}
+  [1m[36mBoard Load (0.7ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/boards_controller.rb:22:in `update'
+  [1m[36mBoard Update (0.9ms)[0m  [1m[33mUPDATE "boards" SET "board_type" = $1, "board_rate_per_person" = $2 WHERE "boards"."id" = $3[0m  [["board_type", "Half-Board"], ["board_rate_per_person", "Ksh 7000"], ["id", 2]]
+  ↳ app/controllers/boards_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/boards_controller.rb:22:in `update'
+Completed 200 OK in 27ms (Views: 0.2ms | ActiveRecord: 3.8ms | Allocations: 2286)
+
+
+Started GET "/boards" for ::1 at 2021-04-29 20:27:36 +1000
+Processing by BoardsController#index as */*
+  Parameters: {"board_type"=>"Half-Board", "board_rate_per_person"=>"Ksh 7000", "board"=>{"board_type"=>"Half-Board", "board_rate_per_person"=>"Ksh 7000"}}
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/boards_controller.rb:3:in `index'
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.4ms | Allocations: 735)
+
+
+Started POST "/boards" for ::1 at 2021-04-29 20:27:58 +1000
+Processing by BoardsController#create as */*
+  Parameters: {"board_type"=>"Test-Board", "board_rate_per_person"=>"Ksh 11000", "board"=>{"board_type"=>"Test-Board", "board_rate_per_person"=>"Ksh 11000"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/boards_controller.rb:7:in `create'
+  [1m[36mBoard Create (0.5ms)[0m  [1m[32mINSERT INTO "boards" ("board_type", "board_rate_per_person") VALUES ($1, $2) RETURNING "id"[0m  [["board_type", "Test-Board"], ["board_rate_per_person", "Ksh 11000"]]
+  ↳ app/controllers/boards_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/boards_controller.rb:7:in `create'
+Completed 200 OK in 29ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 1646)
+
+
+Started GET "/boards" for ::1 at 2021-04-29 20:28:03 +1000
+Processing by BoardsController#index as */*
+  Parameters: {"board_type"=>"Test-Board", "board_rate_per_person"=>"Ksh 11000", "board"=>{"board_type"=>"Test-Board", "board_rate_per_person"=>"Ksh 11000"}}
+  [1m[36mBoard Load (0.3ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/boards_controller.rb:3:in `index'
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms | Allocations: 786)
+
+
+Started GET "/boards/3" for ::1 at 2021-04-29 20:28:11 +1000
+Processing by BoardsController#show as */*
+  Parameters: {"board_type"=>"Test-Board", "board_rate_per_person"=>"Ksh 11000", "id"=>"3", "board"=>{"board_type"=>"Test-Board", "board_rate_per_person"=>"Ksh 11000"}}
+  [1m[36mBoard Load (0.5ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:17:in `show'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 564)
+
+
+Started DELETE "/boards/3" for ::1 at 2021-04-29 20:28:19 +1000
+Processing by BoardsController#destroy as */*
+  Parameters: {"board_type"=>"Test-Board", "board_rate_per_person"=>"Ksh 11000", "id"=>"3", "board"=>{"board_type"=>"Test-Board", "board_rate_per_person"=>"Ksh 11000"}}
+  [1m[36mBoard Load (0.6ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:27:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/boards_controller.rb:27:in `destroy'
+  [1m[36mBoard Destroy (19.0ms)[0m  [1m[31mDELETE FROM "boards" WHERE "boards"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/boards_controller.rb:27:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/boards_controller.rb:27:in `destroy'
+Completed 200 OK in 59ms (Views: 0.3ms | ActiveRecord: 20.7ms | Allocations: 1892)
+
+
+Started GET "/boards/3" for ::1 at 2021-04-29 20:28:27 +1000
+Processing by BoardsController#show as */*
+  Parameters: {"board_type"=>"Test-Board", "board_rate_per_person"=>"Ksh 11000", "id"=>"3", "board"=>{"board_type"=>"Test-Board", "board_rate_per_person"=>"Ksh 11000"}}
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards" WHERE "boards"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/boards_controller.rb:17:in `show'
+Completed 404 Not Found in 15ms (ActiveRecord: 0.4ms | Allocations: 524)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Board with 'id'=3):
+  
+app/controllers/boards_controller.rb:17:in `show'
+Started GET "/boards" for ::1 at 2021-04-29 20:28:33 +1000
+Processing by BoardsController#index as */*
+  Parameters: {"board_type"=>"Test-Board", "board_rate_per_person"=>"Ksh 11000", "board"=>{"board_type"=>"Test-Board", "board_rate_per_person"=>"Ksh 11000"}}
+  [1m[36mBoard Load (0.4ms)[0m  [1m[34mSELECT "boards".* FROM "boards"[0m
+  ↳ app/controllers/boards_controller.rb:3:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 734)
+
+
