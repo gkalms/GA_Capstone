@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+/*import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router";
 
 export const DeleteEnquiry = () => {
@@ -128,4 +128,4 @@ export const DeleteEnquiry = () => {
       </form>
     </div>
   );
-};
+};*/

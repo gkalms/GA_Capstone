@@ -1726,3 +1726,1634 @@ Processing by EnquiriesController#show as */*
 Completed 200 OK in 15ms (Views: 1.4ms | ActiveRecord: 1.9ms | Allocations: 667)
 
 
+Started GET "/" for ::1 at 2021-05-01 17:25:09 +1000
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/georginakalms/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/georginakalms/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 160.1ms | Allocations: 310)
+Completed 200 OK in 272ms (Views: 188.2ms | ActiveRecord: 0.0ms | Allocations: 2474)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-05-01 17:25:11 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:26:55 +1000
+Started GET "/enquiries/undefined" for 127.0.0.1 at 2021-05-01 17:26:55 +1000
+Processing by EnquiriesController#show as */*
+Processing by EnquiriesController#index as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mEnquiry Load (123.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 662ms (Views: 223.9ms | ActiveRecord: 411.8ms | Allocations: 8063)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:26:56 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (2.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 28ms (Views: 18.9ms | ActiveRecord: 2.7ms | Allocations: 1432)
+
+
+  [1m[36mEnquiry Load (8.0ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:26:in `show'
+Completed 404 Not Found in 801ms (ActiveRecord: 242.3ms | Allocations: 12706)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=undefined):
+  
+app/controllers/enquiries_controller.rb:26:in `show'
+Started GET "/enquiries/undefined" for 127.0.0.1 at 2021-05-01 17:26:56 +1000
+Processing by EnquiriesController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mEnquiry Load (6.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:26:in `show'
+Completed 404 Not Found in 15ms (ActiveRecord: 6.8ms | Allocations: 550)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=undefined):
+  
+app/controllers/enquiries_controller.rb:26:in `show'
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:30:37 +1000
+Started GET "/enquiries/undefined" for 127.0.0.1 at 2021-05-01 17:30:37 +1000
+Processing by EnquiriesController#index as */*
+Processing by EnquiriesController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mEnquiry Load (1.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 25ms (Views: 21.4ms | ActiveRecord: 1.5ms | Allocations: 1722)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:30:37 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 1.3ms | Allocations: 1429)
+
+
+  [1m[36mEnquiry Load (9.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:26:in `show'
+Completed 404 Not Found in 62ms (ActiveRecord: 37.9ms | Allocations: 4407)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=undefined):
+  
+app/controllers/enquiries_controller.rb:26:in `show'
+Started GET "/enquiries/undefined" for 127.0.0.1 at 2021-05-01 17:30:37 +1000
+Processing by EnquiriesController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mEnquiry Load (0.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:26:in `show'
+Completed 404 Not Found in 9ms (ActiveRecord: 0.7ms | Allocations: 533)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=undefined):
+  
+app/controllers/enquiries_controller.rb:26:in `show'
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:32:10 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.8ms | Allocations: 1430)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:33:36 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.9ms | Allocations: 1412)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:33:39 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.7ms | Allocations: 1412)
+
+
+Started GET "/enquiries/4" for 127.0.0.1 at 2021-05-01 17:33:41 +1000
+Processing by EnquiriesController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mEnquiry Load (2.2ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:26:in `show'
+Completed 200 OK in 13ms (Views: 1.1ms | ActiveRecord: 2.2ms | Allocations: 669)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:34:19 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.8ms | Allocations: 1414)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:34:24 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.7ms | Allocations: 1412)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-01 17:35:59 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-01 17:36:02 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-01 17:36:25 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-01 17:36:25 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-01 17:36:25 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:36:27 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (8.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 77ms (Views: 66.9ms | ActiveRecord: 8.8ms | Allocations: 1411)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-01 17:37:11 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-01 17:37:11 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:37:11 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.7ms | Allocations: 1411)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:39:16 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (12.1ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 21ms (Views: 7.9ms | ActiveRecord: 12.1ms | Allocations: 1412)
+
+
+Started DELETE "/enquiries/6" for 127.0.0.1 at 2021-05-01 17:39:16 +1000
+Started DELETE "/enquiries/5" for 127.0.0.1 at 2021-05-01 17:39:16 +1000
+Started DELETE "/enquiries/1" for 127.0.0.1 at 2021-05-01 17:39:16 +1000
+Started DELETE "/enquiries/6" for 127.0.0.1 at 2021-05-01 17:39:16 +1000
+Processing by EnquiriesController#destroy as */*
+Started DELETE "/enquiries/5" for 127.0.0.1 at 2021-05-01 17:39:16 +1000
+Processing by EnquiriesController#destroy as */*
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"1", "enquiry"=>{}}
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"6", "enquiry"=>{}}
+  Parameters: {"id"=>"6", "enquiry"=>{}}
+  Parameters: {"id"=>"5", "enquiry"=>{}}
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"5", "enquiry"=>{}}
+  [1m[36mEnquiry Load (13.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (39.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (44.8ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (31.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 166ms (Views: 0.6ms | ActiveRecord: 128.9ms | Allocations: 3859)
+
+
+Started DELETE "/enquiries/1" for 127.0.0.1 at 2021-05-01 17:39:16 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"1", "enquiry"=>{}}
+  [1m[36mEnquiry Load (0.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (5.8ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 202ms (Views: 0.7ms | ActiveRecord: 9.3ms | Allocations: 4625)
+
+
+Started DELETE "/enquiries/4" for 127.0.0.1 at 2021-05-01 17:39:16 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"4", "enquiry"=>{}}
+  [1m[36mEnquiry Load (2.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (28.8ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (3.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 404 Not Found in 469ms (ActiveRecord: 287.4ms | Allocations: 16218)
+
+
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=1):
+  
+app/controllers/enquiries_controller.rb:45:in `destroy'
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 140ms (Views: 0.9ms | ActiveRecord: 37.0ms | Allocations: 15328)
+
+
+  [1m[36mEnquiry Load (79.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mEnquiry Load (77.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 404 Not Found in 548ms (ActiveRecord: 325.0ms | Allocations: 28955)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=6):
+  
+app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (17.2ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Started DELETE "/enquiries/3" for 127.0.0.1 at 2021-05-01 17:39:16 +1000
+Started DELETE "/enquiries/7" for 127.0.0.1 at 2021-05-01 17:39:16 +1000
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Started DELETE "/enquiries/4" for 127.0.0.1 at 2021-05-01 17:39:16 +1000
+  [1m[36mTRANSACTION (61.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"7", "enquiry"=>{}}
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"4", "enquiry"=>{}}
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"3", "enquiry"=>{}}
+  [1m[36mEnquiry Destroy (15.6ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (27.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (8.1ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mEnquiry Load (5.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 404 Not Found in 24ms (ActiveRecord: 8.1ms | Allocations: 1932)
+
+
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=4):
+  
+app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (71.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (60.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (77.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mEnquiry Destroy (73.2ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 734ms (Views: 0.5ms | ActiveRecord: 483.3ms | Allocations: 57054)
+
+
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 752ms (Views: 0.5ms | ActiveRecord: 404.0ms | Allocations: 58719)
+
+
+  [1m[36mEnquiry Destroy (4.2ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 3]]
+  [1m[36mEnquiry Destroy (12.2ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (26.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 152ms (Views: 0.5ms | ActiveRecord: 104.5ms | Allocations: 17882)
+
+
+  [1m[36mTRANSACTION (39.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 174ms (Views: 0.6ms | ActiveRecord: 117.5ms | Allocations: 18911)
+
+
+Started DELETE "/enquiries/3" for 127.0.0.1 at 2021-05-01 17:39:17 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"3", "enquiry"=>{}}
+Started DELETE "/enquiries/7" for 127.0.0.1 at 2021-05-01 17:39:17 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"7", "enquiry"=>{}}
+  [1m[36mEnquiry Load (1.2ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mEnquiry Load (1.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 404 Not Found in 14ms (ActiveRecord: 1.2ms | Allocations: 926)
+
+
+Completed 404 Not Found in 24ms (ActiveRecord: 1.3ms | Allocations: 1647)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=7):
+  
+app/controllers/enquiries_controller.rb:45:in `destroy'
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=3):
+  
+app/controllers/enquiries_controller.rb:45:in `destroy'
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:39:56 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.5ms | Allocations: 641)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:40:04 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (21.2ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 50ms (Views: 27.7ms | ActiveRecord: 21.2ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:40:14 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.7ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:40:15 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.9ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:40:16 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:40:19 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.8ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:40:54 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 1.7ms | Allocations: 643)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:40:56 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (3.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 3.9ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:41:03 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:41:04 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:41:16 +1000
+Started GET "/enquiries/undefined" for 127.0.0.1 at 2021-05-01 17:41:16 +1000
+Processing by EnquiriesController#index as */*
+Processing by EnquiriesController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mEnquiry Load (1.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  [1m[36mEnquiry Load (0.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+  ↳ app/controllers/enquiries_controller.rb:26:in `show'
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 1.8ms | Allocations: 1085)
+
+
+Completed 404 Not Found in 27ms (ActiveRecord: 0.9ms | Allocations: 1138)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=undefined):
+  
+app/controllers/enquiries_controller.rb:26:in `show'
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:41:16 +1000
+Processing by EnquiriesController#index as */*
+Started GET "/enquiries/undefined" for 127.0.0.1 at 2021-05-01 17:41:16 +1000
+Processing by EnquiriesController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mEnquiry Load (1.2ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  [1m[36mEnquiry Load (1.1ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:26:in `show'
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 404 Not Found in 15ms (ActiveRecord: 1.1ms | Allocations: 1011)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=undefined):
+  
+app/controllers/enquiries_controller.rb:26:in `show'
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 1.2ms | Allocations: 1859)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:41:23 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.6ms | Allocations: 641)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:41:28 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.5ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:41:43 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.0ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 1.0ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:41:48 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (29.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 40ms (Views: 9.9ms | ActiveRecord: 29.6ms | Allocations: 645)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:41:48 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 1.5ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:43:17 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 57ms (Views: 48.4ms | ActiveRecord: 1.5ms | Allocations: 642)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 17:43:35 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"Test2", "guest_phone"=>"t", "guest_email"=>"t", "room_type"=>"t", "board_type"=>"t", "number_of_guests"=>"1", "start_date"=>"03/05/2021", "end_date"=>"04/05/201", "enquiry"=>{"guest_name"=>"Test2", "guest_phone"=>"t", "guest_email"=>"t", "room_type"=>"t", "board_type"=>"t", "number_of_guests"=>"1", "start_date"=>"03/05/2021", "end_date"=>"04/05/201"}}
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (205.3ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "Test2"], ["guest_phone", "t"], ["guest_email", "t"], ["room_type", "t"], ["board_type", "t"], ["number_of_guests", 1], ["start_date", "2021-05-03"], ["end_date", "0201-05-04"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (54.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 315ms (Views: 1.3ms | ActiveRecord: 270.2ms | Allocations: 1956)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:43:36 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (143.0ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 167ms (Views: 22.9ms | ActiveRecord: 143.0ms | Allocations: 782)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:44:02 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.0ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 30ms (Views: 26.2ms | ActiveRecord: 1.0ms | Allocations: 781)
+
+
+Started DELETE "/enquiries/8" for 127.0.0.1 at 2021-05-01 17:44:02 +1000
+Started DELETE "/enquiries/8" for 127.0.0.1 at 2021-05-01 17:44:02 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"8", "enquiry"=>{}}
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"8", "enquiry"=>{}}
+  [1m[36mEnquiry Load (1.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (24.7ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (40.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 68ms (Views: 0.7ms | ActiveRecord: 32.0ms | Allocations: 2939)
+
+
+  [1m[36mEnquiry Destroy (3.4ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (27.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 103ms (Views: 1.0ms | ActiveRecord: 71.5ms | Allocations: 4008)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:44:18 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.8ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:44:21 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.8ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:44:23 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 1.3ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:44:26 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.9ms | Allocations: 642)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 17:44:39 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"Test2", "guest_phone"=>"t", "guest_email"=>"t", "room_type"=>"t", "board_type"=>"t", "number_of_guests"=>"1", "start_date"=>"03/05/2021", "end_date"=>"04/05/201", "enquiry"=>{"guest_name"=>"Test2", "guest_phone"=>"t", "guest_email"=>"t", "room_type"=>"t", "board_type"=>"t", "number_of_guests"=>"1", "start_date"=>"03/05/2021", "end_date"=>"04/05/201"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (3.8ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "Test2"], ["guest_phone", "t"], ["guest_email", "t"], ["room_type", "t"], ["board_type", "t"], ["number_of_guests", 1], ["start_date", "2021-05-03"], ["end_date", "0201-05-04"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 38ms (Views: 0.4ms | ActiveRecord: 5.1ms | Allocations: 1785)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:44:39 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (5.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 14ms (Views: 7.9ms | ActiveRecord: 5.5ms | Allocations: 781)
+
+
+Started DELETE "/enquiries/9" for 127.0.0.1 at 2021-05-01 17:44:39 +1000
+Started DELETE "/enquiries/9" for 127.0.0.1 at 2021-05-01 17:44:39 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"9", "enquiry"=>{}}
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"9", "enquiry"=>{}}
+  [1m[36mEnquiry Load (10.0ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mEnquiry Load (1.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (29.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (29.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (4.2ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mEnquiry Destroy (9.7ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 84ms (Views: 0.6ms | ActiveRecord: 38.4ms | Allocations: 3292)
+
+
+  [1m[36mTRANSACTION (25.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 122ms (Views: 0.7ms | ActiveRecord: 74.8ms | Allocations: 4299)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:45:23 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (5.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 198ms (Views: 160.2ms | ActiveRecord: 5.6ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:45:43 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.9ms | Allocations: 642)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 17:45:55 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"Test3", "guest_phone"=>"t", "guest_email"=>"t", "room_type"=>"t", "board_type"=>"t", "number_of_guests"=>"1", "start_date"=>"03/05/2021", "end_date"=>"04/05/201", "enquiry"=>{"guest_name"=>"Test3", "guest_phone"=>"t", "guest_email"=>"t", "room_type"=>"t", "board_type"=>"t", "number_of_guests"=>"1", "start_date"=>"03/05/2021", "end_date"=>"04/05/201"}}
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (2.7ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "Test3"], ["guest_phone", "t"], ["guest_email", "t"], ["room_type", "t"], ["board_type", "t"], ["number_of_guests", 1], ["start_date", "2021-05-03"], ["end_date", "0201-05-04"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 29ms (Views: 0.6ms | ActiveRecord: 9.3ms | Allocations: 1781)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:45:55 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (4.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 68ms (Views: 62.2ms | ActiveRecord: 4.8ms | Allocations: 781)
+
+
+Started DELETE "/enquiries/10" for 127.0.0.1 at 2021-05-01 17:45:55 +1000
+Started DELETE "/enquiries/10" for 127.0.0.1 at 2021-05-01 17:45:55 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"10", "enquiry"=>{}}
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"10", "enquiry"=>{}}
+  [1m[36mEnquiry Load (6.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (25.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (3.4ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (6.1ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (14.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 90ms (Views: 0.6ms | ActiveRecord: 49.9ms | Allocations: 3178)
+
+
+  [1m[36mEnquiry Destroy (26.5ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 10]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 120ms (Views: 0.5ms | ActiveRecord: 45.2ms | Allocations: 4008)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-01 17:47:15 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-01 17:47:16 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started DELETE "/enquiries/10" for 127.0.0.1 at 2021-05-01 17:47:16 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"10", "enquiry"=>{}}
+Started DELETE "/enquiries/10" for 127.0.0.1 at 2021-05-01 17:47:16 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"10", "enquiry"=>{}}
+  [1m[36mEnquiry Load (7.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 404 Not Found in 22ms (ActiveRecord: 7.3ms | Allocations: 578)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=10):
+  
+app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (12.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 404 Not Found in 152ms (ActiveRecord: 12.5ms | Allocations: 12917)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=10):
+  
+app/controllers/enquiries_controller.rb:45:in `destroy'
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:47:16 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 1.3ms | Allocations: 641)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:47:28 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (3.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 46ms (Views: 42.0ms | ActiveRecord: 3.7ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:47:31 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (3.1ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 107ms (Views: 102.9ms | ActiveRecord: 3.1ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:47:36 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.8ms | Allocations: 642)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 17:47:49 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"Test2", "guest_phone"=>"2", "guest_email"=>"2", "room_type"=>"2", "board_type"=>"2", "number_of_guests"=>"2", "start_date"=>"03/05/2021", "end_date"=>"04/05/201", "enquiry"=>{"guest_name"=>"Test2", "guest_phone"=>"2", "guest_email"=>"2", "room_type"=>"2", "board_type"=>"2", "number_of_guests"=>"2", "start_date"=>"03/05/2021", "end_date"=>"04/05/201"}}
+  [1m[36mTRANSACTION (42.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (2.0ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "Test2"], ["guest_phone", "2"], ["guest_email", "2"], ["room_type", "2"], ["board_type", "2"], ["number_of_guests", 2], ["start_date", "2021-05-03"], ["end_date", "0201-05-04"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 69ms (Views: 0.8ms | ActiveRecord: 45.8ms | Allocations: 1785)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:47:49 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (2.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 70ms (Views: 67.2ms | ActiveRecord: 2.5ms | Allocations: 781)
+
+
+Started DELETE "/enquiries/11" for 127.0.0.1 at 2021-05-01 17:47:49 +1000
+Started DELETE "/enquiries/11" for 127.0.0.1 at 2021-05-01 17:47:49 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"11", "enquiry"=>{}}
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"11", "enquiry"=>{}}
+  [1m[36mEnquiry Load (1.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (2.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (30.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (26.1ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 91ms (Views: 0.6ms | ActiveRecord: 37.6ms | Allocations: 2957)
+
+
+  [1m[36mEnquiry Destroy (16.6ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (28.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 131ms (Views: 0.7ms | ActiveRecord: 77.5ms | Allocations: 4008)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:48:03 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.9ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:48:16 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.7ms | Allocations: 642)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 17:48:27 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"t", "guest_phone"=>"t", "guest_email"=>"t", "room_type"=>"t", "board_type"=>"t", "number_of_guests"=>"t", "start_date"=>"03/05/2021", "end_date"=>"05/05/201", "enquiry"=>{"guest_name"=>"t", "guest_phone"=>"t", "guest_email"=>"t", "room_type"=>"t", "board_type"=>"t", "number_of_guests"=>"t", "start_date"=>"03/05/2021", "end_date"=>"05/05/201"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (1.3ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "t"], ["guest_phone", "t"], ["guest_email", "t"], ["room_type", "t"], ["board_type", "t"], ["number_of_guests", 0], ["start_date", "2021-05-03"], ["end_date", "0201-05-05"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 39ms (Views: 0.7ms | ActiveRecord: 3.5ms | Allocations: 1782)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:48:27 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (7.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 31ms (Views: 22.7ms | ActiveRecord: 7.8ms | Allocations: 781)
+
+
+Started DELETE "/enquiries/12" for 127.0.0.1 at 2021-05-01 17:48:27 +1000
+Started DELETE "/enquiries/12" for 127.0.0.1 at 2021-05-01 17:48:27 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"12", "enquiry"=>{}}
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"12", "enquiry"=>{}}
+  [1m[36mEnquiry Load (4.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (6.0ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (0.9ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 12]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (15.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 38ms (Views: 0.5ms | ActiveRecord: 10.5ms | Allocations: 2894)
+
+
+  [1m[36mEnquiry Destroy (22.5ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 12]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 70ms (Views: 0.7ms | ActiveRecord: 43.1ms | Allocations: 4296)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:48:29 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 1.4ms | Allocations: 642)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 17:48:39 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"2", "guest_phone"=>"2", "guest_email"=>"2", "number_of_guests"=>"2", "board_type"=>"2", "room_type"=>"2", "start_date"=>"03/05/2021", "end_date"=>"04/05/201", "enquiry"=>{"guest_name"=>"2", "guest_phone"=>"2", "guest_email"=>"2", "room_type"=>"2", "board_type"=>"2", "number_of_guests"=>"2", "start_date"=>"03/05/2021", "end_date"=>"04/05/201"}}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (32.6ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "2"], ["guest_phone", "2"], ["guest_email", "2"], ["room_type", "2"], ["board_type", "2"], ["number_of_guests", 2], ["start_date", "2021-05-03"], ["end_date", "0201-05-04"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 58ms (Views: 0.6ms | ActiveRecord: 39.9ms | Allocations: 1781)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:48:40 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.9ms | Allocations: 781)
+
+
+Started DELETE "/enquiries/13" for 127.0.0.1 at 2021-05-01 17:48:40 +1000
+Started DELETE "/enquiries/13" for 127.0.0.1 at 2021-05-01 17:48:40 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"13", "enquiry"=>{}}
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"13", "enquiry"=>{}}
+  [1m[36mEnquiry Load (1.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (2.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (4.0ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (37.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (26.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 140ms (Views: 0.6ms | ActiveRecord: 40.1ms | Allocations: 3059)
+
+
+  [1m[36mEnquiry Destroy (4.7ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 152ms (Views: 1.0ms | ActiveRecord: 47.2ms | Allocations: 4008)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:48:46 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.6ms | Allocations: 642)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 17:49:14 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"3", "guest_phone"=>"3", "guest_email"=>"3", "room_type"=>"3", "board_type"=>"3", "number_of_guests"=>"3", "start_date"=>"02/04/2022", "end_date"=>"09/05/2022", "enquiry"=>{"guest_name"=>"3", "guest_phone"=>"3", "guest_email"=>"3", "room_type"=>"3", "board_type"=>"3", "number_of_guests"=>"3", "start_date"=>"02/04/2022", "end_date"=>"09/05/2022"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (0.9ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "3"], ["guest_phone", "3"], ["guest_email", "3"], ["room_type", "3"], ["board_type", "3"], ["number_of_guests", 3], ["start_date", "2022-04-02"], ["end_date", "2022-05-09"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 1781)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:49:14 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 55ms (Views: 52.8ms | ActiveRecord: 1.7ms | Allocations: 781)
+
+
+Started DELETE "/enquiries/14" for 127.0.0.1 at 2021-05-01 17:49:14 +1000
+Started DELETE "/enquiries/14" for 127.0.0.1 at 2021-05-01 17:49:14 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"14", "enquiry"=>{}}
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"14", "enquiry"=>{}}
+  [1m[36mEnquiry Load (7.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (4.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (34.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (44.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (4.2ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 14]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (32.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (48.6ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 14]]
+Completed 200 OK in 113ms (Views: 0.5ms | ActiveRecord: 89.1ms | Allocations: 3215)
+
+
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 118ms (Views: 0.9ms | ActiveRecord: 89.1ms | Allocations: 4012)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:50:31 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 43ms (Views: 34.6ms | ActiveRecord: 1.8ms | Allocations: 642)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 17:50:44 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"test4", "guest_phone"=>"4", "guest_email"=>"4", "number_of_guests"=>"4", "board_type"=>"4", "room_type"=>"4", "start_date"=>"03/05/2021", "end_date"=>"05/05/201", "enquiry"=>{"guest_name"=>"test4", "guest_phone"=>"4", "guest_email"=>"4", "room_type"=>"4", "board_type"=>"4", "number_of_guests"=>"4", "start_date"=>"03/05/2021", "end_date"=>"05/05/201"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (0.7ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "test4"], ["guest_phone", "4"], ["guest_email", "4"], ["room_type", "4"], ["board_type", "4"], ["number_of_guests", 4], ["start_date", "2021-05-03"], ["end_date", "0201-05-05"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 27ms (Views: 0.7ms | ActiveRecord: 10.2ms | Allocations: 1783)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:50:44 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (3.1ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 3.1ms | Allocations: 781)
+
+
+Started DELETE "/enquiries/15" for 127.0.0.1 at 2021-05-01 17:50:44 +1000
+Started DELETE "/enquiries/15" for 127.0.0.1 at 2021-05-01 17:50:44 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"15", "enquiry"=>{}}
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"15", "enquiry"=>{}}
+  [1m[36mEnquiry Load (15.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (3.6ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 15]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (3.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN[0m
+Completed 200 OK in 125ms (Views: 0.5ms | ActiveRecord: 23.1ms | Allocations: 2740)
+
+
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (19.2ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 15]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 75ms (Views: 0.5ms | ActiveRecord: 25.7ms | Allocations: 3973)
+
+
+Started DELETE "/enquiries/15" for 127.0.0.1 at 2021-05-01 17:52:59 +1000
+Started DELETE "/enquiries/15" for 127.0.0.1 at 2021-05-01 17:52:59 +1000
+Processing by EnquiriesController#destroy as */*
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"15", "enquiry"=>{}}
+  Parameters: {"id"=>"15", "enquiry"=>{}}
+  [1m[36mEnquiry Load (2.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 404 Not Found in 23ms (ActiveRecord: 2.4ms | Allocations: 584)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=15):
+  
+app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (23.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 404 Not Found in 117ms (ActiveRecord: 23.4ms | Allocations: 12402)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=15):
+  
+app/controllers/enquiries_controller.rb:45:in `destroy'
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:53:57 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (26.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 57ms (Views: 19.7ms | ActiveRecord: 26.9ms | Allocations: 641)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 17:54:08 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"test5", "guest_phone"=>"5", "guest_email"=>"5", "room_type"=>"5", "board_type"=>"5", "number_of_guests"=>"5", "start_date"=>"03/05/2021", "end_date"=>"05/05/201", "enquiry"=>{"guest_name"=>"test5", "guest_phone"=>"5", "guest_email"=>"5", "room_type"=>"5", "board_type"=>"5", "number_of_guests"=>"5", "start_date"=>"03/05/2021", "end_date"=>"05/05/201"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (0.5ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "test5"], ["guest_phone", "5"], ["guest_email", "5"], ["room_type", "5"], ["board_type", "5"], ["number_of_guests", 5], ["start_date", "2021-05-03"], ["end_date", "0201-05-05"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 18ms (Views: 0.5ms | ActiveRecord: 2.3ms | Allocations: 1782)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:54:08 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.0ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 1.0ms | Allocations: 781)
+
+
+Started DELETE "/enquiries/16" for 127.0.0.1 at 2021-05-01 17:54:08 +1000
+Started DELETE "/enquiries/16" for 127.0.0.1 at 2021-05-01 17:54:08 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"16", "enquiry"=>{}}
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"16", "enquiry"=>{}}
+  [1m[36mEnquiry Load (7.0ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (10.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (27.6ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 16]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mEnquiry Destroy (30.5ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 16]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 75ms (Views: 1.9ms | ActiveRecord: 40.8ms | Allocations: 3355)
+
+
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (30.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 110ms (Views: 0.8ms | ActiveRecord: 71.9ms | Allocations: 4008)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-01 17:57:39 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-01 17:57:39 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started DELETE "/enquiries/16" for 127.0.0.1 at 2021-05-01 17:57:39 +1000
+Started DELETE "/enquiries/16" for 127.0.0.1 at 2021-05-01 17:57:39 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"16", "enquiry"=>{}}
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"16", "enquiry"=>{}}
+  [1m[36mEnquiry Load (4.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mEnquiry Load (8.0ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 404 Not Found in 45ms (ActiveRecord: 4.8ms | Allocations: 919)
+
+
+Completed 404 Not Found in 50ms (ActiveRecord: 8.0ms | Allocations: 1339)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=16):
+  
+app/controllers/enquiries_controller.rb:45:in `destroy'
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=16):
+  
+app/controllers/enquiries_controller.rb:45:in `destroy'
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:57:40 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 1.5ms | Allocations: 641)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:57:50 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (2.1ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 2.1ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:57:57 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 1.5ms | Allocations: 642)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 17:58:16 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"test6", "guest_phone"=>"6", "guest_email"=>"6", "room_type"=>"6", "board_type"=>"6", "number_of_guests"=>"6", "start_date"=>"6/5/2021", "end_date"=>"15/05/201", "enquiry"=>{"guest_name"=>"test6", "guest_phone"=>"6", "guest_email"=>"6", "room_type"=>"6", "board_type"=>"6", "number_of_guests"=>"6", "start_date"=>"6/5/2021", "end_date"=>"15/05/201"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (1.9ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "test6"], ["guest_phone", "6"], ["guest_email", "6"], ["room_type", "6"], ["board_type", "6"], ["number_of_guests", 6], ["start_date", "2021-05-06"], ["end_date", "0201-05-15"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 15ms (Views: 0.9ms | ActiveRecord: 7.3ms | Allocations: 1782)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:58:16 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 1.4ms | Allocations: 781)
+
+
+Started DELETE "/enquiries/17" for 127.0.0.1 at 2021-05-01 17:58:16 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"17", "enquiry"=>{}}
+Started DELETE "/enquiries/17" for 127.0.0.1 at 2021-05-01 17:58:16 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"17", "enquiry"=>{}}
+  [1m[36mEnquiry Load (28.0ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (6.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (3.7ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 17]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (37.7ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 17]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (39.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (131.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 221ms (Views: 0.5ms | ActiveRecord: 176.9ms | Allocations: 3751)
+
+
+Completed 200 OK in 226ms (Views: 0.5ms | ActiveRecord: 74.4ms | Allocations: 3985)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:58:50 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.9ms | Allocations: 642)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 17:59:09 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"test7", "guest_phone"=>"7", "guest_email"=>"7", "room_type"=>"7", "board_type"=>"7", "number_of_guests"=>"7", "start_date"=>"09/03/2022", "end_date"=>"03/10/2022", "enquiry"=>{"guest_name"=>"test7", "guest_phone"=>"7", "guest_email"=>"7", "room_type"=>"7", "board_type"=>"7", "number_of_guests"=>"7", "start_date"=>"09/03/2022", "end_date"=>"03/10/2022"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (28.7ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "test7"], ["guest_phone", "7"], ["guest_email", "7"], ["room_type", "7"], ["board_type", "7"], ["number_of_guests", 7], ["start_date", "2022-03-09"], ["end_date", "2022-10-03"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 39ms (Views: 0.3ms | ActiveRecord: 29.8ms | Allocations: 1782)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:59:09 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.2ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.2ms | Allocations: 781)
+
+
+Started DELETE "/enquiries/18" for 127.0.0.1 at 2021-05-01 17:59:09 +1000
+Started DELETE "/enquiries/18" for 127.0.0.1 at 2021-05-01 17:59:09 +1000
+Processing by EnquiriesController#destroy as */*
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"18", "enquiry"=>{}}
+  Parameters: {"id"=>"18", "enquiry"=>{}}
+  [1m[36mEnquiry Load (35.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (37.1ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (3.2ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 18]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (11.8ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 88ms (Views: 0.6ms | ActiveRecord: 44.1ms | Allocations: 3292)
+
+
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (17.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 113ms (Views: 0.5ms | ActiveRecord: 69.1ms | Allocations: 4052)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 17:59:53 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (39.1ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 62ms (Views: 22.0ms | ActiveRecord: 39.1ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:01:00 +1000
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (24.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 54ms (Views: 3.7ms | ActiveRecord: 27.6ms | Allocations: 3951)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:01:01 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.9ms | Allocations: 661)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 18:01:17 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"test8", "guest_phone"=>"8", "guest_email"=>"8", "room_type"=>"8", "board_type"=>"8", "number_of_guests"=>"8", "start_date"=>"04/06/2021", "end_date"=>"07/03/2021", "enquiry"=>{"guest_name"=>"test8", "guest_phone"=>"8", "guest_email"=>"8", "room_type"=>"8", "board_type"=>"8", "number_of_guests"=>"8", "start_date"=>"04/06/2021", "end_date"=>"07/03/2021"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (1.2ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "test8"], ["guest_phone", "8"], ["guest_email", "8"], ["room_type", "8"], ["board_type", "8"], ["number_of_guests", 8], ["start_date", "2021-06-04"], ["end_date", "2021-03-07"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (26.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 81ms (Views: 0.6ms | ActiveRecord: 59.5ms | Allocations: 6756)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:01:17 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.7ms | Allocations: 826)
+
+
+Started DELETE "/enquiries/19" for 127.0.0.1 at 2021-05-01 18:01:57 +1000
+Started DELETE "/enquiries/19" for 127.0.0.1 at 2021-05-01 18:01:57 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"19", "enquiry"=>{}}
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"19", "enquiry"=>{}}
+  [1m[36mEnquiry Load (0.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (7.4ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 19]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (27.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 158ms (Views: 0.6ms | ActiveRecord: 38.0ms | Allocations: 3731)
+
+
+  [1m[36mEnquiry Load (2.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 404 Not Found in 253ms (ActiveRecord: 52.7ms | Allocations: 6240)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=19):
+  
+app/controllers/enquiries_controller.rb:45:in `destroy'
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:01:57 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (2.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 61ms (Views: 57.3ms | ActiveRecord: 2.4ms | Allocations: 641)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:01:58 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 1.3ms | Allocations: 661)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:02:21 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.7ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:08:11 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 107ms (Views: 106.3ms | ActiveRecord: 54.9ms | Allocations: 2713)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:09:38 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 71ms (Views: 64.4ms | ActiveRecord: 1.8ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:09:40 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.7ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:09:48 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.4ms | Allocations: 642)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 18:10:07 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"test9", "guest_phone"=>"test9", "guest_email"=>"9", "number_of_guests"=>"9", "board_type"=>"9", "room_type"=>"9", "start_date"=>"03/05/2021", "end_date"=>"09/05/2022", "enquiry"=>{"guest_name"=>"test9", "guest_phone"=>"test9", "guest_email"=>"9", "room_type"=>"9", "board_type"=>"9", "number_of_guests"=>"9", "start_date"=>"03/05/2021", "end_date"=>"09/05/2022"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (1.3ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "test9"], ["guest_phone", "test9"], ["guest_email", "9"], ["room_type", "9"], ["board_type", "9"], ["number_of_guests", 9], ["start_date", "2021-05-03"], ["end_date", "2022-05-09"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 3.5ms | Allocations: 1786)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:10:07 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.5ms | Allocations: 781)
+
+
+Started DELETE "/enquiries/20" for 127.0.0.1 at 2021-05-01 18:10:07 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"20", "enquiry"=>{}}
+Started DELETE "/enquiries/20" for 127.0.0.1 at 2021-05-01 18:10:07 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"20", "enquiry"=>{}}
+  [1m[36mEnquiry Load (1.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (20.7ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 99ms (Views: 0.5ms | ActiveRecord: 28.4ms | Allocations: 2704)
+
+
+  [1m[36mEnquiry Load (1.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 404 Not Found in 221ms (ActiveRecord: 82.3ms | Allocations: 4782)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=20):
+  
+app/controllers/enquiries_controller.rb:45:in `destroy'
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:11:10 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (4.2ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 23ms (Views: 17.3ms | ActiveRecord: 4.2ms | Allocations: 641)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-01 18:12:20 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/core/lib/parser/index.js" for 127.0.0.1 at 2021-05-01 18:12:20 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/core/lib/parser/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-01 18:12:20 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/core/lib/parser/index.js" for 127.0.0.1 at 2021-05-01 18:12:20 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/core/lib/parser/index.js"):
+  
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:12:27 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (3.1ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 55ms (Views: 50.8ms | ActiveRecord: 3.1ms | Allocations: 641)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:12:30 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 1.9ms | Allocations: 642)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 18:12:42 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"Test2", "guest_phone"=>"5", "guest_email"=>"5", "number_of_guests"=>"5", "board_type"=>"5", "room_type"=>"5", "start_date"=>"03/05/2021", "end_date"=>"04/05/201", "enquiry"=>{"guest_name"=>"Test2", "guest_phone"=>"5", "guest_email"=>"5", "room_type"=>"5", "board_type"=>"5", "number_of_guests"=>"5", "start_date"=>"03/05/2021", "end_date"=>"04/05/201"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (5.8ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "Test2"], ["guest_phone", "5"], ["guest_email", "5"], ["room_type", "5"], ["board_type", "5"], ["number_of_guests", 5], ["start_date", "2021-05-03"], ["end_date", "0201-05-04"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 31ms (Views: 0.3ms | ActiveRecord: 10.7ms | Allocations: 1786)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:12:42 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (36.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 54ms (Views: 16.7ms | ActiveRecord: 36.6ms | Allocations: 784)
+
+
+Started DELETE "/enquiries/21" for 127.0.0.1 at 2021-05-01 18:12:42 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"21", "enquiry"=>{}}
+Started DELETE "/enquiries/21" for 127.0.0.1 at 2021-05-01 18:12:42 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"21", "enquiry"=>{}}
+  [1m[36mEnquiry Load (20.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Load (2.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (4.6ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 21]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 110ms (Views: 0.4ms | ActiveRecord: 33.2ms | Allocations: 3471)
+
+
+  [1m[36mEnquiry Destroy (33.3ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 21]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 63ms (Views: 0.6ms | ActiveRecord: 42.4ms | Allocations: 3971)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:14:13 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.7ms | Allocations: 642)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:14:23 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (3.2ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 3.2ms | Allocations: 642)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 18:14:36 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"guest_name"=>"q", "guest_phone"=>"q", "guest_email"=>"q", "room_type"=>"q", "board_type"=>"q", "number_of_guests"=>"3", "start_date"=>"03/05/2021", "end_date"=>"04/05/201", "enquiry"=>{"guest_name"=>"q", "guest_phone"=>"q", "guest_email"=>"q", "room_type"=>"q", "board_type"=>"q", "number_of_guests"=>"3", "start_date"=>"03/05/2021", "end_date"=>"04/05/201"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (0.9ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "q"], ["guest_phone", "q"], ["guest_email", "q"], ["room_type", "q"], ["board_type", "q"], ["number_of_guests", 3], ["start_date", "2021-05-03"], ["end_date", "0201-05-04"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 1787)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:14:36 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.6ms | Allocations: 781)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:14:48 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 1.6ms | Allocations: 781)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 18:15:04 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"0"=>{"id"=>22, "guest_name"=>"q", "guest_phone"=>"q", "guest_email"=>"q", "room_type"=>"q", "board_type"=>"q", "number_of_guests"=>3, "start_date"=>"2021-05-03", "end_date"=>"0201-05-04"}, "guest_name"=>"a", "guest_phone"=>"a", "guest_email"=>"a", "room_type"=>"a", "board_type"=>"a", "number_of_guests"=>"5", "start_date"=>"03/05/2021", "end_date"=>"05/05/201", "enquiry"=>{"guest_name"=>"a", "guest_phone"=>"a", "guest_email"=>"a", "room_type"=>"a", "board_type"=>"a", "number_of_guests"=>"5", "start_date"=>"03/05/2021", "end_date"=>"05/05/201"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (0.5ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "a"], ["guest_phone", "a"], ["guest_email", "a"], ["room_type", "a"], ["board_type", "a"], ["number_of_guests", 5], ["start_date", "2021-05-03"], ["end_date", "0201-05-05"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 1783)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:15:04 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.5ms | Allocations: 920)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:18:25 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (10.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 17ms (Views: 6.1ms | ActiveRecord: 10.6ms | Allocations: 920)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:18:30 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (2.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 61ms (Views: 56.7ms | ActiveRecord: 2.5ms | Allocations: 920)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:18:50 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 1.4ms | Allocations: 920)
+
+
+Started POST "/enquiries" for 127.0.0.1 at 2021-05-01 18:19:02 +1000
+Processing by EnquiriesController#create as */*
+  Parameters: {"0"=>{"id"=>22, "guest_name"=>"q", "guest_phone"=>"q", "guest_email"=>"q", "room_type"=>"q", "board_type"=>"q", "number_of_guests"=>3, "start_date"=>"2021-05-03", "end_date"=>"0201-05-04"}, "1"=>{"id"=>23, "guest_name"=>"a", "guest_phone"=>"a", "guest_email"=>"a", "room_type"=>"a", "board_type"=>"a", "number_of_guests"=>5, "start_date"=>"2021-05-03", "end_date"=>"0201-05-05"}, "guest_name"=>"f", "guest_phone"=>"f", "guest_email"=>"f", "room_type"=>"f", "board_type"=>"f", "number_of_guests"=>"7", "start_date"=>"02/04/2022", "end_date"=>"03/10/2022", "enquiry"=>{"guest_name"=>"f", "guest_phone"=>"f", "guest_email"=>"f", "room_type"=>"f", "board_type"=>"f", "number_of_guests"=>"7", "start_date"=>"02/04/2022", "end_date"=>"03/10/2022"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mEnquiry Create (0.7ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "f"], ["guest_phone", "f"], ["guest_email", "f"], ["room_type", "f"], ["board_type", "f"], ["number_of_guests", 7], ["start_date", "2022-04-02"], ["end_date", "2022-10-03"]]
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:7:in `create'
+Completed 200 OK in 18ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 1781)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:19:03 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.0ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.0ms | Allocations: 1059)
+
+
+Started DELETE "/enquiries/[object%20Object]" for 127.0.0.1 at 2021-05-01 18:19:09 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"[object Object]", "enquiry"=>{}}
+  [1m[36mEnquiry Load (0.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms | Allocations: 542)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Enquiry with 'id'=[object Object]):
+  
+app/controllers/enquiries_controller.rb:45:in `destroy'
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:27:33 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (27.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 491ms (Views: 490.1ms | ActiveRecord: 174.5ms | Allocations: 3181)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:27:38 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 65ms (Views: 63.1ms | ActiveRecord: 1.7ms | Allocations: 1059)
+
+
+Started DELETE "/enquiries/24" for 127.0.0.1 at 2021-05-01 18:27:51 +1000
+Processing by EnquiriesController#destroy as */*
+  Parameters: {"id"=>"24", "enquiry"=>{}}
+  [1m[36mEnquiry Load (0.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mEnquiry Destroy (1.8ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 24]]
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+  [1m[36mTRANSACTION (27.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enquiries_controller.rb:45:in `destroy'
+Completed 200 OK in 44ms (Views: 0.7ms | ActiveRecord: 31.0ms | Allocations: 1933)
+
+
+Started GET "/enquiries" for 127.0.0.1 at 2021-05-01 18:28:07 +1000
+Processing by EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/enquiries_controller.rb:3:in `index'
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 1.5ms | Allocations: 920)
+
+

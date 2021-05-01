@@ -12,17 +12,19 @@ export const App = () => {
     <Router>
       <div>
       {/* Link to landing page */}
-        <Homepage />
         {/* Links to CRUD functions - Should use buttons? */}
-        <Link to="/Enquiry">Enquiry</Link>
+        <Link to="/enquiry">Enquiry</Link>
         <Link to="/EditEnquiry">Edit</Link>
         <Link to="/DeleteEnquiry">Delete</Link>
         <Link to="/DisplayEnquiry">List</Link>
         
         <Switch>
-
         <Route exact path="/enquiry">
             <Enquiry />
+          </Route>
+
+          <Route exact path="/DisplayEnquiry">
+            <DisplayEnquiry />
           </Route>
 
           <Route exact path="/enquiry/edit/:id">
@@ -33,10 +35,10 @@ export const App = () => {
             <DeleteEnquiry />
           </Route>
 
-          <Route exact path="/DisplayEnquiry">
-            <DisplayEnquiry />
-          </Route>
 
+          <Route exact path="/">
+        <Homepage />
+          </Route>
         </Switch>
       </div>
     </Router>

@@ -44,6 +44,7 @@ export const Enquiry = () => {
   return (
     <div>
        <h1>Booking enquiry</h1>
+       
       <form onSubmit={handleSubmit}>
         <div className="Enquiry">
           <div>
