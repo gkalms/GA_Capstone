@@ -1,24 +1,44 @@
 import React from "react";
 import "./App.css";
-import { Header } from "./Components/Header";
-import { Overview } from "./Components/Overview";
-import { ImageData } from "./Components/Images";
-import { ImageSlider } from "./Components/ImageSlider";
-import { RoomTable} from "./Components/RoomTable";
-import { BoardTable} from "./Components/BoardTable";
-import {Enquiry} from "./Components/Enquiry/Enquiry";
+import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+import {Homepage} from "./Components/Landingpage/Homepage"
+import { Enquiry } from "./Components/Enquiry/Enquiry";
+import { EditEnquiry } from "./Components/Enquiry/EditEnquiry";
+import { DeleteEnquiry } from "./Components/Enquiry/DeleteEnquiry";
+import { DisplayEnquiry} from "./Components/Enquiry/DisplayEnquiry";
 
-const App = () => {
+export const App = () => {
   return (
-    <div className="app">
-      <Header />
-      <Overview />
-      <ImageSlider slides={ImageData} />
-      <RoomTable />
-      <BoardTable />
-      <Enquiry />
-    </div>
+    <Router>
+      <div>
+      {/* Link to landing page */}
+        <Homepage />
+        {/* Links to CRUD functions - Should use buttons? */}
+        <Link to="/Enquiry">Enquiry</Link>
+        <Link to="/EditEnquiry">Edit</Link>
+        <Link to="/DeleteEnquiry">Delete</Link>
+        <Link to="/DisplayEnquiry">List</Link>
+        
+        <Switch>
+
+        <Route exact path="/enquiry">
+            <Enquiry />
+          </Route>
+
+          <Route exact path="/enquiry/edit/:id">
+            <EditEnquiry />
+          </Route>
+
+          <Route exact path="/enquiry/delete/:id">
+            <DeleteEnquiry />
+          </Route>
+
+          <Route exact path="/DisplayEnquiry">
+            <DisplayEnquiry />
+          </Route>
+
+        </Switch>
+      </div>
+    </Router>
   );
 };
-
-export { App };

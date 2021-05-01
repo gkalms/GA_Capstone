@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router";
 
-export const EditEnquiry = () => {
-  const [delete, setDelete] = useState({
+export const DeleteEnquiry = () => {
+  const [remove, setDelete] = useState({
     guest_name: "",
     guest_phone: "",
     guest_email: "",
@@ -26,6 +26,7 @@ export const EditEnquiry = () => {
     fetch(`/enquiries/${params.id}`)
       .then((response) => response.json())
       .then((data) => setDelete(data));
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSubmit = (e) => {
@@ -37,15 +38,15 @@ export const EditEnquiry = () => {
       },
       body: JSON.stringify(remove),
     }).then((response) => {
-      // route back to Homepage
-      history.replace("/");
+      // Display list
+      history.replace("/Display Enquiry");
     });
   };
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <h3>Delete booking enquiry</h3>
-        <div className="Edit">
+        <h1>Delete booking enquiry</h1>
+        <div className="Delete">
           <div>
             <label>
               Guest Name

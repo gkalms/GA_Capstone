@@ -26,6 +26,7 @@ export const EditEnquiry = () => {
     fetch(`/enquiries/${params.id}`)
       .then((response) => response.json())
       .then((data) => setEdit(data));
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSubmit = (e) => {
@@ -37,15 +38,14 @@ export const EditEnquiry = () => {
       },
       body: JSON.stringify(edit),
     }).then((response) => {
-      // route back to Homepage
-      history.replace("/");
+      // Display List
+      history.replace("/DisplayEnquiry");
     });
   };
   return (
     <div>
+      <h1>Edit enquiry</h1>
       <form onSubmit={handleSubmit}>
-        <h3>Edit booking enquiry</h3>
-        <div className="Edit">
           <div>
             <label>
               Guest Name
@@ -74,6 +74,7 @@ export const EditEnquiry = () => {
               />
             </label>
           </div>
+
           <div>
             <label>
               Room Type
@@ -124,7 +125,6 @@ export const EditEnquiry = () => {
 
             <button type="submit">Update</button>
           </div>
-        </div>
       </form>
     </div>
   );

@@ -19,7 +19,7 @@ export const Homepage = () => {
         <BoardTable />
         <Link to="EnquiryHomepage">Enquiry</Link>
         <Switch>
-          <Route path="../Enquiry/EnquiryHomepage">
+          <Route path="/EnquiryHomepage">
             <EnquiryHomepage />
           </Route>
         </Switch>
