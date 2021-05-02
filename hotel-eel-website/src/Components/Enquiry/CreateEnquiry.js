@@ -1,8 +1,10 @@
-/*import { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router";
+import React from "react";
+import { useEffect, useState } from "react";
+import { Select } from "@material-ui/core";
 
-export const DeleteEnquiry = () => {
-  const [remove, setDelete] = useState({
+
+export const CreateEnquiry = () => {
+  const [create, setCreate] = useState({
     guest_name: "",
     guest_phone: "",
     guest_email: "",
@@ -13,46 +15,44 @@ export const DeleteEnquiry = () => {
     end_date: "",
   });
 
-  const history = useHistory();
-  const params = useParams();
-
   const handleChange = (e) => {
-    const newState = { ...remove };
+    const newState = { ...create };
     newState[e.target.name] = e.target.value;
-    setDelete(newState);
+    setCreate(newState);
   };
 
   useEffect(() => {
-    fetch(`/enquiries/${params.id}`)
+    fetch("/enquiries")
       .then((response) => response.json())
-      .then((data) => setDelete(data));
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+      .then((create) => setCreate(create));
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`/enquiries/${params.id}`, {
-      method: "DELETE",
+    fetch("/enquiries", {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(remove),
+      body: JSON.stringify(create),
     }).then((response) => {
-      // Display list
-      history.replace("/Display Enquiry");
+      e.target.reset();
+      alert("Booking Enquiry created!");
     });
   };
   return (
     <div>
+      <h1>Booking enquiry</h1>
+
       <form onSubmit={handleSubmit}>
-        <h1>Delete booking enquiry</h1>
-        <div className="Delete">
+        <div className="Enquiry">
           <div>
             <label>
               Guest Name
               <input
+                type="text"
                 name="guest_name"
-                value={remove.guest_name}
+                value={create.guest_name}
                 onChange={handleChange}
               />
             </label>
@@ -60,8 +60,9 @@ export const DeleteEnquiry = () => {
             <label>
               Guest Phone
               <input
+                type="text"
                 name="guest_phone"
-                value={remove.guest_phone}
+                value={create.guest_phone}
                 onChange={handleChange}
               />
             </label>
@@ -69,8 +70,10 @@ export const DeleteEnquiry = () => {
             <label>
               Guest Email
               <input
+                type="text"
                 name="guest_email"
-                value={remove.guest_email}
+                placeholder="email@email.com"
+                value={create.guest_email}
                 onChange={handleChange}
               />
             </label>
@@ -78,27 +81,37 @@ export const DeleteEnquiry = () => {
           <div>
             <label>
               Room Type
-              <input
+              <Select
                 name="room_type"
-                value={remove.room_type}
+                value={create.room_type}
                 onChange={handleChange}
-              />
+              >
+                <option value={"Standard"}>Standard</option>
+                <option value={"Suite"}>Suite</option>
+                <option value={"Cottage"}>Cottage</option>
+              </Select>
             </label>
 
             <label>
               Board Type
-              <input
+              <Select
                 name="board_type"
-                value={remove.board_type}
+                value={create.board_type}
                 onChange={handleChange}
-              />
+              >
+                <option value={""}>None</option>
+                <option value={"Breakfast"}>Breakfast</option>
+                <option value={"Half-Board"}>Half-Board</option>
+                <option value={"Full-Board"}>Full-Board</option>
+              </Select>
             </label>
 
             <label>
               Number of Guests
               <input
+                type="number"
                 name="number_of_guests"
-                value={remove.number_of_guests}
+                value={create.number_of_guests}
                 onChange={handleChange}
               />
             </label>
@@ -107,8 +120,10 @@ export const DeleteEnquiry = () => {
             <label>
               Arrival
               <input
+                type="date"
                 name="start_date"
-                value={remove.start_date}
+                placeholder="DD/MM/YYYY"
+                value={create.start_date}
                 onChange={handleChange}
               />
             </label>
@@ -116,16 +131,18 @@ export const DeleteEnquiry = () => {
             <label>
               Departure
               <input
+                type="date"
                 name="end_date"
-                value={remove.end_date}
+                placeholder="DD/MM/YYYY"
+                value={create.end_date}
                 onChange={handleChange}
               />
             </label>
 
-            <button type="submit">Delete</button>
+            <button type="submit">Submit</button>
           </div>
         </div>
       </form>
     </div>
   );
-};*/
+};

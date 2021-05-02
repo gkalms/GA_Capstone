@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link, /*useHistory*/ } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 
 export const DisplayEnquiry = () => {
-  // const history = useHistory();
   const [enquiry, setEnquiry] = useState([]);
 
   useEffect(() => {

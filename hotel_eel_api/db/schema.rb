@@ -10,15 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_27_101333) do
+ActiveRecord::Schema.define(version: 2021_05_02_115222) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "admins", force: :cascade do |t|
-    t.string "name"
-    t.string "password"
-  end
 
   create_table "boards", force: :cascade do |t|
     t.string "board_type"
@@ -40,6 +35,11 @@ ActiveRecord::Schema.define(version: 2021_04_27_101333) do
     t.string "room_type"
     t.string "room_occupancy"
     t.string "room_rate"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "password_digest"
   end
 
 end
