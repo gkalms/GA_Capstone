@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { useHistory } from "react-router";
+// import { useHistory } from "react-router";
 
 export const Enquiry = () => {
   const [create, setCreate] = useState({
@@ -14,7 +14,7 @@ export const Enquiry = () => {
     end_date: "",
   });
 
-  const history = useHistory();
+  // const history = useHistory();
 
   const handleChange = (e) => {
     const newState = { ...create };
@@ -37,8 +37,8 @@ export const Enquiry = () => {
       },
       body: JSON.stringify(create),
     }).then((response) => {
-      // Display List
-      history.replace("/DisplayEnquiry");
+      e.target.reset();
+      alert("Booking Enquiry created!");
     });
   };
   return (
@@ -70,6 +70,7 @@ export const Enquiry = () => {
               Guest Email
               <input type="text"
                 name="guest_email"
+                placeholder="email@email.com"
                 value={create.guest_email}
                 onChange={handleChange}
               />
@@ -96,7 +97,7 @@ export const Enquiry = () => {
 
             <label>
               Number of Guests
-              <input type="text"
+              <input type="number"
                 name="number_of_guests"
                 value={create.number_of_guests}
                 onChange={handleChange}
@@ -108,6 +109,7 @@ export const Enquiry = () => {
               Arrival
               <input type="text"
                 name="start_date"
+                placeholder="DD/MM/YYYY"
                 value={create.start_date}
                 onChange={handleChange}
               />
@@ -117,6 +119,7 @@ export const Enquiry = () => {
               Departure
               <input type="text"
                 name="end_date"
+                placeholder="DD/MM/YYYY"
                 value={create.end_date}
                 onChange={handleChange}
               />

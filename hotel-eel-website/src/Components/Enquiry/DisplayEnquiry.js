@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, /*useHistory*/ } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 
 export const DisplayEnquiry = () => {
-  const history = useHistory();
+  // const history = useHistory();
   const [enquiry, setEnquiry] = useState([]);
 
   useEffect(() => {
@@ -13,16 +13,13 @@ export const DisplayEnquiry = () => {
   }, []);
 
   const onDeleteClicked = (id) => {
-    console.log("bout to delete!!");
     fetch(`/enquiries/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
       },
     }).then((response) => {
-      console.log("deleted!");
-      // Display list
-      history.replace("/DisplayEnquiry");
+      alert("Booking Enquiry deleted!");
     });
   };
   return (
@@ -36,8 +33,6 @@ export const DisplayEnquiry = () => {
                 ,{el.board_type},{el.number_of_guests},{el.start_date},
                 {el.end_date}
               </Link>
-
-              {/* <label onClick={() => console.log('clicked')} >Delete</label> */}
             </li>
             <Button variant="contained" onClick={() => onDeleteClicked(el.id)}>
               Delete

@@ -26,7 +26,7 @@ export const ImageSlider = ({ slides }) => {
       {ImageData.map((slide, index) => {
         return (
           <div className={index === image ? "slide active" : "slide"} key={index}>
-            {index === image && ( <img src={slide.image} alt="Hotel Eeel Accomodation" className="images" />)}
+            {index === image && ( <img src={slide.image} alt="Hotel Eel Accomodation" className="images" />)}
           </div>
         );
       })}

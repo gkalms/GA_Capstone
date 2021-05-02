@@ -8,41 +8,8 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 
-const StyledTableCell = withStyles((theme) => ({
-  head: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
-  },
-  body: {
-    fontSize: 14,
-  },
-}))(TableCell);
 
-const StyledTableRow = withStyles((theme) => ({
-  root: {
-    "&:nth-of-type(odd)": {
-      backgroundColor: theme.palette.action.hover,
-    },
-  },
-}))(TableRow);
-
-function createData(Room, Occupancy, Rates) {
-  return { Room, Occupancy, Rates };
-}
-
-const rows = [
-  createData("Standard room", "2", "KSH 3000"),
-  createData("Suite", "4", "KSH 6000"),
-  createData("Cottage", "6", "KSH 9000"),
-];
-
-const useStyles = makeStyles({
-  table: {
-    minWidth: 0,
-  },
-});
-
-export const RoomTable = () => {
+export const EnquiryTable = () => {
   const classes = useStyles();
 
   return (

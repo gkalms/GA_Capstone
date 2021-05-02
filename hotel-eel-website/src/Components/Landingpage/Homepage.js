@@ -10,20 +10,20 @@ import { EnquiryHomepage} from "../Enquiry/EnquiryHomepage";
 
 export const Homepage = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <div>
         <Header />
         <Overview />
         <ImageSlider slides={ImageData} />
         <RoomTable />
         <BoardTable />
-        <Link to="EnquiryHomepage">Enquiry</Link>
+        <Link to="EnquiryHomepage">Enquiry homepage</Link>
         <Switch>
           <Route path="/EnquiryHomepage">
             <EnquiryHomepage />
           </Route>
         </Switch>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 };

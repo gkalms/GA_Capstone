@@ -65,4 +65,12 @@ position: relative;
     /* transform: scale(2); */
 }
 
+.roomtable {
+    display: flex;
+}
+
+.boardtable {
+    flex: 50%
+}
+
 

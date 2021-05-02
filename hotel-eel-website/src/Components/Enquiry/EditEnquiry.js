@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router";
+import { /*useHistory,*/ useParams } from "react-router";
 
 export const EditEnquiry = () => {
   const [edit, setEdit] = useState({
@@ -13,7 +13,7 @@ export const EditEnquiry = () => {
     end_date: "",
   });
 
-  const history = useHistory();
+  // const history = useHistory();
   const params = useParams();
 
   const handleChange = (e) => {
@@ -38,8 +38,7 @@ export const EditEnquiry = () => {
       },
       body: JSON.stringify(edit),
     }).then((response) => {
-      // Display List
-      history.replace("/DisplayEnquiry");
+      alert("Booking Enquiry updted!");
     });
   };
   return (
