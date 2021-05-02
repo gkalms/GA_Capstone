@@ -1,22 +1,39 @@
 import React from "react";
 import "./App.css";
-import { Header } from "./Components/Header";
-import { Overview } from "./Components/Overview";
-import { ImageData } from "./Components/Images";
-import { ImageSlider } from "./Components/ImageSlider";
-import { AccomodationTable } from "./Components/AccomodationtType.js";
-import {Enquiry} from "./Components/Enquiry";
+import { Homepage } from "./Components/Landingpage/Homepage";
+import { CreateEnquiry } from "./Components/Enquiry/CreateEnquiry";
+import { EditEnquiry } from "./Components/Enquiry/EditEnquiry";
+import { DisplayEnquiry } from "./Components/Enquiry/DisplayEnquiry";
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 
-const App = () => {
+export const App = () => {
   return (
-    <div className="app">
-      <Header />
-      <Overview />
-      <ImageSlider slides={ImageData} />
-      <AccomodationTable />
-      <Enquiry />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        {/* Links to CRUD functions - Should use buttons? */}
+        <Link to="/enquiry">Enquire</Link>
+        <Link to="/EditEnquiry">Update</Link>
+        <Link to="/DisplayEnquiry">Display</Link>
+
+        <Switch>
+          <Route exact path="/enquiry">
+            <CreateEnquiry />
+          </Route>
+
+          <Route exact path="/DisplayEnquiry">
+            <DisplayEnquiry />
+          </Route>
+
+          <Route exact path="/enquiry/edit/:id">
+            <EditEnquiry />{" "}
+          </Route>
+
+          {/* Link to landing page */}
+          <Route exact path="/">
+            <Homepage />
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 };
-
-export { App };
