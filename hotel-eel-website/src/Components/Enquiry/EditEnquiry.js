@@ -24,7 +24,11 @@ export const EditEnquiry = () => {
   };
 
   useEffect(() => {
-    fetch(`/enquiries/${params.id}`)
+    fetch(`/api/enquiries/${params.id}` , {
+      headers: {
+        'token': window.localStorage.getItem('token')
+      }
+    })
       .then((response) => response.json())
       .then((data) => setEdit(data));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -32,10 +36,11 @@ export const EditEnquiry = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`/enquiries/${params.id}`, {
+    fetch(`/api/enquiries/${params.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
+        'token': window.localStorage.getItem('token')
       },
       body: JSON.stringify(edit),
     }).then((response) => {

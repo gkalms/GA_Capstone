@@ -6,16 +6,26 @@ export const DisplayEnquiry = () => {
   const [enquiry, setEnquiry] = useState([]);
 
   useEffect(() => {
-    fetch("/enquiries")
+    fetch("/api/enquiries", {
+      headers: {
+        'token': window.localStorage.getItem('token')
+      }
+    })
       .then((response) => response.json())
-      .then((data) => setEnquiry(data));
+      .then((data) => {
+        if (data.length) {
+          setEnquiry(data)
+        }
+      })
+      .catch((error) => console.log(error))
   }, []);
 
   const onDeleteClicked = (id) => {
-    fetch(`/enquiries/${id}`, {
+    fetch(`/api/enquiries/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
+        'token': window.localStorage.getItem('token')
       },
     }).then((response) => {
       alert("Booking Enquiry deleted!");
