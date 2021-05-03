@@ -22,14 +22,14 @@ export const CreateEnquiry = () => {
   };
 
   useEffect(() => {
-    fetch("/enquiries")
+    fetch("api/enquiries")
       .then((response) => response.json())
       .then((create) => setCreate(create));
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("/enquiries", {
+    fetch("/api/enquiries", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -1,4 +1,5 @@
 class Api::EnquiriesController < ApplicationController
+
   def index
     render json: Enquiry.all
   end
