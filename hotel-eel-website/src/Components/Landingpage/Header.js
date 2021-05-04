@@ -12,10 +12,13 @@ export const Header = () => {
       <div className="Enquire">
       <Link to="/enquiry">Enquire</Link>
       </div>
+      <div className="Register">
+      <Link to="/register">Register</Link>
+      </div>
       <div className="Login">
       <Link to="/login">Login</Link>
       </div>
-      <div className="Contact">Contact Us</div>
+      <label>Reservation: (+254) 2 733 733 </label> 
     </div>
   );
 };

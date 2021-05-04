@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
 
-export const LoginUser = () => {
+export const LoginUser = (props) => {
   const history = useHistory();
 
   const [form, setForm] = useState({
@@ -26,6 +26,7 @@ export const LoginUser = () => {
       .then((response) => response.json())
       .then((data) => {
         window.localStorage.setItem("token", data.token);
+        props.setLoggedIn(true);
         if (data.token) {
           history.replace("/DisplayEnquiry");
         }
