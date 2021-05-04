@@ -5816,3 +5816,113 @@ Processing by Api::EnquiriesController#show as */*
 Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.9ms | Allocations: 716)
 
 
+Started POST "/api/auth/login" for 127.0.0.1 at 2021-05-04 20:30:43 +1000
+Processing by Api::AuthController#login as */*
+  Parameters: {"name"=>"tester", "password"=>"[FILTERED]", "auth"=>{"name"=>"tester", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "tester"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:6:in `login'
+Completed 200 OK in 326ms (Views: 2.8ms | ActiveRecord: 18.8ms | Allocations: 2735)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 20:30:43 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.2ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 1.2ms | Allocations: 1278)
+
+
+Started DELETE "/api/enquiries/23" for 127.0.0.1 at 2021-05-04 20:30:55 +1000
+Processing by Api::EnquiriesController#destroy as */*
+  Parameters: {"id"=>"23", "enquiry"=>{}}
+  [1m[36mEnquiry Load (0.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/api/enquiries_controller.rb:47:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/enquiries_controller.rb:47:in `destroy'
+  [1m[36mEnquiry Destroy (4.4ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 23]]
+  ↳ app/controllers/api/enquiries_controller.rb:47:in `destroy'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/enquiries_controller.rb:47:in `destroy'
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 7.4ms | Allocations: 1973)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 20:31:08 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.5ms | Allocations: 1108)
+
+
+Started GET "/api/enquiries/32" for 127.0.0.1 at 2021-05-04 20:31:19 +1000
+Processing by Api::EnquiriesController#show as */*
+  Parameters: {"id"=>"32"}
+  [1m[36mEnquiry Load (0.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/api/enquiries_controller.rb:28:in `show'
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 716)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 20:31:42 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.6ms | Allocations: 1108)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-04 21:55:59 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-04 21:55:59 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/api/auth/login" for 127.0.0.1 at 2021-05-04 21:56:38 +1000
+Processing by Api::AuthController#login as */*
+  Parameters: {"name"=>"tester", "password"=>"[FILTERED]", "auth"=>{"name"=>"tester", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "tester"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:6:in `login'
+Completed 200 OK in 330ms (Views: 2.1ms | ActiveRecord: 23.9ms | Allocations: 2786)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 21:56:39 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (2.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 2.5ms | Allocations: 1138)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 22:18:38 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 3.4ms | Allocations: 146)
+
+
+Started POST "/api/auth/login" for 127.0.0.1 at 2021-05-04 22:18:52 +1000
+Processing by Api::AuthController#login as */*
+  Parameters: {"name"=>"tester", "password"=>"[FILTERED]", "auth"=>{"name"=>"tester", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "tester"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:6:in `login'
+Completed 200 OK in 350ms (Views: 0.9ms | ActiveRecord: 20.6ms | Allocations: 2736)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 22:18:53 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.0ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.0ms | Allocations: 1138)
+
+
+Started POST "/api/auth/login" for 127.0.0.1 at 2021-05-04 22:19:16 +1000
+Processing by Api::AuthController#login as */*
+  Parameters: {"name"=>"tester", "password"=>"[FILTERED]", "auth"=>{"name"=>"tester", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "tester"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:6:in `login'
+Completed 200 OK in 296ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 662)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 22:19:16 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 1108)
+
+

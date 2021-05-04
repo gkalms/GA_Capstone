@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Overview = () => {
+export const Herobanner = () => {
   return (
     <div className='banner'>
       <div className="banner-info">

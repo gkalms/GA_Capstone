@@ -1,7 +1,7 @@
 import React from "react";
 import { ImageData } from "./Images";
 import { ImageSlider } from "./ImageSlider";
-import {Amenities} from "./Amenities";
+import { Amenities} from "./Amenities";
 import { RoomTable } from "./RoomTable";
 import { BoardTable } from "./BoardTable";
 
