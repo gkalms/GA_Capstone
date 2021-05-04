@@ -47,8 +47,8 @@ export const RoomTable = () => {
 
   return (
  
-        <TableContainer className="roomtable" component={Paper}>
-          <Table style={{ width: 500 }} className={classes.table}>
+        <TableContainer className="table" component={Paper}>
+          <Table className={classes.table}>
             <TableHead>
               <TableRow>
                 <StyledTableCell>Room</StyledTableCell>

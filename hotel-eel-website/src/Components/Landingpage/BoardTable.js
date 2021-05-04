@@ -26,15 +26,25 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData(Board, Rates) {
+function createData1(Board, Rates) {
   return { Board, Rates };
-}
+};
 
-const rows = [
-  createData("Breakfast", "KSH 3000"),
-  createData("Half Board", "KSH 6000"),
-  createData("Full Board", "KSH 9000"),
+// function createData2(Room, Occupancy, Rates) {
+//   return { Room, Occupancy, Rates };
+// };
+
+const rows1 = [
+  createData1("Breakfast", "KSH 3000"),
+  createData1("Half Board", "KSH 6000"),
+  createData1("Full Board", "KSH 9000"),
 ];
+
+// const rows2 = [
+//   createData2("Standard room", "2", "KSH 3000"),
+//   createData2("Suite", "4", "KSH 6000"),
+//   createData2("Cottage", "6", "KSH 9000"),
+// ];
 
 const useStyles = makeStyles({
   table: {
@@ -46,8 +56,9 @@ export const BoardTable = () => {
   const classes = useStyles();
 
   return (
-        <TableContainer className="boardtable" component={Paper}>
-          <Table style={{ width: 500 }} className={classes.table}>
+    <>
+        <TableContainer className="table" component={Paper}>
+          <Table className={classes.table}>
             <TableHead>
               <TableRow>
                 <StyledTableCell>Board</StyledTableCell>
@@ -55,7 +66,7 @@ export const BoardTable = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {rows.map((row) => (
+              {rows1.map((row) => (
                 <StyledTableRow key={row.Board}>
                   <StyledTableCell component="th" scope="row">
                     {row.Board}
@@ -66,5 +77,29 @@ export const BoardTable = () => {
             </TableBody>
           </Table>
         </TableContainer>
+
+        {/* <TableContainer className="table" component={Paper}>
+        <Table className={classes.table}>
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>Room</StyledTableCell>
+              <StyledTableCell>Occupancy</StyledTableCell>
+              <StyledTableCell>Rates</StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows2.map((row) => (
+              <StyledTableRow key={row.Room}>
+                <StyledTableCell component="th" scope="row">
+                  {row.Room}
+                </StyledTableCell>
+                <StyledTableCell>{row.Occupancy}</StyledTableCell>
+                <StyledTableCell>{row.Rates}</StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer> */}
+      </>
   );
 };
