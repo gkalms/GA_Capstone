@@ -1,25 +1,27 @@
 import React from "react";
 import "./App.css";
+
+import { Header } from "./Components/Landingpage/Header";
+import { Overview } from "./Components/Landingpage/Overview";
+
 import { Homepage } from "./Components/Landingpage/Homepage";
 import { CreateEnquiry } from "./Components/Enquiry/CreateEnquiry";
 import { EditEnquiry } from "./Components/Enquiry/EditEnquiry";
 import { DisplayEnquiry } from "./Components/Enquiry/DisplayEnquiry";
-import { UserForm } from './Components/User/UserForm';
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+import { LoginUser } from './Components/User/LoginUser';
+import { BrowserRouter, /*Link,*/ Switch, Route } from "react-router-dom";
 
 export const App = () => {
   return (
     <BrowserRouter>
       <div className="App">
-        {/* Links to CRUD functions - Should use buttons? */}
-        <Link to="/login">Login</Link>
-        <Link to="/enquiry">Enquire</Link>
-        <Link to="/EditEnquiry">Update</Link>
-        <Link to="/DisplayEnquiry">Display</Link>
+
+        <Header />
+        <Overview />
 
         <Switch>
         <Route exact path="/login">
-            <UserForm />
+            <LoginUser />
           </Route>
 
           <Route exact path="/enquiry">

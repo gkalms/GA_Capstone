@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
 
-export const UserForm = () => {
+export const LoginUser = () => {
   const history = useHistory();
 
   const [form, setForm] = useState({

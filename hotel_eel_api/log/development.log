@@ -5092,3 +5092,134 @@ Processing by Api::EnquiriesController#destroy as */*
 Completed 200 OK in 23ms (Views: 0.2ms | ActiveRecord: 15.7ms | Allocations: 1968)
 
 
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-03 22:36:49 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.8ms | Allocations: 128)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-03 22:36:51 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:4:in `index'
+Completed 200 OK in 65ms (Views: 59.2ms | ActiveRecord: 21.8ms | Allocations: 3227)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 13:18:40 +1000
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 193)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 13:18:41 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:4:in `index'
+Completed 200 OK in 55ms (Views: 30.8ms | ActiveRecord: 9.2ms | Allocations: 9185)
+
+
+Started GET "/api/enquiries/32" for 127.0.0.1 at 2021-05-04 13:18:44 +1000
+Processing by Api::EnquiriesController#show as */*
+  Parameters: {"id"=>"32"}
+  [1m[36mEnquiry Load (1.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/api/enquiries_controller.rb:27:in `show'
+Completed 200 OK in 10ms (Views: 0.7ms | ActiveRecord: 2.0ms | Allocations: 1180)
+
+
+Started GET "/enquiry/edit/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-04 13:33:26 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/enquiry/edit/babel/parser/lib/index.js"):
+  
+Started GET "/enquiry/edit/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-04 13:33:26 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/enquiry/edit/babel/parser/lib/index.js"):
+  
+Started GET "/enquiry/edit/[object%20Object],[object%20Object],[object%20Object]" for 127.0.0.1 at 2021-05-04 13:33:27 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/enquiry/edit/[object%20Object],[object%20Object],[object%20Object]"):
+  
+Started GET "/enquiry/edit/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-04 13:44:23 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/enquiry/edit/babel/parser/lib/index.js"):
+  
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 13:44:44 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 2.1ms | Allocations: 164)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 13:49:18 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 129)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 13:51:29 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | Allocations: 129)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 13:54:30 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 128)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 13:56:21 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 128)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 13:59:11 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 1.7ms | Allocations: 129)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 15:27:08 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 2.1ms | Allocations: 128)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 15:27:17 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | Allocations: 128)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 15:40:08 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | Allocations: 128)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 15:46:44 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | Allocations: 128)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-04 15:54:08 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-04 16:55:13 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 17:43:39 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 2.0ms | Allocations: 128)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-04 17:43:48 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 128)
+
+

@@ -9,12 +9,16 @@ background-color: while;
 }
 
 .banner {
+background: url("https://cdn.pixabay.com/photo/2015/12/18/20/04/flamingos-1099071__480.jpg") center/ cover no-repeat;
 height: 50vh;
 position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .banner-info {
-    background-color: grey;
+    /* background-color: grey; */
     color: white;
     text-align: center;
 }
@@ -65,12 +69,33 @@ position: relative;
     /* transform: scale(2); */
 }
 
-.roomtable {
-    display: flex;
+.amenities_container {
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    padding: 0 25px;
 }
 
-.boardtable {
-    flex: 50%
+.amenities {
+    position: relative;
+    float:left;
+    
 }
+
+.amenities_container ul {
+    list-style-type: none;
+    display: block
+}
+
+.table {
+    display: flex;
+    float: left;
+    width: 50%
+}
+
+/* .boardtable {
+    display: flex;
+    flex: 50%
+} */
 
 
