@@ -22,7 +22,10 @@ export const CreateEnquiry = () => {
   };
 
   useEffect(() => {
-    fetch("api/enquiries")
+    fetch("api/enquiries",{
+    headers: {
+      'token': window.localStorage.getItem('token')}
+    })
       .then((response) => response.json())
       .then((create) => setCreate(create));
   }, []);

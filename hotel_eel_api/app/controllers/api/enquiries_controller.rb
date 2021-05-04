@@ -1,4 +1,5 @@
 class Api::EnquiriesController < ApplicationController
+  before_action :user_exists, except: [:create]
 
   def index
     render json: Enquiry.all

@@ -1,5 +1,6 @@
-import React from "react";
+import React,{useState} from "react";
 import "./App.css";
+
 
 import { Header } from "./Components/Landingpage/Header";
 import { Overview } from "./Components/Landingpage/Overview";
@@ -10,8 +11,21 @@ import { EditEnquiry } from "./Components/Enquiry/EditEnquiry";
 import { DisplayEnquiry } from "./Components/Enquiry/DisplayEnquiry";
 import { LoginUser } from './Components/User/LoginUser';
 import { BrowserRouter, /*Link,*/ Switch, Route } from "react-router-dom";
+import UserRegister from "./Components/User/UserRegister";
+
+const userLoggedIn = () => {
+  if (window.localStorage.getItem('token')){
+    return true 
+  }
+  else {
+    return false
+  }
+}
 
 export const App = () => {
+const userloggedIn = userLoggedIn()
+  const [loggedIn, setLoggedIn] = useState(userloggedIn);
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -21,7 +35,11 @@ export const App = () => {
 
         <Switch>
         <Route exact path="/login">
-            <LoginUser />
+            <LoginUser setLoggedIn={setLoggedIn}/>
+          </Route>
+
+          <Route exact path="/register">
+            <UserRegister />
           </Route>
 
           <Route exact path="/enquiry">
@@ -32,9 +50,9 @@ export const App = () => {
             <DisplayEnquiry />
           </Route>
 
-          <Route exact path="/enquiry/edit/:id">
-            <EditEnquiry />
-          </Route>
+        {loggedIn && <Route exact path="/enquiry/edit/:id">
+          <EditEnquiry />
+        </Route>}
 
           {/* Link to landing page */}
           <Route exact path="/">
