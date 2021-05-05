@@ -1,19 +1,32 @@
+import { Grid, makeStyles, TextField, Button } from "@material-ui/core";
 import { useState } from "react";
 import { useHistory } from "react-router";
 
+const useStyles = makeStyles(theme =>({
+  root: {
+'& .MuiFormControl-root': {
+  width: '80%',
+  margin:theme.spacing(1)
+}
+  }
+}))
+
 export const LoginUser = (props) => {
+
+
   const history = useHistory();
 
   const [form, setForm] = useState({
     name: "",
     password: "",
   });
+
   const changeHandler = (e) => {
     const newFormState = { ...form };
     newFormState[e.target.name] = e.target.value;
-    console.log(newFormState);
     setForm(newFormState);
   };
+
   const submitHandler = (e) => {
     e.preventDefault();
     fetch("/api/auth/login", {
@@ -32,24 +45,54 @@ export const LoginUser = (props) => {
         }
       });
   };
+
+  const classes = useStyles();
+
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={submitHandler}>
-        <label>
-          Username:
-          <input name="name" value={form.name} onChange={changeHandler} />
-        </label>
-        <label>
-          Password:
-          <input
-            name="password"
-            value={form.password}
-            onChange={changeHandler}
-          />
-        </label>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+<>
+ <h1>Login</h1>
+  <form className={classes.root} onSubmit={submitHandler}>
+<Grid container>
+  <Grid item xs={3}>
+    <TextField
+    variant="outlined"
+    label="Name"
+    name="name"
+    value={form.name}
+    onChange={changeHandler}
+    />
+  </Grid>
+
+  <Grid item xs={3}>
+    <TextField
+    variant="outlined"
+    label="Password"
+    name="password"
+    value={form.password}
+    onChange={changeHandler}
+    />
+  </Grid>
+  <Grid item xs={3}>
+  <Button type="submit" variant="contained" color="primary">Submit</Button>
+  </Grid>
+</Grid>
+
+{/* <label>
+  Username:
+  <input name="name" value={form.name} onChange={changeHandler} />
+</label>
+<label>
+  Password:
+  <input
+    name="password"
+    value={form.password}
+    onChange={changeHandler}
+  />
+</label>
+
+<button type="submit">Submit</button> */}
+
+</form> 
+    </>
   );
 };

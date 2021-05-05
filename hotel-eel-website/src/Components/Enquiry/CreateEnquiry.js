@@ -45,7 +45,7 @@ export const CreateEnquiry = () => {
   };
   return (
     <div className="Enquiry">
-      
+
       
       <h1>Booking enquiry</h1>
 
@@ -104,7 +104,7 @@ export const CreateEnquiry = () => {
                 value={create.board_type}
                 onChange={handleChange}
               >
-                <option value={""}>None</option>
+                <option value={"None"}>None</option>
                 <option value={"Breakfast"}>Breakfast</option>
                 <option value={"Half-Board"}>Half-Board</option>
                 <option value={"Full-Board"}>Full-Board</option>

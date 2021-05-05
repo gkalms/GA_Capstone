@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import {CssBaseline} from '@material-ui/core';
 
 import { Nav } from "./Components/Landingpage/Nav";
 import { Herobanner } from "./Components/Landingpage/Herobanner";
@@ -28,6 +29,7 @@ export const App = () => {
   const [loggedIn, setLoggedIn] = useState(userloggedIn);
 
   return (
+    <>
     <BrowserRouter>
       <div className="App">
         <Nav logout={setLoggedIn} loginStatus={loggedIn} />
@@ -60,5 +62,7 @@ export const App = () => {
         </Switch>
       </div>
     </BrowserRouter>
+    <CssBaseline />
+    </>
   );
 };

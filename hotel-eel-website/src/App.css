@@ -1,92 +1,95 @@
 .Topbanner {
-display: flex;
-justify-content: space-between;
-align-items: center;
-position: sticky;
-top: 0;
-left: 0;
-z-index: 100%;
-background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100%;
+  background-color: white;
 }
 
 .banner {
-background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLL43diHthOj0i0GzfR2IvTI72LhdPcw4TGA&usqp=CAU") center/ cover no-repeat;
-height: 50vh;
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLL43diHthOj0i0GzfR2IvTI72LhdPcw4TGA&usqp=CAU")
+    center/ cover no-repeat;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner-info {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
 
 .amenities {
-    margin: auto;
-    float:left;
-    width: 50%
+  margin: auto;
+  float: left;
+  width: 50%;
 }
 
 .amenities ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .slider {
-    position: relative;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: floralwhite;
+  position: relative;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: floralwhite;
 }
 
-.images{
-    width: 400px;
-    height: 200px;
-    border-radius: 10px;
+.images {
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
 }
 
 .right-arrow {
-    position: absolute;
-    top: 50%;
-    right: 150px;
-    font-size: 3rem;
-    color: black;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
+  position: absolute;
+  top: 50%;
+  right: 150px;
+  font-size: 3rem;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
 }
 
- .left-arrow {
-    position:absolute;
-    top: 50%;
-    left: 150px;
-    font-size: 3rem;
-    color: black;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
-} 
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 150px;
+  font-size: 3rem;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
 
 .slide {
-    opacity: 1;
-    transition-duration: 2s ease;
+  opacity: 1;
+  transition-duration: 2s ease;
 }
 .slide.active {
-    opacity: 1;
-    transition-duration: 2s;
+  opacity: 1;
+  transition-duration: 2s;
 }
 
 .table {
-    display: flex;
-    background: floralwhite;
+  float: left;
+  display: flex;
+  width: 100%;
+  background: floralwhite;
+  align-items: center;
+  justify-content: center;
 }
 
 .Enquiry {
-    /* display: flex; */
-    background: floralwhite;
+  display: flex;
+  background: floralwhite;
 }
-
-

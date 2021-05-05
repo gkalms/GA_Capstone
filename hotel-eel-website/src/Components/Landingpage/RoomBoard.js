@@ -30,9 +30,9 @@ function createData1(Board, Rates) {
   return { Board, Rates };
 };
 
-// function createData2(Room, Occupancy, Rates) {
-//   return { Room, Occupancy, Rates };
-// };
+function createData2(Room, Occupancy, Rates) {
+  return { Room, Occupancy, Rates };
+};
 
 const rows1 = [
   createData1("Breakfast", "KSH 3000"),
@@ -40,11 +40,11 @@ const rows1 = [
   createData1("Full Board", "KSH 9000"),
 ];
 
-// const rows2 = [
-//   createData2("Standard room", "2", "KSH 3000"),
-//   createData2("Suite", "4", "KSH 6000"),
-//   createData2("Cottage", "6", "KSH 9000"),
-// ];
+const rows2 = [
+  createData2("Standard room", "2", "KSH 3000"),
+  createData2("Suite", "4", "KSH 6000"),
+  createData2("Cottage", "6", "KSH 9000"),
+];
 
 const useStyles = makeStyles({
   table: {
@@ -52,11 +52,12 @@ const useStyles = makeStyles({
   },
 });
 
-export const BoardTable = () => {
+export const RoomBoard = () => {
   const classes = useStyles();
 
   return (
-    <>
+    <div className="table">
+      <div className="boardTable">
         <TableContainer className="table" component={Paper}>
           <Table className={classes.table}>
             <TableHead>
@@ -77,8 +78,9 @@ export const BoardTable = () => {
             </TableBody>
           </Table>
         </TableContainer>
-
-        {/* <TableContainer className="table" component={Paper}>
+        </div>
+        <div className="roomTable">
+        <TableContainer className="table" component={Paper}>
         <Table className={classes.table}>
           <TableHead>
             <TableRow>
@@ -99,7 +101,8 @@ export const BoardTable = () => {
             ))}
           </TableBody>
         </Table>
-      </TableContainer> */}
-      </>
+      </TableContainer>
+      </div>
+      </div>
   );
 };

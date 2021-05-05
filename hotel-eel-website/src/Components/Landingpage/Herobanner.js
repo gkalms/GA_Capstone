@@ -9,7 +9,7 @@ export const Herobanner = () => {
         <h3>Amenities</h3>
         <div className="amenities">
         <ul>
-          <li>Wifi</li>
+          <li>Free Wifi</li>
           <li>Dining facilities</li>
           <li>Laundry Service</li>
           <li>Secure parking</li>
@@ -17,7 +17,7 @@ export const Herobanner = () => {
       </div>
       <div className="amenities">
         <ul>
-          <li>Complimentary tea/coffee</li>
+          <li>Tea/coffee facilities</li>
           <li>Electronic Safe</li>
           <li>Netflix</li>
           <li>Room service</li>

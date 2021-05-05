@@ -6065,3 +6065,49 @@ Filter chain halted as :user_exists rendered or redirected
 Completed 401 Unauthorized in 4ms (Views: 1.8ms | Allocations: 146)
 
 
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-05 17:10:02 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-05 17:10:02 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-05 17:10:02 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-05 17:10:03 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-05 17:10:03 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-05 17:10:19 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 19ms (Views: 7.9ms | Allocations: 147)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-05 18:53:30 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2021-05-05 18:53:30 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-05 19:11:23 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 3.9ms | Allocations: 146)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-05 19:13:33 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | Allocations: 146)
+
+
