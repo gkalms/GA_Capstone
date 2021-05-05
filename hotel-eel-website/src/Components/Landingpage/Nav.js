@@ -8,23 +8,23 @@ export const Nav = (props) => {
   };
 
   return (
-    <div className="Topbanner">
+    <div className="topbanner">
 
-      <div className="logo">
-        <Link to="/">Home</Link>
+      <div >
+        <Link className="link" to="/">Home</Link>
       </div>
 
-      <div className="Enquire">
-        <Link to="/enquiry">Enquire</Link>
+      <div >
+        <Link className="link" to="/enquiry">Enquire</Link>
       </div>
 
-      <div className="Login">
+      <div >
         {props.loginStatus && (
-          <Link to="/login" onClick={handleLogout}>
+          <Link className="link" to="/login" onClick={handleLogout}>
             Logout
           </Link>
         )}
-        {!props.loginStatus && <Link to="/login">Login</Link>}
+        {!props.loginStatus && <Link className="link" to="/login">Login</Link>}
       </div>
 
       <label>Reservation: (+254) 2 733 733 </label>

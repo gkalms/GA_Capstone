@@ -8,16 +8,16 @@ export const DisplayEnquiry = () => {
   useEffect(() => {
     fetch("/api/enquiries", {
       headers: {
-        'token': window.localStorage.getItem('token')
-      }
+        token: window.localStorage.getItem("token"),
+      },
     })
       .then((response) => response.json())
       .then((data) => {
         if (data.length) {
-          setEnquiry(data)
+          setEnquiry(data);
         }
       })
-      .catch((error) => console.log(error))
+      .catch((error) => console.log(error));
   }, []);
 
   const onDeleteClicked = (id) => {
@@ -25,7 +25,7 @@ export const DisplayEnquiry = () => {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
-        'token': window.localStorage.getItem('token')
+        token: window.localStorage.getItem("token"),
       },
     }).then((response) => {
       alert("Booking Enquiry deleted!");

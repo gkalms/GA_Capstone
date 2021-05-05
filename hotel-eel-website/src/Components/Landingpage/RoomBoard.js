@@ -28,11 +28,11 @@ const StyledTableRow = withStyles((theme) => ({
 
 function createData1(Board, Rates) {
   return { Board, Rates };
-};
+}
 
 function createData2(Room, Occupancy, Rates) {
   return { Room, Occupancy, Rates };
-};
+}
 
 const rows1 = [
   createData1("Breakfast", "KSH 3000"),
@@ -78,31 +78,31 @@ export const RoomBoard = () => {
             </TableBody>
           </Table>
         </TableContainer>
-        </div>
-        <div className="roomTable">
+      </div>
+      <div className="roomTable">
         <TableContainer className="table" component={Paper}>
-        <Table className={classes.table}>
-          <TableHead>
-            <TableRow>
-              <StyledTableCell>Room</StyledTableCell>
-              <StyledTableCell>Occupancy</StyledTableCell>
-              <StyledTableCell>Rates</StyledTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows2.map((row) => (
-              <StyledTableRow key={row.Room}>
-                <StyledTableCell component="th" scope="row">
-                  {row.Room}
-                </StyledTableCell>
-                <StyledTableCell>{row.Occupancy}</StyledTableCell>
-                <StyledTableCell>{row.Rates}</StyledTableCell>
-              </StyledTableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+          <Table className={classes.table}>
+            <TableHead>
+              <TableRow>
+                <StyledTableCell>Room</StyledTableCell>
+                <StyledTableCell>Occupancy</StyledTableCell>
+                <StyledTableCell>Rates</StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows2.map((row) => (
+                <StyledTableRow key={row.Room}>
+                  <StyledTableCell component="th" scope="row">
+                    {row.Room}
+                  </StyledTableCell>
+                  <StyledTableCell>{row.Occupancy}</StyledTableCell>
+                  <StyledTableCell>{row.Rates}</StyledTableCell>
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
       </div>
-      </div>
+    </div>
   );
 };

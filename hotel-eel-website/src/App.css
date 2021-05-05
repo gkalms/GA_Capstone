@@ -1,17 +1,21 @@
-.Topbanner {
+.topbanner {
+  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 100%;
   background-color: white;
 }
 
 .banner {
-  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLL43diHthOj0i0GzfR2IvTI72LhdPcw4TGA&usqp=CAU")
-    center/ cover no-repeat;
+  /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLL43diHthOj0i0GzfR2IvTI72LhdPcw4TGA&usqp=CAU")
+    center/ cover no-repeat; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
+    url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLL43diHthOj0i0GzfR2IvTI72LhdPcw4TGA&usqp=CAU);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 50vh;
   position: relative;
   display: flex;
@@ -22,6 +26,7 @@
 .banner-info {
   color: white;
   text-align: center;
+  font-size: 16px;
 }
 
 .amenities {
@@ -44,15 +49,15 @@
 }
 
 .images {
-  width: 400px;
-  height: 200px;
+  width: 500px;
+  height: 250px;
   border-radius: 10px;
 }
 
 .right-arrow {
   position: absolute;
   top: 50%;
-  right: 150px;
+  right: 175px;
   font-size: 3rem;
   color: black;
   z-index: 10;
@@ -63,7 +68,7 @@
 .left-arrow {
   position: absolute;
   top: 50%;
-  left: 150px;
+  left: 175px;
   font-size: 3rem;
   color: black;
   z-index: 10;
@@ -83,6 +88,7 @@
 .table {
   float: left;
   display: flex;
+  flex-direction: row;
   width: 100%;
   background: floralwhite;
   align-items: center;
@@ -92,4 +98,72 @@
 .Enquiry {
   display: flex;
   background: floralwhite;
+}
+
+.link {
+  color: hotpink;
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+  .link:hover {
+    text-decoration: underline;
+  }
+}
+
+.MuiGrid-item {
+    height: 45px;
+}
+
+.MuiButtonBase-root MuiButtonBase-root MuiButton-contained {
+    margin-top: 15px;
+    width: 55px;
+    height: 45px;
+}
+
+.enquirycontainer {
+    display: flex;
+    flex-direction: column;
+    align-items:;
+}
+
+.enquirycontainer label {
+    font-size: 16px;
+}
+.enquirycontainer input {
+    font-size: 16px;
+    margin: 5px;
+    width: 200px;
+}
+
+.enquirycontainer button {
+    font-size: 16px;
+    margin: 5px;
+    width: 200px;
+}
+
+#mui-component-select-room_type {
+    width: 200px;
+}
+
+#mui-component-select-board_type {
+    width: 200px;
+}
+
+.logincontainer {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.logincontainer input {
+    font-size: 16px;
+    margin: 5px;
+    width: 200px;
+}
+
+.logincontainer button {
+    font-size: 16px;
+    margin: 5px;
+    width: 200px;
 }

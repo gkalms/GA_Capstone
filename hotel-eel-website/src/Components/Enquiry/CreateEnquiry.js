@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Select } from "@material-ui/core";
 
-
 export const CreateEnquiry = () => {
   const [create, setCreate] = useState({
     guest_name: "",
@@ -22,9 +21,10 @@ export const CreateEnquiry = () => {
   };
 
   useEffect(() => {
-    fetch("api/enquiries",{
-    headers: {
-      'token': window.localStorage.getItem('token')}
+    fetch("api/enquiries", {
+      headers: {
+        token: window.localStorage.getItem("token"),
+      },
     })
       .then((response) => response.json())
       .then((create) => setCreate(create));
@@ -44,17 +44,14 @@ export const CreateEnquiry = () => {
     });
   };
   return (
-    <div className="Enquiry">
-
-      
-      <h1>Booking enquiry</h1>
 
       <form onSubmit={handleSubmit}>
-        <div>
-          <div>
-            <label>
+         <h1>Booking enquiry</h1>
+        <div className="enquirycontainer">
+            <label classname="label">
               Guest Name
               <input
+                classname="input"
                 type="text"
                 name="guest_name"
                 value={create.guest_name}
@@ -82,8 +79,7 @@ export const CreateEnquiry = () => {
                 onChange={handleChange}
               />
             </label>
-          </div>
-          <div>
+      
             <label>
               Room Type
               <Select
@@ -120,8 +116,7 @@ export const CreateEnquiry = () => {
                 onChange={handleChange}
               />
             </label>
-          </div>
-          <div>
+        
             <label>
               Arrival
               <input
@@ -145,9 +140,8 @@ export const CreateEnquiry = () => {
             </label>
 
             <button type="submit">Submit</button>
-          </div>
-        </div>
+            </div>
       </form>
-    </div>
+    
   );
 };
