@@ -4,12 +4,13 @@ justify-content: space-between;
 align-items: center;
 position: sticky;
 top: 0;
+left: 0;
 z-index: 100%;
-background-color: while;
+background-color: white;
 }
 
 .banner {
-background: url("https://cdn.pixabay.com/photo/2015/12/18/20/04/flamingos-1099071__480.jpg") center/ cover no-repeat;
+background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLL43diHthOj0i0GzfR2IvTI72LhdPcw4TGA&usqp=CAU") center/ cover no-repeat;
 height: 50vh;
 position: relative;
 display: flex;
@@ -18,9 +19,18 @@ justify-content: center;
 }
 
 .banner-info {
-    /* background-color: grey; */
     color: white;
     text-align: center;
+}
+
+.amenities {
+    margin: auto;
+    float:left;
+    width: 50%
+}
+
+.amenities ul {
+    list-style-type: none;
 }
 
 .slider {
@@ -29,6 +39,7 @@ justify-content: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: floralwhite;
 }
 
 .images{
@@ -66,36 +77,16 @@ justify-content: center;
 .slide.active {
     opacity: 1;
     transition-duration: 2s;
-    /* transform: scale(2); */
-}
-
-.amenities_container {
-    margin: auto;
-    justify-content: center;
-    text-align: center;
-    padding: 0 25px;
-}
-
-.amenities {
-    position: relative;
-    float:left;
-    
-}
-
-.amenities_container ul {
-    list-style-type: none;
-    display: block
 }
 
 .table {
     display: flex;
-    float: left;
-    width: 50%
+    background: floralwhite;
 }
 
-/* .boardtable {
-    display: flex;
-    flex: 50%
-} */
+.Enquiry {
+    /* display: flex; */
+    background: floralwhite;
+}
 
 

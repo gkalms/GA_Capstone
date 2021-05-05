@@ -6,7 +6,25 @@ export const Herobanner = () => {
       <div className="banner-info">
         <h1>Hotel Eel</h1>
         <h2>Best hotel in Nakuru county</h2>
+        <h3>Amenities</h3>
+        <div className="amenities">
+        <ul>
+          <li>Wifi</li>
+          <li>Dining facilities</li>
+          <li>Laundry Service</li>
+          <li>Secure parking</li>
+        </ul>
       </div>
+      <div className="amenities">
+        <ul>
+          <li>Complimentary tea/coffee</li>
+          <li>Electronic Safe</li>
+          <li>Netflix</li>
+          <li>Room service</li>
+        </ul>
+      </div>
+      </div>
+    
         </div>
   );
 };

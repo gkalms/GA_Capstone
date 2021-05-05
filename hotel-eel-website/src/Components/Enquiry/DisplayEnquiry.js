@@ -32,7 +32,7 @@ export const DisplayEnquiry = () => {
     });
   };
   return (
-    <div>
+    <div className="Enquiry">
       <ul>
         {enquiry.map((el) => (
           <div>

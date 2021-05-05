@@ -44,12 +44,13 @@ export const CreateEnquiry = () => {
     });
   };
   return (
-    <div>
+    <div className="Enquiry">
+      
       
       <h1>Booking enquiry</h1>
 
       <form onSubmit={handleSubmit}>
-        <div className="Enquiry">
+        <div>
           <div>
             <label>
               Guest Name

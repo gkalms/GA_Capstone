@@ -49,7 +49,7 @@ export const EditEnquiry = () => {
     });
   };
   return (
-    <div>
+    <div className="Enquiry">
       <h1>Edit enquiry</h1>
       <form onSubmit={handleSubmit}>
         <div>

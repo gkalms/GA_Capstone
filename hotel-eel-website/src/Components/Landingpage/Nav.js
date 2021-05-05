@@ -11,7 +11,7 @@ export const Nav = (props) => {
     <div className="Topbanner">
 
       <div className="logo">
-        <Link to="/">HotelEel</Link>
+        <Link to="/">Home</Link>
       </div>
 
       <div className="Enquire">
