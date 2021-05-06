@@ -6,17 +6,17 @@
   position: sticky;
   top: 0;
   left: 0;
-  background-color: white;
+  background:floralwhite;
 }
 
 .banner {
-  /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLL43diHthOj0i0GzfR2IvTI72LhdPcw4TGA&usqp=CAU")
-    center/ cover no-repeat; */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
-    url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLL43diHthOj0i0GzfR2IvTI72LhdPcw4TGA&usqp=CAU);
+  background-image: url("https://media.istockphoto.com/photos/flock-of-flamingos-in-the-water-picture-id103963118?k=6&m=103963118&s=612x612&w=0&h=gSkA_A23dvv_abHapJZWyXZKkeM6DQI_nGMuWgxnv54=");
+  background-position:center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
+  width: 100%;
+  height: 55
+  vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -24,7 +24,8 @@
 }
 
 .banner-info {
-  color: white;
+  color: oldlace;
+  font-weight:bold;
   text-align: center;
   font-size: 16px;
 }
@@ -101,13 +102,14 @@
 }
 
 .link {
-  color: hotpink;
+  color: purple;
   text-decoration: none;
 }
 
 @media (hover: hover) {
   .link:hover {
     text-decoration: underline;
+    background: bisque;
   }
 }
 
@@ -121,49 +123,36 @@
     height: 45px;
 }
 
-.enquirycontainer {
+.container {
     display: flex;
     flex-direction: column;
-    align-items:;
+    background: floralwhite;
+    font-weight: bold;
 }
 
-.enquirycontainer label {
+.container label {
     font-size: 16px;
 }
-.enquirycontainer input {
+.container input {
     font-size: 16px;
     margin: 5px;
     width: 200px;
+    padding-left: 5px;
 }
 
-.enquirycontainer button {
+.container button {
     font-size: 16px;
     margin: 5px;
     width: 200px;
+    background-color: goldenrod;
 }
 
 #mui-component-select-room_type {
     width: 200px;
+    padding-left: 15px;
 }
 
 #mui-component-select-board_type {
     width: 200px;
-}
-
-.logincontainer {
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-}
-
-.logincontainer input {
-    font-size: 16px;
-    margin: 5px;
-    width: 200px;
-}
-
-.logincontainer button {
-    font-size: 16px;
-    margin: 5px;
-    width: 200px;
+    padding-left: 15px;
 }

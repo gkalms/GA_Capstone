@@ -35,10 +35,11 @@ export const LoginUser = (props) => {
   };
 
   return (
-    <>
-      <h1>Login</h1>
+  
+      
       <form onSubmit={submitHandler}>
-        <div className="logincontainer">
+        <div className="container">
+        <h1>Login</h1>
           <label>Name</label>
           <input
             type="text"
@@ -58,6 +59,5 @@ export const LoginUser = (props) => {
           <button type="submit">Submit</button>
         </div>
       </form>
-    </>
   );
 };

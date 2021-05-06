@@ -49,10 +49,12 @@ export const EditEnquiry = () => {
     });
   };
   return (
-    <div className="Enquiry">
-      <h1>Edit enquiry</h1>
+    
+     
       <form onSubmit={handleSubmit}>
-        <div>
+        
+        <div className="container">
+        <h1>Edit enquiry</h1>
           <label>
             Guest Name
             <input
@@ -83,9 +85,9 @@ export const EditEnquiry = () => {
               onChange={handleChange}
             />
           </label>
-        </div>
+        
 
-        <div>
+        
           <label>
             Room Type
             <Select
@@ -122,9 +124,9 @@ export const EditEnquiry = () => {
               onChange={handleChange}
             />
           </label>
-        </div>
+      
 
-        <div>
+       
           <label>
             Arrival
             <input
@@ -150,6 +152,6 @@ export const EditEnquiry = () => {
           <button type="submit">Update</button>
         </div>
       </form>
-    </div>
+  
   );
 };

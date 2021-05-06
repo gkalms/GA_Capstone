@@ -46,12 +46,13 @@ export const CreateEnquiry = () => {
   return (
 
       <form onSubmit={handleSubmit}>
-         <h1>Booking enquiry</h1>
-        <div className="enquirycontainer">
+        
+        <div className="container">
+        <h1>Booking enquiry</h1>
+        
             <label classname="label">
               Guest Name
               <input
-                classname="input"
                 type="text"
                 name="guest_name"
                 value={create.guest_name}
