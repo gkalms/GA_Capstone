@@ -26,25 +26,26 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData1(Board, Rates) {
-  return { Board, Rates };
-};
+function createData1(Board, Description, Rates) {
+  return { Board, Description, Rates };
+}
 
-// function createData2(Room, Occupancy, Rates) {
-//   return { Room, Occupancy, Rates };
-// };
+function createData2(Room, Occupancy, Rates) {
+  return { Room, Occupancy, Rates };
+}
 
 const rows1 = [
-  createData1("Breakfast", "KSH 3000"),
-  createData1("Half Board", "KSH 6000"),
-  createData1("Full Board", "KSH 9000"),
+  createData1("Continental", "Continental b/fast", "Ksh 1000"),
+  createData1("B&B", "Breakfast menu", "Ksh 3000"),
+  createData1("Half Board", "Breakfast + Lunch or Dinner", "Ksh 6000"),
+  createData1("Full Board", "Breakfast + Lunch + Dinner", "Ksh 10,000"),
 ];
 
-// const rows2 = [
-//   createData2("Standard room", "2", "KSH 3000"),
-//   createData2("Suite", "4", "KSH 6000"),
-//   createData2("Cottage", "6", "KSH 9000"),
-// ];
+const rows2 = [
+  createData2("Standard room", "2", "Ksh 3000"),
+  createData2("Suite", "4", "Ksh 6000"),
+  createData2("Cottage", "6", "Ksh 9000"),
+];
 
 const useStyles = makeStyles({
   table: {
@@ -52,33 +53,32 @@ const useStyles = makeStyles({
   },
 });
 
-export const BoardTable = () => {
+export const RoomBoard = () => {
   const classes = useStyles();
 
   return (
-    <>
-        <TableContainer className="table" component={Paper}>
-          <Table className={classes.table}>
-            <TableHead>
-              <TableRow>
-                <StyledTableCell>Board</StyledTableCell>
-                <StyledTableCell>Rates</StyledTableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows1.map((row) => (
-                <StyledTableRow key={row.Board}>
-                  <StyledTableCell component="th" scope="row">
-                    {row.Board}
-                  </StyledTableCell>
-                  <StyledTableCell>{row.Rates}</StyledTableCell>
-                </StyledTableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-
-        {/* <TableContainer className="table" component={Paper}>
+    <div className="table">
+      <TableContainer className="board-table" component={Paper}>
+        <Table className={classes.table}>
+          <TableHead>
+            <TableRow>
+              <StyledTableCell>Board</StyledTableCell>
+              <StyledTableCell>Rates</StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows1.map((row) => (
+              <StyledTableRow key={row.Board}>
+                <StyledTableCell component="th" scope="row">
+                  {row.Board}
+                </StyledTableCell>
+                <StyledTableCell>{row.Rates}</StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <TableContainer className="room-table" component={Paper}>
         <Table className={classes.table}>
           <TableHead>
             <TableRow>
@@ -99,7 +99,7 @@ export const BoardTable = () => {
             ))}
           </TableBody>
         </Table>
-      </TableContainer> */}
-      </>
+      </TableContainer>
+    </div>
   );
 };

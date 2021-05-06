@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Select } from "@material-ui/core";
 
-
 export const CreateEnquiry = () => {
   const [create, setCreate] = useState({
     guest_name: "",
@@ -22,9 +21,10 @@ export const CreateEnquiry = () => {
   };
 
   useEffect(() => {
-    fetch("api/enquiries",{
-    headers: {
-      'token': window.localStorage.getItem('token')}
+    fetch("api/enquiries", {
+      headers: {
+        token: window.localStorage.getItem("token"),
+      },
     })
       .then((response) => response.json())
       .then((create) => setCreate(create));
@@ -44,109 +44,106 @@ export const CreateEnquiry = () => {
     });
   };
   return (
-    <div>
-      
-      <h1>Booking enquiry</h1>
-
-      <form onSubmit={handleSubmit}>
-        <div className="Enquiry">
-          <div>
-            <label>
-              Guest Name
-              <input
-                type="text"
-                name="guest_name"
-                value={create.guest_name}
-                onChange={handleChange}
-              />
-            </label>
-
-            <label>
-              Guest Phone
-              <input
-                type="text"
-                name="guest_phone"
-                value={create.guest_phone}
-                onChange={handleChange}
-              />
-            </label>
-
-            <label>
-              Guest Email
-              <input
-                type="text"
-                name="guest_email"
-                placeholder="email@email.com"
-                value={create.guest_email}
-                onChange={handleChange}
-              />
-            </label>
-          </div>
-          <div>
-            <label>
-              Room Type
-              <Select
-                name="room_type"
-                value={create.room_type}
-                onChange={handleChange}
-              >
-                <option value={"Standard"}>Standard</option>
-                <option value={"Suite"}>Suite</option>
-                <option value={"Cottage"}>Cottage</option>
-              </Select>
-            </label>
-
-            <label>
-              Board Type
-              <Select
-                name="board_type"
-                value={create.board_type}
-                onChange={handleChange}
-              >
-                <option value={""}>None</option>
-                <option value={"Breakfast"}>Breakfast</option>
-                <option value={"Half-Board"}>Half-Board</option>
-                <option value={"Full-Board"}>Full-Board</option>
-              </Select>
-            </label>
-
-            <label>
-              Number of Guests
-              <input
-                type="number"
-                name="number_of_guests"
-                value={create.number_of_guests}
-                onChange={handleChange}
-              />
-            </label>
-          </div>
-          <div>
-            <label>
-              Arrival
-              <input
-                type="date"
-                name="start_date"
-                placeholder="DD/MM/YYYY"
-                value={create.start_date}
-                onChange={handleChange}
-              />
-            </label>
-
-            <label>
-              Departure
-              <input
-                type="date"
-                name="end_date"
-                placeholder="DD/MM/YYYY"
-                value={create.end_date}
-                onChange={handleChange}
-              />
-            </label>
-
-            <button type="submit">Submit</button>
-          </div>
-        </div>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <div className="container">
+        <h1>Booking enquiry</h1>
+        <label>
+          Guest Name
+          <input
+            type="text"
+            name="guest_name"
+            value={create.guest_name}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <label>
+          Guest Phone
+          <input
+            type="text"
+            inputMode="numeric"
+            maxlength="12"
+            name="guest_phone"
+            value={create.guest_phone}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <label>
+          Guest Email
+          <input
+            type="text"
+            name="guest_email"
+            placeholder="email@email.com"
+            value={create.guest_email}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Room Type
+          <Select
+            name="room_type"
+            value={create.room_type}
+            onChange={handleChange}
+            required
+          >
+            <option value={"Standard"}>Standard</option>
+            <option value={"Suite"}>Suite</option>
+            <option value={"Cottage"}>Cottage</option>
+          </Select>
+        </label>
+        <label>
+          Board Type
+          <Select
+            name="board_type"
+            value={create.board_type}
+            onChange={handleChange}
+            required
+          >
+            <option value={"Continental"}>B/fast Continental</option>
+            <option value={"Breakfast"}>B/fast menu</option>
+            <option value={"Half-Board"}>Half-Board</option>
+            <option value={"Full-Board"}>Full-Board</option>
+          </Select>
+        </label>
+        <label>
+          Number of Guests
+          <input
+            type="number"
+            pattern="[0-9]"
+            inputmode="numeric"
+            max="9"
+            min="1"
+            name="number_of_guests"
+            value={create.number_of_guests}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <label>
+          Arrival
+          <input
+            type="date"
+            name="start_date"
+            placeholder="DD/MM/YYYY"
+            value={create.start_date}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <label>
+          Departure
+          <input
+            type="date"
+            name="end_date"
+            placeholder="DD/MM/YYYY"
+            value={create.end_date}
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
   );
 };

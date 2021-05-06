@@ -22,7 +22,6 @@ export const ImageSlider = ({ slides }) => {
     <section className="slider">
       <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
-
       {ImageData.map((slide, index) => {
         return (
           <div className={index === image ? "slide active" : "slide"} key={index}>

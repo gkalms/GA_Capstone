@@ -1,101 +1,175 @@
-.Topbanner {
-display: flex;
-justify-content: space-between;
-align-items: center;
-position: sticky;
-top: 0;
-z-index: 100%;
-background-color: while;
+.topbanner {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: floralwhite;
 }
 
 .banner {
-background: url("https://cdn.pixabay.com/photo/2015/12/18/20/04/flamingos-1099071__480.jpg") center/ cover no-repeat;
-height: 50vh;
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
+  background-image: url("https://media.istockphoto.com/photos/flock-of-flamingos-in-the-water-picture-id103963118?k=6&m=103963118&s=612x612&w=0&h=gSkA_A23dvv_abHapJZWyXZKkeM6DQI_nGMuWgxnv54=");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 55 vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
 }
 
-.banner-info {
-    /* background-color: grey; */
-    color: white;
-    text-align: center;
+.banner ul {
+  list-style-type: none;
 }
 
 .slider {
-    position: relative;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: floralwhite;
 }
 
-.images{
-    width: 400px;
-    height: 200px;
-    border-radius: 10px;
+.images {
+  width: 500px;
+  height: 250px;
+  border-radius: 10px;
 }
 
 .right-arrow {
-    position: absolute;
-    top: 50%;
-    right: 150px;
-    font-size: 3rem;
-    color: black;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
+  position: absolute;
+  top: 50%;
+  right: 175px;
+  font-size: 3rem;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
 }
 
- .left-arrow {
-    position:absolute;
-    top: 50%;
-    left: 150px;
-    font-size: 3rem;
-    color: black;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
-} 
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 175px;
+  font-size: 3rem;
+  color: black;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
 
 .slide {
-    opacity: 1;
-    transition-duration: 2s ease;
+  opacity: 1;
+  transition-duration: 2s ease;
 }
 .slide.active {
-    opacity: 1;
-    transition-duration: 2s;
-    /* transform: scale(2); */
-}
-
-.amenities_container {
-    margin: auto;
-    justify-content: center;
-    text-align: center;
-    padding: 0 25px;
-}
-
-.amenities {
-    position: relative;
-    float:left;
-    
-}
-
-.amenities_container ul {
-    list-style-type: none;
-    display: block
+  opacity: 1;
+  transition-duration: 2s;
 }
 
 .table {
-    display: flex;
-    float: left;
-    width: 50%
+  float: left;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background: floralwhite;
+  align-items: center;
+  justify-content: center;
 }
 
-/* .boardtable {
-    display: flex;
-    flex: 50%
-} */
+@media (min-width: 375px) {
+  .table {
+    flex-direction: column;
+  }
+}
+
+.Enquiry {
+  display: flex;
+  background: floralwhite;
+}
+
+.link {
+  color: purple;
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+  .link:hover {
+    text-decoration: underline;
+    background: bisque;
+  }
+}
+
+.MuiGrid-item {
+  height: 45px;
+}
+
+.MuiButtonBase-root MuiButtonBase-root MuiButton-contained {
+  margin-top: 15px;
+  width: 55px;
+  height: 45px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: floralwhite;
+  font-weight: bold;
+}
+
+.container label {
+  font-size: 16px;
+}
+.container input {
+  font-size: 16px;
+  margin: 5px;
+  width: 200px;
+  padding-left: 5px;
+}
+
+.container button {
+  font-size: 16px;
+  margin: 5px;
+  width: 200px;
+  background-color: goldenrod;
+}
+
+#mui-component-select-room_type {
+  width: 200px;
+  padding-left: 15px;
+}
+
+#mui-component-select-board_type {
+  width: 200px;
+  padding-left: 15px;
+}
+
+.displaytable {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  background: floralwhite;
+  font-weight: bold;
+}
 
 
+table {
+  border: 2px;
+  border-style:double;
+  padding: 15px;
+}
+
+td th {
+  border: 1px;
+  border-style:solid;
+  padding: 5px;
+}
