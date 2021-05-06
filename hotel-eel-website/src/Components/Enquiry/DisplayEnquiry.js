@@ -30,11 +30,11 @@ export const DisplayEnquiry = () => {
       body: JSON.stringify(enquiry),
     }).then((response) => {
       alert("Booking Enquiry deleted!");
-      setIsDeleted(true)
+      setIsDeleted(true);
     });
   };
 
-  useEffect(() => { 
+  useEffect(() => {
     fetch("/api/enquiries", {
       headers: {
         token: window.localStorage.getItem("token"),
@@ -48,28 +48,27 @@ export const DisplayEnquiry = () => {
         setIsDeleted(false);
       })
       .catch((error) => console.log(error));
-  },[isDeleted])
+  }, [isDeleted]);
 
   return (
     <div className="container">
-      <table>
-      <thead>
-              <tr>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Roam</th>
-                <th>Board</th>
-                <th>Numbers</th>
-                <th>Arrival</th>
-                <th>Departure</th>
-              </tr>
-              </thead>
+      <table className="displaytable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Roam</th>
+            <th>Board</th>
+            <th>Numbers</th>
+            <th>Arrival</th>
+            <th>Departure</th>
+          </tr>
+        </thead>
 
-              <tbody>
-              {enquiry.map((el) => (
-        
-              <tr key={el.id}>
+        <tbody>
+          {enquiry.map((el) => (
+            <tr key={el.id}>
               <td>{el.guest_name}</td>
               <td>{el.guest_phone}</td>
               <td>{el.guest_email}</td>
@@ -78,14 +77,15 @@ export const DisplayEnquiry = () => {
               <td>{el.number_of_guests}</td>
               <td>{el.start_date}</td>
               <td>{el.end_date}</td>
-              <td><Link to={`/enquiry/edit/${el.id}`}>Edit</Link></td>
-              <td><button onClick={() => onDeleteClicked(el.id)}>Delete</button></td>
-              
-              </tr>
-              
-        
-      ))}
-                </tbody>
+              <td>
+                <Link to={`/enquiry/edit/${el.id}`}>Edit</Link>
+              </td>
+              <td>
+                <button onClick={() => onDeleteClicked(el.id)}>Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );

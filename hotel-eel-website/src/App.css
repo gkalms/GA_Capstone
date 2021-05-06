@@ -21,22 +21,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.banner-info {
   color: white;
   font-weight:bold;
   text-align: center;
   font-size: 16px;
 }
 
-.amenities {
-  margin: auto;
-  float: left;
-  width: 50%;
-}
-
-.amenities ul {
+.banner ul {
   list-style-type: none;
 }
 
@@ -96,12 +87,6 @@
   justify-content: center;
 }
 
-@media (min-width: 768px) {
-  .table {
-      flex-direction: row;
-  }
-}
-
 @media (min-width: 375px) {
   .table {
       flex-direction: column;
@@ -140,7 +125,6 @@
     flex-direction: column;
     background: floralwhite;
     font-weight: bold;
-    /* justify-content: center; */
 }
 
 .container label {
@@ -168,4 +152,9 @@
 #mui-component-select-board_type {
     width: 200px;
     padding-left: 15px;
+}
+
+.container table {
+  border: 2px;
+  padding: 5px;
 }

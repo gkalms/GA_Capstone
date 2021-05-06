@@ -3,20 +3,15 @@ import { useHistory } from "react-router";
 
 export const LoginUser = (props) => {
   const history = useHistory();
-
   const [login, setLogin] = useState({
     name: "",
     password: "",
   });
-
   const changeHandler = (e) => {
     const newLoginState = { ...login };
     newLoginState[e.target.name] = e.target.value;
     setLogin(newLoginState);
   };
-
-  
-
   const submitHandler = (e) => {
     e.preventDefault();
     fetch("/api/auth/login", {
@@ -37,12 +32,11 @@ export const LoginUser = (props) => {
   };
 
   return (
-  
-      
-      <form onSubmit={submitHandler}>
-        <div className="container">
+    <form onSubmit={submitHandler}>
+      <div className="container">
         <h1>Login</h1>
-          <label>Name
+        <label>
+          Name
           <input
             type="text"
             label="Name"
@@ -51,8 +45,9 @@ export const LoginUser = (props) => {
             onChange={changeHandler}
             required
           />
-          </label>
-          <label>Password
+        </label>
+        <label>
+          Password
           <input
             type="text"
             name="password"
@@ -60,10 +55,9 @@ export const LoginUser = (props) => {
             onChange={changeHandler}
             required
           />
-          </label>
-
-          <button type="submit">Submit</button>
-        </div>
-      </form>
+        </label>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
   );
 };

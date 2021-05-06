@@ -13,6 +13,6 @@ export const ImageData = [
   },
   {
     image:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdR8EYsJUWLjZADx95Di3bGOaVCztG6gY3UDtHPLxPQUKOTTeHjmQcBg9x4YqyNrdlMLg&usqp=CAU",
-  }
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdR8EYsJUWLjZADx95Di3bGOaVCztG6gY3UDtHPLxPQUKOTTeHjmQcBg9x4YqyNrdlMLg&usqp=CAU",
+  },
 ];

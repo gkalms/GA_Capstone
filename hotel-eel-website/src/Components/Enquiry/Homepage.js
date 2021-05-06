@@ -10,6 +10,6 @@ export const Homepage = () => {
         <ImageSlider slides={ImageData} />
         <RoomBoard />
       </div>
-      </>
+    </>
   );
 };

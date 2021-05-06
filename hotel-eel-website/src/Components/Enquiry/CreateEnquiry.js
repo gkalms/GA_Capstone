@@ -14,13 +14,6 @@ export const CreateEnquiry = () => {
     end_date: "",
   });
 
-  //   let today = new Date().toISOString().substr(0, 10);
-  // document.querySelector("#today").value = today;
-
-  // // or...
-
-  // document.querySelector("#today").valueAsDate = new Date();
-
   const handleChange = (e) => {
     const newState = { ...create };
     newState[e.target.name] = e.target.value;
@@ -54,7 +47,6 @@ export const CreateEnquiry = () => {
     <form onSubmit={handleSubmit}>
       <div className="container">
         <h1>Booking enquiry</h1>
-
         <label classname="label">
           Guest Name
           <input
@@ -65,12 +57,10 @@ export const CreateEnquiry = () => {
             required
           />
         </label>
-
         <label>
           Guest Phone
           <input
             type="text"
-            // pattern="[0-9]"
             inputMode="numeric"
             maxlength="12"
             name="guest_phone"
@@ -79,19 +69,16 @@ export const CreateEnquiry = () => {
             required
           />
         </label>
-
         <label>
           Guest Email
           <input
             type="text"
-            // pattern="[0-9][a-z]@."
             name="guest_email"
             placeholder="email@email.com"
             value={create.guest_email}
             onChange={handleChange}
           />
         </label>
-
         <label>
           Room Type
           <Select
@@ -105,7 +92,6 @@ export const CreateEnquiry = () => {
             <option value={"Cottage"}>Cottage</option>
           </Select>
         </label>
-
         <label>
           Board Type
           <Select
@@ -114,13 +100,12 @@ export const CreateEnquiry = () => {
             onChange={handleChange}
             required
           >
-            <option value={"None"}>None</option>
+            <option value={""}>None</option>
             <option value={"Breakfast"}>Breakfast</option>
             <option value={"Half-Board"}>Half-Board</option>
             <option value={"Full-Board"}>Full-Board</option>
           </Select>
         </label>
-
         <label>
           Number of Guests
           <input
@@ -135,7 +120,6 @@ export const CreateEnquiry = () => {
             required
           />
         </label>
-
         <label>
           Arrival
           <input
@@ -147,7 +131,6 @@ export const CreateEnquiry = () => {
             required
           />
         </label>
-
         <label>
           Departure
           <input
@@ -159,7 +142,6 @@ export const CreateEnquiry = () => {
             required
           />
         </label>
-
         <button type="submit">Submit</button>
       </div>
     </form>
