@@ -51,8 +51,8 @@ export const DisplayEnquiry = () => {
   }, [isDeleted]);
 
   return (
-    <div className="container">
-      <table className="displaytable">
+    <div className="displaytable">
+      <table>
         <thead>
           <tr>
             <th>Name</th>

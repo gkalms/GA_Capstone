@@ -6,23 +6,22 @@
   position: sticky;
   top: 0;
   left: 0;
-  background:floralwhite;
+  background: floralwhite;
 }
 
 .banner {
   background-image: url("https://media.istockphoto.com/photos/flock-of-flamingos-in-the-water-picture-id103963118?k=6&m=103963118&s=612x612&w=0&h=gSkA_A23dvv_abHapJZWyXZKkeM6DQI_nGMuWgxnv54=");
-  background-position:center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 55
-  vh;
+  height: 55 vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-weight:bold;
+  font-weight: bold;
   text-align: center;
   font-size: 16px;
 }
@@ -89,7 +88,7 @@
 
 @media (min-width: 375px) {
   .table {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -111,50 +110,66 @@
 }
 
 .MuiGrid-item {
-    height: 45px;
+  height: 45px;
 }
 
 .MuiButtonBase-root MuiButtonBase-root MuiButton-contained {
-    margin-top: 15px;
-    width: 55px;
-    height: 45px;
+  margin-top: 15px;
+  width: 55px;
+  height: 45px;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    background: floralwhite;
-    font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  background: floralwhite;
+  font-weight: bold;
 }
 
 .container label {
-    font-size: 16px;
+  font-size: 16px;
 }
 .container input {
-    font-size: 16px;
-    margin: 5px;
-    width: 200px;
-    padding-left: 5px;
+  font-size: 16px;
+  margin: 5px;
+  width: 200px;
+  padding-left: 5px;
 }
 
 .container button {
-    font-size: 16px;
-    margin: 5px;
-    width: 200px;
-    background-color: goldenrod;
+  font-size: 16px;
+  margin: 5px;
+  width: 200px;
+  background-color: goldenrod;
 }
 
 #mui-component-select-room_type {
-    width: 200px;
-    padding-left: 15px;
+  width: 200px;
+  padding-left: 15px;
 }
 
 #mui-component-select-board_type {
-    width: 200px;
-    padding-left: 15px;
+  width: 200px;
+  padding-left: 15px;
 }
 
-.container table {
+.displaytable {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  background: floralwhite;
+  font-weight: bold;
+}
+
+
+table {
   border: 2px;
+  border-style:double;
+  padding: 15px;
+}
+
+td th {
+  border: 1px;
+  border-style:solid;
   padding: 5px;
 }

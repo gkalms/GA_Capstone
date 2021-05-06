@@ -47,7 +47,7 @@ export const CreateEnquiry = () => {
     <form onSubmit={handleSubmit}>
       <div className="container">
         <h1>Booking enquiry</h1>
-        <label classname="label">
+        <label>
           Guest Name
           <input
             type="text"
@@ -100,8 +100,8 @@ export const CreateEnquiry = () => {
             onChange={handleChange}
             required
           >
-            <option value={""}>None</option>
-            <option value={"Breakfast"}>Breakfast</option>
+            <option value={"Continental"}>B/fast Continental</option>
+            <option value={"Breakfast"}>B/fast menu</option>
             <option value={"Half-Board"}>Half-Board</option>
             <option value={"Full-Board"}>Full-Board</option>
           </Select>

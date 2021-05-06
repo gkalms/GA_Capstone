@@ -8060,3 +8060,216 @@ Processing by Api::EnquiriesController#index as */*
 Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 1.1ms | Allocations: 830)
 
 
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:18:42 +1000
+  [1m[35m (28.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 85ms (Views: 17.1ms | ActiveRecord: 45.1ms | Allocations: 8946)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:18:43 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.2ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 1.2ms | Allocations: 850)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:21:14 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.6ms | Allocations: 850)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:21:14 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.9ms | Allocations: 850)
+
+
+Started GET "/api/enquiries/44" for 127.0.0.1 at 2021-05-06 23:31:24 +1000
+Processing by Api::EnquiriesController#show as */*
+  Parameters: {"id"=>"44"}
+  [1m[36mEnquiry Load (13.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/enquiries_controller.rb:28:in `show'
+Completed 200 OK in 110ms (Views: 0.7ms | ActiveRecord: 26.3ms | Allocations: 4374)
+
+
+Started PATCH "/api/enquiries/44" for 127.0.0.1 at 2021-05-06 23:31:49 +1000
+Processing by Api::EnquiriesController#update as */*
+  Parameters: {"id"=>"44", "guest_name"=>"Test2", "guest_phone"=>"98901111", "guest_email"=>"test2@test2.com.au", "room_type"=>"Standard", "board_type"=>"Breakfast", "number_of_guests"=>"2", "start_date"=>"2021-05-06", "end_date"=>"2021-05-08", "enquiry"=>{"id"=>"44", "guest_name"=>"Test2", "guest_phone"=>"98901111", "guest_email"=>"test2@test2.com.au", "room_type"=>"Standard", "board_type"=>"Breakfast", "number_of_guests"=>"2", "start_date"=>"2021-05-06", "end_date"=>"2021-05-08"}}
+  [1m[36mEnquiry Load (0.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/enquiries_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/enquiries_controller.rb:33:in `update'
+  [1m[36mEnquiry Update (13.4ms)[0m  [1m[33mUPDATE "enquiries" SET "guest_phone" = $1, "number_of_guests" = $2 WHERE "enquiries"."id" = $3[0m  [["guest_phone", "98901111"], ["number_of_guests", 2], ["id", 44]]
+  ↳ app/controllers/api/enquiries_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/enquiries_controller.rb:33:in `update'
+Completed 200 OK in 38ms (Views: 0.3ms | ActiveRecord: 20.3ms | Allocations: 2426)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:31:52 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 830)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:31:52 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.8ms | Allocations: 830)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:32:04 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 830)
+
+
+Started POST "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:33:14 +1000
+Processing by Api::EnquiriesController#create as */*
+  Parameters: {"0"=>{"id"=>44, "guest_name"=>"Test2", "guest_phone"=>"98901111", "guest_email"=>"test2@test2.com.au", "room_type"=>"Standard", "board_type"=>"Breakfast", "number_of_guests"=>2, "start_date"=>"2021-05-06", "end_date"=>"2021-05-08"}, "guest_name"=>"test1", "guest_phone"=>"9909001", "guest_email"=>"test1@test1.com", "room_type"=>"Standard", "board_type"=>"Breakfast", "number_of_guests"=>"2", "start_date"=>"2021-05-09", "end_date"=>"2021-05-10", "enquiry"=>{"guest_name"=>"test1", "guest_phone"=>"9909001", "guest_email"=>"test1@test1.com", "room_type"=>"Standard", "board_type"=>"Breakfast", "number_of_guests"=>"2", "start_date"=>"2021-05-09", "end_date"=>"2021-05-10"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/enquiries_controller.rb:9:in `create'
+  [1m[36mEnquiry Create (9.1ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "test1"], ["guest_phone", "9909001"], ["guest_email", "test1@test1.com"], ["room_type", "Standard"], ["board_type", "Breakfast"], ["number_of_guests", 2], ["start_date", "2021-05-09"], ["end_date", "2021-05-10"]]
+  ↳ app/controllers/api/enquiries_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/enquiries_controller.rb:9:in `create'
+Completed 200 OK in 20ms (Views: 0.3ms | ActiveRecord: 9.9ms | Allocations: 1825)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:38:17 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.5ms | Allocations: 989)
+
+
+Started POST "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:39:08 +1000
+Processing by Api::EnquiriesController#create as */*
+  Parameters: {"0"=>{"id"=>44, "guest_name"=>"Test2", "guest_phone"=>"98901111", "guest_email"=>"test2@test2.com.au", "room_type"=>"Standard", "board_type"=>"Breakfast", "number_of_guests"=>2, "start_date"=>"2021-05-06", "end_date"=>"2021-05-08"}, "1"=>{"id"=>46, "guest_name"=>"test1", "guest_phone"=>"9909001", "guest_email"=>"test1@test1.com", "room_type"=>"Standard", "board_type"=>"Breakfast", "number_of_guests"=>2, "start_date"=>"2021-05-09", "end_date"=>"2021-05-10"}, "guest_name"=>"Test3", "guest_phone"=>"99039003", "guest_email"=>"test3@test3.com", "room_type"=>"Cottage", "board_type"=>"Continental", "number_of_guests"=>"1", "start_date"=>"2021-05-08", "end_date"=>"2021-05-09", "enquiry"=>{"guest_name"=>"Test3", "guest_phone"=>"99039003", "guest_email"=>"test3@test3.com", "room_type"=>"Cottage", "board_type"=>"Continental", "number_of_guests"=>"1", "start_date"=>"2021-05-08", "end_date"=>"2021-05-09"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/enquiries_controller.rb:9:in `create'
+  [1m[36mEnquiry Create (1.6ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "Test3"], ["guest_phone", "99039003"], ["guest_email", "test3@test3.com"], ["room_type", "Cottage"], ["board_type", "Continental"], ["number_of_guests", 1], ["start_date", "2021-05-08"], ["end_date", "2021-05-09"]]
+  ↳ app/controllers/api/enquiries_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/enquiries_controller.rb:9:in `create'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 2.5ms | Allocations: 1776)
+
+
+Started POST "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:39:58 +1000
+Processing by Api::EnquiriesController#create as */*
+  Parameters: {"0"=>{"id"=>44, "guest_name"=>"Test2", "guest_phone"=>"98901111", "guest_email"=>"test2@test2.com.au", "room_type"=>"Standard", "board_type"=>"Breakfast", "number_of_guests"=>2, "start_date"=>"2021-05-06", "end_date"=>"2021-05-08"}, "1"=>{"id"=>46, "guest_name"=>"test1", "guest_phone"=>"9909001", "guest_email"=>"test1@test1.com", "room_type"=>"Standard", "board_type"=>"Breakfast", "number_of_guests"=>2, "start_date"=>"2021-05-09", "end_date"=>"2021-05-10"}, "guest_name"=>"test4", "guest_phone"=>"99049004", "guest_email"=>"test4@test4.com", "room_type"=>"Suite", "board_type"=>"Full-Board", "number_of_guests"=>"2", "start_date"=>"2021-05-08", "end_date"=>"2021-05-10", "enquiry"=>{"guest_name"=>"test4", "guest_phone"=>"99049004", "guest_email"=>"test4@test4.com", "room_type"=>"Suite", "board_type"=>"Full-Board", "number_of_guests"=>"2", "start_date"=>"2021-05-08", "end_date"=>"2021-05-10"}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/enquiries_controller.rb:9:in `create'
+  [1m[36mEnquiry Create (0.7ms)[0m  [1m[32mINSERT INTO "enquiries" ("guest_name", "guest_phone", "guest_email", "room_type", "board_type", "number_of_guests", "start_date", "end_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["guest_name", "test4"], ["guest_phone", "99049004"], ["guest_email", "test4@test4.com"], ["room_type", "Suite"], ["board_type", "Full-Board"], ["number_of_guests", 2], ["start_date", "2021-05-08"], ["end_date", "2021-05-10"]]
+  ↳ app/controllers/api/enquiries_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/enquiries_controller.rb:9:in `create'
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 1776)
+
+
+Started POST "/api/auth/login" for 127.0.0.1 at 2021-05-06 23:40:26 +1000
+Processing by Api::AuthController#login as */*
+  Parameters: {"name"=>"tester", "password"=>"[FILTERED]", "auth"=>{"name"=>"tester", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 405)
+
+
+  
+ArgumentError (Unknown key: :uniqueness. Valid keys are: :on, :if, :unless, :prepend. Perhaps you meant to call `validates` instead of `validate`?):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/api/auth_controller.rb:6:in `login'
+Started POST "/api/auth/login" for 127.0.0.1 at 2021-05-06 23:40:39 +1000
+Processing by Api::AuthController#login as */*
+  Parameters: {"name"=>"tester", "password"=>"[FILTERED]", "auth"=>{"name"=>"tester", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (19.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "tester"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:6:in `login'
+Completed 200 OK in 318ms (Views: 3.4ms | ActiveRecord: 33.9ms | Allocations: 2587)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:40:40 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.4ms | Allocations: 1248)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:40:40 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (15.0ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 8.8ms | ActiveRecord: 15.0ms | Allocations: 1248)
+
+
+Started GET "/api/enquiries/46" for 127.0.0.1 at 2021-05-06 23:41:00 +1000
+Processing by Api::EnquiriesController#show as */*
+  Parameters: {"id"=>"46"}
+  [1m[36mEnquiry Load (0.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/api/enquiries_controller.rb:28:in `show'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 716)
+
+
+Started PATCH "/api/enquiries/46" for 127.0.0.1 at 2021-05-06 23:41:06 +1000
+Processing by Api::EnquiriesController#update as */*
+  Parameters: {"id"=>"46", "guest_name"=>"test1", "guest_phone"=>"99019001", "guest_email"=>"test1@test1.com", "room_type"=>"Standard", "board_type"=>"Breakfast", "number_of_guests"=>2, "start_date"=>"2021-05-09", "end_date"=>"2021-05-10", "enquiry"=>{"id"=>"46", "guest_name"=>"test1", "guest_phone"=>"99019001", "guest_email"=>"test1@test1.com", "room_type"=>"Standard", "board_type"=>"Breakfast", "number_of_guests"=>2, "start_date"=>"2021-05-09", "end_date"=>"2021-05-10"}}
+  [1m[36mEnquiry Load (0.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/api/enquiries_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/enquiries_controller.rb:33:in `update'
+  [1m[36mEnquiry Update (0.7ms)[0m  [1m[33mUPDATE "enquiries" SET "guest_phone" = $1 WHERE "enquiries"."id" = $2[0m  [["guest_phone", "99019001"], ["id", 46]]
+  ↳ app/controllers/api/enquiries_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/enquiries_controller.rb:33:in `update'
+Completed 200 OK in 28ms (Views: 0.5ms | ActiveRecord: 13.0ms | Allocations: 2250)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:41:09 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 0.5ms | Allocations: 1248)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:41:09 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (2.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 2.6ms | Allocations: 1248)
+
+
+Started DELETE "/api/enquiries/48" for 127.0.0.1 at 2021-05-06 23:41:21 +1000
+Processing by Api::EnquiriesController#destroy as */*
+  Parameters: {"_json"=>[{"id"=>44, "guest_name"=>"Test2", "guest_phone"=>"98901111", "guest_email"=>"test2@test2.com.au", "room_type"=>"Standard", "board_type"=>"Breakfast", "number_of_guests"=>2, "start_date"=>"2021-05-06", "end_date"=>"2021-05-08"}, {"id"=>47, "guest_name"=>"Test3", "guest_phone"=>"99039003", "guest_email"=>"test3@test3.com", "room_type"=>"Cottage", "board_type"=>"Continental", "number_of_guests"=>1, "start_date"=>"2021-05-08", "end_date"=>"2021-05-09"}, {"id"=>48, "guest_name"=>"test4", "guest_phone"=>"99049004", "guest_email"=>"test4@test4.com", "room_type"=>"Suite", "board_type"=>"Full-Board", "number_of_guests"=>2, "start_date"=>"2021-05-08", "end_date"=>"2021-05-10"}, {"id"=>46, "guest_name"=>"test1", "guest_phone"=>"99019001", "guest_email"=>"test1@test1.com", "room_type"=>"Standard", "board_type"=>"Breakfast", "number_of_guests"=>2, "start_date"=>"2021-05-09", "end_date"=>"2021-05-10"}], "id"=>"48", "enquiry"=>{}}
+  [1m[36mEnquiry Load (0.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/api/enquiries_controller.rb:47:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/enquiries_controller.rb:47:in `destroy'
+  [1m[36mEnquiry Destroy (0.4ms)[0m  [1m[31mDELETE FROM "enquiries" WHERE "enquiries"."id" = $1[0m  [["id", 48]]
+  ↳ app/controllers/api/enquiries_controller.rb:47:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/enquiries_controller.rb:47:in `destroy'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 1970)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:41:23 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 1108)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-06 23:41:23 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 1108)
+
+
