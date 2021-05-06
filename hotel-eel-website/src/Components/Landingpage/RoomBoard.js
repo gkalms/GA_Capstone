@@ -57,8 +57,8 @@ export const RoomBoard = () => {
 
   return (
     <div className="table">
-      <div className="boardTable">
-        <TableContainer className="table" component={Paper}>
+      {/* <div className="boardTable"> */}
+        <TableContainer className="board-table" component={Paper}>
           <Table className={classes.table}>
             <TableHead>
               <TableRow>
@@ -78,9 +78,9 @@ export const RoomBoard = () => {
             </TableBody>
           </Table>
         </TableContainer>
-      </div>
-      <div className="roomTable">
-        <TableContainer className="table" component={Paper}>
+      {/* </div> */}
+      {/* <div className="roomTable"> */}
+        <TableContainer className="room-table" component={Paper}>
           <Table className={classes.table}>
             <TableHead>
               <TableRow>
@@ -102,7 +102,7 @@ export const RoomBoard = () => {
             </TableBody>
           </Table>
         </TableContainer>
-      </div>
+      {/* </div> */}
     </div>
   );
 };

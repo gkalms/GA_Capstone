@@ -14,6 +14,13 @@ export const CreateEnquiry = () => {
     end_date: "",
   });
 
+  //   let today = new Date().toISOString().substr(0, 10);
+  // document.querySelector("#today").value = today;
+
+  // // or...
+
+  // document.querySelector("#today").valueAsDate = new Date();
+
   const handleChange = (e) => {
     const newState = { ...create };
     newState[e.target.name] = e.target.value;
@@ -44,105 +51,117 @@ export const CreateEnquiry = () => {
     });
   };
   return (
-
-      <form onSubmit={handleSubmit}>
-        
-        <div className="container">
+    <form onSubmit={handleSubmit}>
+      <div className="container">
         <h1>Booking enquiry</h1>
-        
-            <label classname="label">
-              Guest Name
-              <input
-                type="text"
-                name="guest_name"
-                value={create.guest_name}
-                onChange={handleChange}
-              />
-            </label>
 
-            <label>
-              Guest Phone
-              <input
-                type="text"
-                name="guest_phone"
-                value={create.guest_phone}
-                onChange={handleChange}
-              />
-            </label>
+        <label classname="label">
+          Guest Name
+          <input
+            type="text"
+            name="guest_name"
+            value={create.guest_name}
+            onChange={handleChange}
+            required
+          />
+        </label>
 
-            <label>
-              Guest Email
-              <input
-                type="text"
-                name="guest_email"
-                placeholder="email@email.com"
-                value={create.guest_email}
-                onChange={handleChange}
-              />
-            </label>
-      
-            <label>
-              Room Type
-              <Select
-                name="room_type"
-                value={create.room_type}
-                onChange={handleChange}
-              >
-                <option value={"Standard"}>Standard</option>
-                <option value={"Suite"}>Suite</option>
-                <option value={"Cottage"}>Cottage</option>
-              </Select>
-            </label>
+        <label>
+          Guest Phone
+          <input
+            type="text"
+            // pattern="[0-9]"
+            inputMode="numeric"
+            maxlength="12"
+            name="guest_phone"
+            value={create.guest_phone}
+            onChange={handleChange}
+            required
+          />
+        </label>
 
-            <label>
-              Board Type
-              <Select
-                name="board_type"
-                value={create.board_type}
-                onChange={handleChange}
-              >
-                <option value={"None"}>None</option>
-                <option value={"Breakfast"}>Breakfast</option>
-                <option value={"Half-Board"}>Half-Board</option>
-                <option value={"Full-Board"}>Full-Board</option>
-              </Select>
-            </label>
+        <label>
+          Guest Email
+          <input
+            type="text"
+            // pattern="[0-9][a-z]@."
+            name="guest_email"
+            placeholder="email@email.com"
+            value={create.guest_email}
+            onChange={handleChange}
+          />
+        </label>
 
-            <label>
-              Number of Guests
-              <input
-                type="number"
-                name="number_of_guests"
-                value={create.number_of_guests}
-                onChange={handleChange}
-              />
-            </label>
-        
-            <label>
-              Arrival
-              <input
-                type="date"
-                name="start_date"
-                placeholder="DD/MM/YYYY"
-                value={create.start_date}
-                onChange={handleChange}
-              />
-            </label>
+        <label>
+          Room Type
+          <Select
+            name="room_type"
+            value={create.room_type}
+            onChange={handleChange}
+            required
+          >
+            <option value={"Standard"}>Standard</option>
+            <option value={"Suite"}>Suite</option>
+            <option value={"Cottage"}>Cottage</option>
+          </Select>
+        </label>
 
-            <label>
-              Departure
-              <input
-                type="date"
-                name="end_date"
-                placeholder="DD/MM/YYYY"
-                value={create.end_date}
-                onChange={handleChange}
-              />
-            </label>
+        <label>
+          Board Type
+          <Select
+            name="board_type"
+            value={create.board_type}
+            onChange={handleChange}
+            required
+          >
+            <option value={"None"}>None</option>
+            <option value={"Breakfast"}>Breakfast</option>
+            <option value={"Half-Board"}>Half-Board</option>
+            <option value={"Full-Board"}>Full-Board</option>
+          </Select>
+        </label>
 
-            <button type="submit">Submit</button>
-            </div>
-      </form>
-    
+        <label>
+          Number of Guests
+          <input
+            type="number"
+            pattern="[0-9]"
+            inputmode="numeric"
+            max="9"
+            min="1"
+            name="number_of_guests"
+            value={create.number_of_guests}
+            onChange={handleChange}
+            required
+          />
+        </label>
+
+        <label>
+          Arrival
+          <input
+            type="date"
+            name="start_date"
+            placeholder="DD/MM/YYYY"
+            value={create.start_date}
+            onChange={handleChange}
+            required
+          />
+        </label>
+
+        <label>
+          Departure
+          <input
+            type="date"
+            name="end_date"
+            placeholder="DD/MM/YYYY"
+            value={create.end_date}
+            onChange={handleChange}
+            required
+          />
+        </label>
+
+        <button type="submit">Submit</button>
+      </div>
+    </form>
   );
 };

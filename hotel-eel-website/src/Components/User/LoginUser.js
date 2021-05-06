@@ -4,16 +4,18 @@ import { useHistory } from "react-router";
 export const LoginUser = (props) => {
   const history = useHistory();
 
-  const [form, setForm] = useState({
+  const [login, setLogin] = useState({
     name: "",
     password: "",
   });
 
   const changeHandler = (e) => {
-    const newFormState = { ...form };
-    newFormState[e.target.name] = e.target.value;
-    setForm(newFormState);
+    const newLoginState = { ...login };
+    newLoginState[e.target.name] = e.target.value;
+    setLogin(newLoginState);
   };
+
+  
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -22,7 +24,7 @@ export const LoginUser = (props) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(form),
+      body: JSON.stringify(login),
     })
       .then((response) => response.json())
       .then((data) => {
@@ -40,21 +42,25 @@ export const LoginUser = (props) => {
       <form onSubmit={submitHandler}>
         <div className="container">
         <h1>Login</h1>
-          <label>Name</label>
+          <label>Name
           <input
             type="text"
             label="Name"
             name="name"
-            value={form.name}
+            value={login.name}
             onChange={changeHandler}
+            required
           />
-          <label>Password</label>
+          </label>
+          <label>Password
           <input
             type="text"
             name="password"
-            value={form.password}
+            value={login.password}
             onChange={changeHandler}
+            required
           />
+          </label>
 
           <button type="submit">Submit</button>
         </div>

@@ -48,6 +48,9 @@ export const EditEnquiry = () => {
       history.replace("/DisplayEnquiry");
     });
   };
+
+
+
   return (
     
      
