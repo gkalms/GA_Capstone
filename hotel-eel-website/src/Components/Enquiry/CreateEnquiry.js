@@ -100,7 +100,6 @@ export const CreateEnquiry = () => {
             onChange={handleChange}
             required
           >
-            <option value={"Continental"}>B/fast Continental</option>
             <option value={"Breakfast"}>B/fast menu</option>
             <option value={"Half-Board"}>Half-Board</option>
             <option value={"Full-Board"}>Full-Board</option>

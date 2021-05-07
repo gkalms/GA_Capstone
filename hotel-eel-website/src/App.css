@@ -86,11 +86,11 @@
   justify-content: center;
 }
 
-@media (min-width: 375px) {
+/* @media (min-width: 375px) {
   .table {
     flex-direction: column;
   }
-}
+} */
 
 .Enquiry {
   display: flex;

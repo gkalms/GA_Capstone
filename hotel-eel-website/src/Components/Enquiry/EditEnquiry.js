@@ -106,7 +106,6 @@ export const EditEnquiry = () => {
             onChange={handleChange}
             required
           >
-            <option value={"None"}>None</option>
             <option value={"Breakfast"}>Breakfast</option>
             <option value={"Half-Board"}>Half-Board</option>
             <option value={"Full-Board"}>Full-Board</option>
