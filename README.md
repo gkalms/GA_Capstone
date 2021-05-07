@@ -2,13 +2,11 @@
 General Capstone project April 2021
 
 My idea:
-Build a website presence for my father’s second hotel – Hote Eel
-https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbnails.trvl-media.com%2FO-aVJyuWKIcgJeTzvEAZmvRTCrE%3D%2F773x530%2Fsmart%2Ffilters%3Aquality(60)%2Fimages.trvl-media.com%2Fhotels%2F33000000%2F32730000%2F32720200%2F32720178%2F5e52665f_z.jpg&imgrefurl=https%3A%2F%2Fau.hotels.com%2Fho1048045696%2Fhotel-eel-elburgon-kenya%2F&tbnid=XYgPxljQfkJ13M&vet=12ahUKEwjJ9Y_wzJHwAhWbkksFHcKTBtAQMygAegQIARAp..i&docid=UluKsfIBzCPnyM&w=773&h=530&itg=1&q=eel%20hotel%20elburgon%20kenya&ved=2ahUKEwjJ9Y_wzJHwAhWbkksFHcKTBtAQMygAegQIARAp
+Build a simple website to provide information and a booking enquiry service for guests. My father's motel in Nakuru, Kenya
+
 
 -	To be Information only website
--	CRUD will be represented by admin updating website content – Room/Board description and rates
--	For capstone project – No booking functionality; Customer will still ring to book
--	Option:  Link up to Booking.com?/Fill out form that is emailed in?/????
+-	CRUD will be represented by 1: guest creating booking enquiry; admin updating or deleting Booking enquiry information
 
 Look and feel I want to achieve:
 One page website: https://clhg.com/hotels/901/Fairview-Hotel-Nairobi
@@ -16,18 +14,21 @@ One page website: https://clhg.com/hotels/901/Fairview-Hotel-Nairobi
 User storie:
 As Guest I want information on Room and board
 As Guest, I want to make a booking enquiry
-As Hotel manager I want to add,update or delete rooms/board information
 As Hotel manager I want to view, update or delete booking enquiry information
 
 Database:
-3 tables:
-Employee - Name, password
-Accomodation - Room, boarding, Rates, Occupancy(?) 
-Enquiry - Guest name(primary contact), Guest phone/email, Room type, Boarding type, Number of guests(?),Number of rooms, Dates
+2 tables:
+Employee - Name, password 
+Enquiry - Guest name, phone,email, Room type, Boarding type, Number of guests, arrival and departure Dates
 
 Wireframe: Attach image
 
 Code language & Frameworks
 - React
+- React router
+- Link, Select
+- React icons - arrows for image carousel
+- Material UI core/ table/paper/styles
 - Rails/Postgresql
-- Material-ui
+- Cors & bcrypt - authorisation
+- Material-ui - table
