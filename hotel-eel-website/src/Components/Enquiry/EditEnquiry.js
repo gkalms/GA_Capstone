@@ -62,6 +62,7 @@ export const EditEnquiry = () => {
             onChange={handleChange}
             required
           />
+          <span></span>
         </label>
         <label>
           Guest Phone
@@ -74,6 +75,7 @@ export const EditEnquiry = () => {
             onChange={handleChange}
             required
           />
+          <span></span>
         </label>
         <label>
           Guest Email
@@ -97,6 +99,7 @@ export const EditEnquiry = () => {
             <option value={"Suite"}>Suite</option>
             <option value={"Cottage"}>Cottage</option>
           </Select>
+          <span></span>
         </label>
         <label>
           Board Type
@@ -106,11 +109,11 @@ export const EditEnquiry = () => {
             onChange={handleChange}
             required
           >
-            <option value={"None"}>None</option>
             <option value={"Breakfast"}>Breakfast</option>
             <option value={"Half-Board"}>Half-Board</option>
             <option value={"Full-Board"}>Full-Board</option>
           </Select>
+          <span></span>
         </label>
         <label>
           Number of Guests
@@ -125,6 +128,7 @@ export const EditEnquiry = () => {
             onChange={handleChange}
             required
           />
+          <span></span>
         </label>
         <label>
           Arrival
@@ -136,6 +140,7 @@ export const EditEnquiry = () => {
             onChange={handleChange}
             required
           />
+          <span></span>
         </label>
         <label>
           Departure
@@ -147,6 +152,7 @@ export const EditEnquiry = () => {
             onChange={handleChange}
             required
           />
+          <span></span>
         </label>
         <button type="submit">Update</button>
       </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router";
+import { RegisterUser } from "./RegisterUser";
 
 export const LoginUser = (props) => {
   const history = useHistory();
@@ -32,32 +33,37 @@ export const LoginUser = (props) => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
-      <div className="container">
-        <h1>Login</h1>
-        <label>
-          Name
-          <input
-            type="text"
-            label="Name"
-            name="name"
-            value={login.name}
-            onChange={changeHandler}
-            required
-          />
-        </label>
-        <label>
-          Password
-          <input
-            type="text"
-            name="password"
-            value={login.password}
-            onChange={changeHandler}
-            required
-          />
-        </label>
-        <button type="submit">Submit</button>
+    <>
+      <form onSubmit={submitHandler}>
+        <div className="container">
+          <h1>Login</h1>
+          <label>
+            Name
+            <input
+              type="text"
+              label="Name"
+              name="name"
+              value={login.name}
+              onChange={changeHandler}
+              required
+            />
+          </label>
+          <label>
+            Password
+            <input
+              type="text"
+              name="password"
+              value={login.password}
+              onChange={changeHandler}
+              required
+            />
+          </label>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      <div>
+        <RegisterUser />
       </div>
-    </form>
+    </>
   );
 };

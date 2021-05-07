@@ -35,7 +35,6 @@ function createData2(Room, Occupancy, Rates) {
 }
 
 const rows1 = [
-  createData1("Continental", "Continental b/fast", "Ksh 1000"),
   createData1("B&B", "Breakfast menu", "Ksh 3000"),
   createData1("Half Board", "Breakfast + Lunch or Dinner", "Ksh 6000"),
   createData1("Full Board", "Breakfast + Lunch + Dinner", "Ksh 10,000"),
@@ -63,6 +62,7 @@ export const RoomBoard = () => {
           <TableHead>
             <TableRow>
               <StyledTableCell>Board</StyledTableCell>
+              <StyledTableCell>Description</StyledTableCell>
               <StyledTableCell>Rates</StyledTableCell>
             </TableRow>
           </TableHead>
@@ -72,6 +72,7 @@ export const RoomBoard = () => {
                 <StyledTableCell component="th" scope="row">
                   {row.Board}
                 </StyledTableCell>
+                <StyledTableCell>{row.Description}</StyledTableCell>
                 <StyledTableCell>{row.Rates}</StyledTableCell>
               </StyledTableRow>
             ))}
