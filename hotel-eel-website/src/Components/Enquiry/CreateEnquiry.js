@@ -49,7 +49,6 @@ export const CreateEnquiry = () => {
         <h1>Booking enquiry</h1>
         <label>
           Guest Name
-          
           <input
             type="text"
             name="guest_name"

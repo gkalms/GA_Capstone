@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import {CssBaseline} from '@material-ui/core';
+import { CssBaseline } from "@material-ui/core";
 
 import { Nav } from "./Components/Landingpage/Nav";
 import { Herobanner } from "./Components/Landingpage/Herobanner";
@@ -11,6 +11,7 @@ import { EditEnquiry } from "./Components/Enquiry/EditEnquiry";
 import { DisplayEnquiry } from "./Components/Enquiry/DisplayEnquiry";
 
 import { LoginUser } from "./Components/User/LoginUser";
+import { RegisterUser } from "./Components/User/RegisterUser";
 
 import { BrowserRouter, /*Link,*/ Switch, Route } from "react-router-dom";
 
@@ -30,39 +31,45 @@ export const App = () => {
 
   return (
     <>
-    <BrowserRouter>
-      <div className="App">
-        <Nav logout={setLoggedIn} loginStatus={loggedIn} />
-        <Herobanner />
+      <BrowserRouter>
+        <div className="App">
+          <Nav logout={setLoggedIn} loginStatus={loggedIn} />
+          <Herobanner />
 
-        <Switch>
-          <Route exact path="/login">
-            <LoginUser setLoggedIn={setLoggedIn} />
-          </Route>
-
-          <Route exact path="/enquiry">
-            <CreateEnquiry />
-          </Route>
-
-          {loggedIn && (
-            <Route exact path="/DisplayEnquiry">
-              <DisplayEnquiry />
+          <Switch>
+            <Route exact path="/login">
+              <LoginUser setLoggedIn={setLoggedIn} />
             </Route>
-          )}
 
-          {loggedIn && (
-            <Route exact path="/enquiry/edit/:id">
-              <EditEnquiry />
+            <Route exact path="/enquiry">
+              <CreateEnquiry />
             </Route>
-          )}
 
-          <Route exact path="/">
-            <Homepage />
-          </Route>
-        </Switch>
-      </div>
-    </BrowserRouter>
-    <CssBaseline />
+            {loggedIn && (
+              <Route exact path="/DisplayEnquiry">
+                <DisplayEnquiry />
+              </Route>
+            )}
+
+            {loggedIn && (
+              <Route exact path="/enquiry/edit/:id">
+                <EditEnquiry />
+              </Route>
+            )}
+
+            {loggedIn && (
+              <Route exact path="/register">
+                <RegisterUser />
+              </Route>
+            )}
+
+            <Route exact path="/">
+              <Homepage />
+            </Route>
+          </Switch>
+        </div>
+      </BrowserRouter>
+      <CssBaseline />
     </>
   );
 };
