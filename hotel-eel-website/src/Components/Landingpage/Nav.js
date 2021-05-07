@@ -31,7 +31,7 @@ export const Nav = (props) => {
           </Link>
         )}
       </div>
-      <label>Reservation: (+254) 2 733 733 </label>
+      <label>Reservation: +254-2-733733 </label>
     </div>
   );
 };

@@ -55,12 +55,12 @@ export const DisplayEnquiry = () => {
       <table>
         <thead>
           <tr>
-            <th>Name</th>
+            <th>Guest Name</th>
             <th>Phone</th>
             <th>Email</th>
-            <th>Roam</th>
-            <th>Board</th>
-            <th>Numbers</th>
+            <th>Room Type</th>
+            <th>Board Type</th>
+            <th>Guest Numbers</th>
             <th>Arrival</th>
             <th>Departure</th>
           </tr>

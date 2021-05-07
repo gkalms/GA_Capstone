@@ -49,6 +49,7 @@ export const CreateEnquiry = () => {
         <h1>Booking enquiry</h1>
         <label>
           Guest Name
+          
           <input
             type="text"
             name="guest_name"
@@ -56,6 +57,7 @@ export const CreateEnquiry = () => {
             onChange={handleChange}
             required
           />
+          <span></span>
         </label>
         <label>
           Guest Phone
@@ -68,6 +70,7 @@ export const CreateEnquiry = () => {
             onChange={handleChange}
             required
           />
+          <span></span>
         </label>
         <label>
           Guest Email
@@ -91,6 +94,7 @@ export const CreateEnquiry = () => {
             <option value={"Suite"}>Suite</option>
             <option value={"Cottage"}>Cottage</option>
           </Select>
+          <span></span>
         </label>
         <label>
           Board Type
@@ -104,6 +108,7 @@ export const CreateEnquiry = () => {
             <option value={"Half-Board"}>Half-Board</option>
             <option value={"Full-Board"}>Full-Board</option>
           </Select>
+          <span></span>
         </label>
         <label>
           Number of Guests
@@ -118,6 +123,7 @@ export const CreateEnquiry = () => {
             onChange={handleChange}
             required
           />
+          <span></span>
         </label>
         <label>
           Arrival
@@ -129,6 +135,7 @@ export const CreateEnquiry = () => {
             onChange={handleChange}
             required
           />
+          <span></span>
         </label>
         <label>
           Departure
@@ -140,6 +147,7 @@ export const CreateEnquiry = () => {
             onChange={handleChange}
             required
           />
+          <span></span>
         </label>
         <button type="submit">Submit</button>
       </div>
