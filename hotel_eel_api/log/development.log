@@ -8738,3 +8738,72 @@ Filter chain halted as :user_exists rendered or redirected
 Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 146)
 
 
+Started GET "/api/users" for 127.0.0.1 at 2021-05-08 13:11:03 +1000
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::UsersController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 215)
+
+
+Started POST "/api/auth/login" for 127.0.0.1 at 2021-05-08 13:11:15 +1000
+Processing by Api::AuthController#login as */*
+  Parameters: {"name"=>"tester", "password"=>"[FILTERED]", "auth"=>{"name"=>"tester", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 2682)
+
+
+  
+ArgumentError (Unknown key: :uniqueness. Valid keys are: :on, :if, :unless, :prepend. Perhaps you meant to call `validates` instead of `validate`?):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/api/auth_controller.rb:6:in `login'
+Started POST "/api/auth/login" for 127.0.0.1 at 2021-05-08 13:11:19 +1000
+Processing by Api::AuthController#login as */*
+  Parameters: {"name"=>"tester", "password"=>"[FILTERED]", "auth"=>{"name"=>"tester", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "tester"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:6:in `login'
+Completed 200 OK in 323ms (Views: 0.2ms | ActiveRecord: 27.1ms | Allocations: 3452)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-08 13:11:19 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (4.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 13.2ms | ActiveRecord: 8.4ms | Allocations: 6340)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-08 13:11:19 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1128)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-08 13:14:32 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.5ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.5ms | Allocations: 1109)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-08 13:14:32 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1123)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-08 13:14:45 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.3ms | Allocations: 1108)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-08 13:14:45 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 32ms (Views: 31.6ms | ActiveRecord: 0.3ms | Allocations: 1108)
+
+

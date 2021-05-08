@@ -63,6 +63,8 @@ export const DisplayEnquiry = () => {
             <th>Guest Numbers</th>
             <th>Arrival</th>
             <th>Departure</th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
 
