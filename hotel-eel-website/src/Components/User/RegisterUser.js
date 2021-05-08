@@ -3,10 +3,8 @@ import { useEffect, useState } from "react";
 
 export const RegisterUser = () => {
   const [register, setRegister] = useState({
-      
     name: "",
     password: "",
-      
   });
 
   const handleChange = (e) => {
