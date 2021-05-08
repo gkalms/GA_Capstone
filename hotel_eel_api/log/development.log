@@ -8642,3 +8642,99 @@ Processing by Api::UsersController#create as */*
 Completed 500 Internal Server Error in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 357)
 
 
+Started GET "/api/users" for 127.0.0.1 at 2021-05-08 09:49:20 +1000
+  [1m[35m (27.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::UsersController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 215)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2021-05-08 09:54:13 +1000
+  
+ArgumentError (Unknown key: :uniqueness. Valid keys are: :on, :if, :unless, :prepend. Perhaps you meant to call `validates` instead of `validate`?):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+Started POST "/api/users" for ::1 at 2021-05-08 09:57:18 +1000
+Processing by Api::UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"fred2", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Create (62.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest") VALUES ($1, $2) RETURNING "id"[0m  [["name", "fred2"], ["password_digest", "$2a$12$JmuKiuy5.H3JjTivxSdjAuphzUUkjWMNtTcpk1LQUOuhGBD./VqZK"]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+Completed 201 Created in 1060ms (Views: 10.6ms | ActiveRecord: 225.2ms | Allocations: 9623)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2021-05-08 10:00:45 +1000
+Processing by Api::UsersController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 147)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2021-05-08 10:00:49 +1000
+Processing by Api::UsersController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 146)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2021-05-08 10:02:27 +1000
+Processing by Api::UsersController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | Allocations: 147)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2021-05-08 10:02:36 +1000
+Processing by Api::UsersController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 2.5ms | Allocations: 147)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2021-05-08 10:02:46 +1000
+Processing by Api::UsersController#create as */*
+  Parameters: {"user"=>{"message"=>"Unauthorised", "name"=>"name", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :message[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Create (26.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest") VALUES ($1, $2) RETURNING "id"[0m  [["name", "name"], ["password_digest", "$2a$12$aVlx2ptv582vFIZP.22mlenPi058q4tUnJpb6GIml.rU.gpedDEVm"]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+Completed 201 Created in 492ms (Views: 0.7ms | ActiveRecord: 37.4ms | Allocations: 3853)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2021-05-08 10:03:43 +1000
+Processing by Api::UsersController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 146)
+
+
+Started POST "/api/auth/login" for 127.0.0.1 at 2021-05-08 10:06:36 +1000
+Processing by Api::AuthController#login as */*
+  Parameters: {"name"=>"name", "password"=>"[FILTERED]", "auth"=>{"name"=>"name", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "name"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:6:in `login'
+Completed 200 OK in 299ms (Views: 1.8ms | ActiveRecord: 1.7ms | Allocations: 1249)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-08 10:06:36 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (30.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 125ms (Views: 41.7ms | ActiveRecord: 69.8ms | Allocations: 6390)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-08 10:06:36 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.8ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.8ms | Allocations: 1110)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2021-05-08 10:07:06 +1000
+Processing by Api::UsersController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 146)
+
+

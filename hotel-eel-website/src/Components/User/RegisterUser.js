@@ -3,15 +3,16 @@ import { useEffect, useState } from "react";
 
 export const RegisterUser = () => {
   const [register, setRegister] = useState({
-      user: {
+      
     name: "",
     password: "",
-      }
+      
   });
 
   const handleChange = (e) => {
     const newRegister = { ...register };
     newRegister[e.target.name] = e.target.value;
+    console.log("this is the object being set", newRegister)
     setRegister(newRegister);
   };
 
@@ -32,7 +33,7 @@ export const RegisterUser = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(register),
+      body: JSON.stringify({user: {...register}}),
     }).then((response) => {
       e.target.reset();
       alert("User created!");
@@ -56,7 +57,7 @@ export const RegisterUser = () => {
         <label>
           Password
           <input
-            type="text"
+            type="password"
             name="password"
             value={register.password}
             onChange={handleChange}
