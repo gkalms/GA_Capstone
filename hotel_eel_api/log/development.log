@@ -8807,3 +8807,188 @@ Processing by Api::EnquiriesController#index as */*
 Completed 200 OK in 32ms (Views: 31.6ms | ActiveRecord: 0.3ms | Allocations: 1108)
 
 
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-08 13:53:01 +1000
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 85ms (Views: 51.4ms | ActiveRecord: 14.5ms | Allocations: 9225)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2021-05-08 13:53:06 +1000
+Processing by Api::UsersController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 173)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2021-05-08 13:56:32 +1000
+Processing by Api::UsersController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 147)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-08 13:56:47 +1000
+Processing by Api::EnquiriesController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 147)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2021-05-08 14:13:24 +1000
+Processing by Api::UsersController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 147)
+
+
+Started POST "/api/auth/login" for 127.0.0.1 at 2021-05-08 14:13:35 +1000
+Processing by Api::AuthController#login as */*
+  Parameters: {"name"=>"a", "password"=>"[FILTERED]", "auth"=>{"name"=>"a", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 2ms (Allocations: 405)
+
+
+  
+ArgumentError (Unknown key: :uniqueness. Valid keys are: :on, :if, :unless, :prepend. Perhaps you meant to call `validates` instead of `validate`?):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/api/auth_controller.rb:6:in `login'
+Started POST "/api/auth/login" for 127.0.0.1 at 2021-05-08 14:13:38 +1000
+Processing by Api::AuthController#login as */*
+  Parameters: {"name"=>"a", "password"=>"[FILTERED]", "auth"=>{"name"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:6:in `login'
+Completed 404 Not Found in 100ms (Views: 0.5ms | ActiveRecord: 72.0ms | Allocations: 3476)
+
+
+Started POST "/api/auth/login" for 127.0.0.1 at 2021-05-08 14:13:57 +1000
+Processing by Api::AuthController#login as */*
+  Parameters: {"name"=>"a", "password"=>"[FILTERED]", "auth"=>{"name"=>"a", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "a"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:6:in `login'
+Completed 404 Not Found in 6ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 559)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2021-05-08 14:30:15 +1000
+Processing by Api::UsersController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.7ms | Allocations: 146)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2021-05-08 14:30:33 +1000
+Processing by Api::UsersController#create as */*
+  Parameters: {"user"=>{"message"=>"Unauthorised", "name"=>"last", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :message[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Create (34.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest") VALUES ($1, $2) RETURNING "id"[0m  [["name", "last"], ["password_digest", "$2a$12$WqAB1NAu0/JSw/CkaGfunOxiNwuFV8F8qJbWxuyCE4ozS71EPRF0e"]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+Completed 201 Created in 493ms (Views: 0.4ms | ActiveRecord: 54.2ms | Allocations: 5478)
+
+
+Started POST "/api/auth/login" for 127.0.0.1 at 2021-05-08 14:31:05 +1000
+Processing by Api::AuthController#login as */*
+  Parameters: {"name"=>"tester", "password"=>"[FILTERED]", "auth"=>{"name"=>"tester", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "tester"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:6:in `login'
+Completed 200 OK in 449ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 777)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-08 14:31:06 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (2.0ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 2.0ms | Allocations: 1138)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-08 14:31:06 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.7ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 1.7ms | Allocations: 1110)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2021-05-08 14:31:14 +1000
+Processing by Api::UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/users_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.3ms | Allocations: 1163)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2021-05-08 14:31:25 +1000
+Processing by Api::UsersController#create as */*
+  Parameters: {"user"=>{"0"=>{"id"=>2, "name"=>"test_1", "password_digest"=>"[FILTERED]"}, "1"=>{"id"=>4, "name"=>"test4", "password_digest"=>"[FILTERED]"}, "2"=>{"id"=>1, "name"=>"test1", "password_digest"=>"[FILTERED]"}, "3"=>{"id"=>5, "name"=>"tester", "password_digest"=>"[FILTERED]"}, "4"=>{"id"=>6, "name"=>"fred", "password_digest"=>"[FILTERED]"}, "5"=>{"id"=>7, "name"=>"fred", "password_digest"=>"[FILTERED]"}, "6"=>{"id"=>8, "name"=>"fred2", "password_digest"=>"[FILTERED]"}, "7"=>{"id"=>9, "name"=>"name", "password_digest"=>"[FILTERED]"}, "8"=>{"id"=>10, "name"=>"last", "password_digest"=>"[FILTERED]"}, "name"=>"last", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameters: :0, :1, :2, :3, :4, :5, :6, :7, :8[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Create (25.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest") VALUES ($1, $2) RETURNING "id"[0m  [["name", "last"], ["password_digest", "$2a$12$u4rp1owsaMZJegAZFTgDeudpHpOSTg0TKf.yF4iOtxDCLQp2wPSju"]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+Completed 201 Created in 509ms (Views: 0.4ms | ActiveRecord: 27.0ms | Allocations: 1848)
+
+
+Started POST "/api/auth/login" for 127.0.0.1 at 2021-05-08 14:31:54 +1000
+Processing by Api::AuthController#login as */*
+  Parameters: {"name"=>"last", "password"=>"[FILTERED]", "auth"=>{"name"=>"last", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = $1 LIMIT $2[0m  [["name", "last"], ["LIMIT", 1]]
+  ↳ app/controllers/api/auth_controller.rb:6:in `login'
+Completed 200 OK in 526ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 665)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-08 14:31:55 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (2.0ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 2.0ms | Allocations: 1108)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-08 14:31:55 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (1.2ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 1.2ms | Allocations: 1108)
+
+
+Started GET "/api/enquiries/44" for 127.0.0.1 at 2021-05-08 14:32:10 +1000
+Processing by Api::EnquiriesController#show as */*
+  Parameters: {"id"=>"44"}
+  [1m[36mEnquiry Load (0.9ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/enquiries_controller.rb:28:in `show'
+Completed 200 OK in 34ms (Views: 1.1ms | ActiveRecord: 0.9ms | Allocations: 817)
+
+
+Started PATCH "/api/enquiries/44" for 127.0.0.1 at 2021-05-08 14:32:16 +1000
+Processing by Api::EnquiriesController#update as */*
+  Parameters: {"id"=>"44", "guest_name"=>"Guest2", "guest_phone"=>"98901112", "guest_email"=>"Guest2@guest2.com", "room_type"=>"Suite", "board_type"=>"Breakfast", "number_of_guests"=>2, "start_date"=>"2021-05-06", "end_date"=>"2021-05-08", "enquiry"=>{"id"=>"44", "guest_name"=>"Guest2", "guest_phone"=>"98901112", "guest_email"=>"Guest2@guest2.com", "room_type"=>"Suite", "board_type"=>"Breakfast", "number_of_guests"=>2, "start_date"=>"2021-05-06", "end_date"=>"2021-05-08"}}
+  [1m[36mEnquiry Load (0.3ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries" WHERE "enquiries"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/api/enquiries_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/enquiries_controller.rb:33:in `update'
+  [1m[36mEnquiry Update (29.1ms)[0m  [1m[33mUPDATE "enquiries" SET "guest_phone" = $1 WHERE "enquiries"."id" = $2[0m  [["guest_phone", "98901112"], ["id", 44]]
+  ↳ app/controllers/api/enquiries_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/enquiries_controller.rb:33:in `update'
+Completed 200 OK in 45ms (Views: 0.3ms | ActiveRecord: 34.3ms | Allocations: 2300)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-08 14:32:18 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.6ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.6ms | Allocations: 1108)
+
+
+Started GET "/api/enquiries" for 127.0.0.1 at 2021-05-08 14:32:18 +1000
+Processing by Api::EnquiriesController#index as */*
+  [1m[36mEnquiry Load (0.4ms)[0m  [1m[34mSELECT "enquiries".* FROM "enquiries"[0m
+  ↳ app/controllers/api/enquiries_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.4ms | Allocations: 1108)
+
+
+Started GET "/api/users" for 127.0.0.1 at 2021-05-08 14:32:28 +1000
+Processing by Api::UsersController#index as */*
+Filter chain halted as :user_exists rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 146)
+
+

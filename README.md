@@ -30,5 +30,5 @@ Code language & Frameworks
 - React icons - arrows for image carousel
 - Material UI core/ table/paper/styles
 - Rails/Postgresql
-- Cors & bcrypt - authorisation
+- bcrypt,JWT 
 - Material-ui - table
