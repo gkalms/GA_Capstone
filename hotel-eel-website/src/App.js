@@ -13,7 +13,7 @@ import { DisplayEnquiry } from "./Components/Enquiry/DisplayEnquiry";
 import { LoginUser } from "./Components/User/LoginUser";
 import { RegisterUser } from "./Components/User/RegisterUser";
 
-import { BrowserRouter, /*Link,*/ Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 // When App loads the first time/refreshed
 const userLoggedIn = () => {
